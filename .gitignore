@@ -1,3 +1,10 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+purgentcare/project.godot
+/purgentcare/.godot
+/purgentcare/.godot
+/purgentcare/.godot/editor
+/purgentcare/.godot
+purgentcare/.godot/editor/editor_layout.cfg
+/purgentcare/.godot
