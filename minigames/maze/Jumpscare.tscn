@@ -1,0 +1,111 @@
+[gd_scene load_steps=22 format=3 uid="uid://dkdkq68osvuj7"]
+
+[ext_resource type="Texture2D" uid="uid://ccmw2iox02srf" path="res://assets/misc/jumpscare/sprite_00.png" id="1_mp0hq"]
+[ext_resource type="Texture2D" uid="uid://dibrqjn8p1vfs" path="res://assets/misc/jumpscare/sprite_01.png" id="2_uqvuv"]
+[ext_resource type="Texture2D" uid="uid://c8uicffy7fn2y" path="res://assets/misc/jumpscare/sprite_02.png" id="3_vn8la"]
+[ext_resource type="Texture2D" uid="uid://1g0lw2ebmdb2" path="res://assets/misc/jumpscare/sprite_03.png" id="4_46uip"]
+[ext_resource type="Texture2D" uid="uid://cxmbsnlywxb3t" path="res://assets/misc/jumpscare/sprite_04.png" id="5_hhlvk"]
+[ext_resource type="Texture2D" uid="uid://dbsdo1nwclwfj" path="res://assets/misc/jumpscare/sprite_05.png" id="6_7ve35"]
+[ext_resource type="Texture2D" uid="uid://cirlrwpk230cx" path="res://assets/misc/jumpscare/sprite_06.png" id="7_2k8s3"]
+[ext_resource type="Texture2D" uid="uid://r43y2i4v1afo" path="res://assets/misc/jumpscare/sprite_07.png" id="8_2ltg4"]
+[ext_resource type="Texture2D" uid="uid://dkfekx0kwmygr" path="res://assets/misc/jumpscare/sprite_08.png" id="9_kc6fp"]
+[ext_resource type="Texture2D" uid="uid://c3sjrfa5nt27c" path="res://assets/misc/jumpscare/sprite_09.png" id="10_mwf8c"]
+[ext_resource type="Texture2D" uid="uid://bbtuhlcgn2y0x" path="res://assets/misc/jumpscare/sprite_10.png" id="11_5km3w"]
+[ext_resource type="Texture2D" uid="uid://us1wugghqlch" path="res://assets/misc/jumpscare/sprite_11.png" id="12_67xoj"]
+[ext_resource type="Texture2D" uid="uid://c4a5baghg5qee" path="res://assets/misc/jumpscare/sprite_12.png" id="13_4bkjc"]
+[ext_resource type="Texture2D" uid="uid://dpfxkem6eaxkj" path="res://assets/misc/jumpscare/sprite_13.png" id="14_wje4y"]
+[ext_resource type="Texture2D" uid="uid://cpdssaxu3rqdd" path="res://assets/misc/jumpscare/sprite_14.png" id="15_a22h0"]
+[ext_resource type="Texture2D" uid="uid://bqkksu5mx8240" path="res://assets/misc/jumpscare/sprite_15.png" id="16_xpla5"]
+[ext_resource type="Texture2D" uid="uid://b2yv832vrigy7" path="res://assets/misc/jumpscare/sprite_16.png" id="17_3fuag"]
+[ext_resource type="Texture2D" uid="uid://8g8jpispo7hh" path="res://assets/misc/jumpscare/sprite_17.png" id="18_cchqr"]
+[ext_resource type="Texture2D" uid="uid://cgetll8mhbvfs" path="res://assets/misc/jumpscare/sprite_18.png" id="19_kwe7g"]
+[ext_resource type="Script" uid="uid://rlgqctn2rwbh" path="res://minigames/maze/jumpscare.gd" id="20_mp0hq"]
+
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t8lcq"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mp0hq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_uqvuv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vn8la")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_46uip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hhlvk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7ve35")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2k8s3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_2ltg4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_kc6fp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_mwf8c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5km3w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_67xoj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_4bkjc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_wje4y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_a22h0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_xpla5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_3fuag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_cchqr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_kwe7g")
+}],
+"loop": false,
+"name": &"jumpscare",
+"speed": 14.0
+}]
+
+[node name="Jumpscare" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-696, 486)
+scale = Vector2(3.90376, 3.90376)
+sprite_frames = SubResource("SpriteFrames_t8lcq")
+animation = &"jumpscare"
+autoplay = "jumpscare"
+frame = 8
+frame_progress = 0.0889009
+script = ExtResource("20_mp0hq")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-785, 483)
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="AnimatedSprite2D" method="_on_animation_finished"]
+[connection signal="ready" from="AnimatedSprite2D" to="AnimatedSprite2D" method="_on_ready"]
