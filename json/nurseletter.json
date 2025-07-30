@@ -1,0 +1,24 @@
+[
+	{
+		"id": "give_letter",
+		"name": "Finneas",
+		"text": "(Should I give the love letter to the nurse?)",
+		"options": [
+			{"text": "Give the letter", "next_id": "nurse_reaction"},
+			{"text": "Keep it for now", "next_id": "keep_letter"}
+		]
+	},
+	{
+		"id": "nurse_reaction",
+		"name": "Nurse",
+		"text": "Oh my! This is... from him? *blushes* I must tell him how I feel right away!",
+		"action": "trigger_nurse_exit",
+		"next_id": "None"
+	},
+	{
+		"id": "keep_letter",
+		"name": "Finneas",
+		"text": "Maybe I'll hold onto this a bit longer...",
+		"next_id": "None"
+	}
+]

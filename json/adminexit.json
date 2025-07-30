@@ -1,0 +1,22 @@
+[
+  {
+	"id": "start",
+	"name": "Finneas",
+	"text": "Done here? Time to go back?",
+	"options": [
+	  { "text": "Yeah, let's go", "next_id": "leave" },
+	  { "text": "Not yet, I need to check something", "next_id": "stay" }
+	]
+  },
+  {
+	"id": "stay",
+	"name": "Finneas",
+	"text": "Better make it quick. This place gives me the creeps."
+  },
+  {
+	"id": "leave",
+	"name": "Finneas",
+	"text": "(Heading back...)",
+	"action": "conditional_scene_change"
+  }
+]

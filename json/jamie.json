@@ -1,0 +1,51 @@
+[
+	{
+		"id": "jamie_start",
+		"name": "Finneas",
+		"text": "Hello? Are you okay?? Why are you restrained?",
+		"next_id": "jamie_response"
+	},
+	{
+		"id": "jamie_response",
+		"name": "????",
+		"text": "Please.. please help me.. they.. I don't know what they've done to me.. please",
+		"next_id": "jamie_response2"
+	},
+	{
+		"id": "jamie_response2",
+		"name": "Jamie",
+		"text": "My name is Jamie... Jamie Howl.. Ever since I was admitted to this hospital.. my mind hasn't been working right. They won't tell me what's wrong with me either.. Please I need you to set me free...",
+		"next_id": "finn_response"
+	},
+	{
+		"id": "finn_response",
+		"name": "Finneas",
+		"text": "(He doesn't seem to be in his right mind.. And he looks.. off.)",
+		"options": [
+		  { "text": "Help him.", "next_id": "bad_response" },
+		  { "text": "Ignore him and keep searching for Penelope's room.", "next_id": "nice_response" }
+		]
+  	},
+	{
+		"id": "nice_response",
+		"name": "Finneas",
+		"text": "I'm sorry.. I have to find my sister. I promise to come back later.",
+		"next_id": "leave",
+	},
+	{
+		"id": "bad_response",
+		"name": "Finneas",
+		"text": "OW! What is wrong with you?!",
+		"next_id": "bad_response2"
+	},
+	{
+		"id": "bad_response2",
+		"name": "Finneas",
+		"text": "(This maniac just bit me..)",
+		"next_id": "jamie_res"
+	},
+	{
+		"id": "jamie_res",
+		"action": "start_combat"
+	}
+]

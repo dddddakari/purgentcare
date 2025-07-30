@@ -1,0 +1,21 @@
+[
+  {
+	"id": "start",
+	"name": "Finneas",
+	"text": "Should I leave the file room?",
+	"options": [
+	  { "text": "Yeah, it's weird in here", "next_id": "teleport" },
+	  { "text": "No, I'm gonna hack into their mainframe", "next_id": "stay_here" }
+	]
+  },
+  {
+	"id": "stay_here",
+	"name": "Finneas",
+	"text": "Teehee! So sneaky."
+  },
+  {
+	"id": "teleport",
+	"name": "Finneas",
+	"action": "conditional_scene_change"
+  }
+]

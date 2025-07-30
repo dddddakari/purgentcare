@@ -1,0 +1,38 @@
+[
+	{
+		"id": "FindPenelope",
+		"name": "Finneas",
+		"text": "(Let me check these files for Penelope's...)",
+		"next_id": "JamieFile"
+	},
+	{
+		"id": "JamieFile",
+		"name": "Finneas",
+		"text": "(Wait... where have I heard the name Jamie Howl before..)",
+		"next_id": "Lore"
+	},
+	{
+		"id": "Lore",
+		"name": "Finneas",
+		"text": "'Jamie Howl almost fully recovered.. signs of family negative and reacts positively to doses'",
+		"next_id": "LoreContinue"
+	},
+	{
+		"id": "LoreContinue",
+		"name": "Finneas",
+		"text": "'Jamie moved to basement for further analysis and tests'",
+		"next_id": "LoreEnds"
+	},
+	{
+		"id": "LoreEnds",
+		"name": "Finneas",
+		"text": "This is so weird..., but I can't focus on this right now.",
+		"next_id": "Focus"
+	},
+	{
+		"id": "Focus",
+		"name": "Finneas",
+		"text": "Penelope's file isnt here... I'll check the computer",
+		"next_id": "None"
+	}
+]

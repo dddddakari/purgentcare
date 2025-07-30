@@ -1,0 +1,44 @@
+[
+	{
+		"id": "FindPenelope",
+		"name": "Finneas",
+		"text": "(Let's check this Pc for Pen's room)",
+		"next_id": "Cyber"
+	},
+	{
+		"id": "Cyber",
+		"name": "Finneas",
+		"text": "(No Password huh... terrible cybersecurity.)",
+		"next_id": "Lore"
+	},
+	{
+		"id": "Lore",
+		"name": "Finneas",
+		"text": "Oh! Pen's file.",
+		"next_id": "LoreContinue"
+	},
+	{
+		"id": "LoreContinue",
+		"name": "Finneas",
+		"text": "'This file has been moved to the Admin's office'???",
+		"next_id": "LoreEnds"
+	},
+	{
+		"id": "LoreEnds",
+		"name": "Finneas",
+		"text": "'1 equals red, 2 equals orange, 3 equals yellow, 4 equals green, 5 equals blue, 6 equals indigo, 7 equals purple, 8 equals pink, 9 equals brown'?",
+		"next_id": "Lost"
+	},
+	{
+		"id": "Lost",
+		"name": "Finneas",
+		"text": "A number code..? where would I use that...",
+		"next_id": "LostnConfused"
+	},
+	{
+		"id": "LostnConfused",
+		"name": "Finneas",
+		"text": "Whatever I have to go find the Admin's office",
+		"next_id": "none"
+	}
+]

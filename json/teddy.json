@@ -1,0 +1,20 @@
+[
+	{
+		"id": "teddy_start",
+		"name": "Finneas",
+		"text": "Isn't this.. Teddy? I can still vividly remember Penelope's expression when I got her that hehe",
+		"next_id": "2"
+	},
+	{
+		"id": "2",
+		"name": "Finneas",
+		"text": "(I'm now positive that this IS Penelope's room... )",
+		"next_id": "3"
+	},
+	{
+		"id": "3",
+		"name": "Finneas",
+		"text": "(But where is she?)",
+		"next_id": "end"
+	},
+]

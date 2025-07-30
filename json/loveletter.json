@@ -1,0 +1,23 @@
+[
+	{
+		"id": "FinnNosey",
+		"name": "Finneas",
+		"text": "(The Janitor seems to have dropped something on the floor. Should I pick it up?)",
+		"options": [
+			{"text": "Pick it up", "next_id": "Love_Confession"},
+			{"text": "No, it's a waste of time", "next_id": "Oh"}
+		]
+	},
+	{
+		"id": "Love_Confession",
+		"name": "Finneas",
+		"text": "(Oh! This is a love letter from the janitor to the nurse. I should keep this - it might come in handy later.)",
+		"next_id": "None"
+	},
+	{
+		"id": "Oh",
+		"name": "Finneas",
+		"text": "Nah, it's probably garbage.",
+		"next_id": "None"
+	}
+]

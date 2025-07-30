@@ -1,0 +1,20 @@
+[
+	{
+		"id": "penroom_start",
+		"name": "Finneas",
+		"text": "Penelope, are you here?!",
+		"next_id": "2"
+	},
+	{
+		"id": "2",
+		"name": "",
+		"text": "....",
+		"next_id": "3"
+	},
+	{
+		"id": "3",
+		"name": "Finneas",
+		"text": "Not here huh.. (Let me look around this room to double check.)",
+		"next_id": "end"
+	},
+]

@@ -1,0 +1,23 @@
+[
+	{
+		"id": "FinnNosey",
+		"name": "Finneas",
+		"text": "(The Nurse dropped her key card... what should I do?)",
+		"options": [
+			{"text": "Grab it, it might be useful", "next_id": "Love_Confession"},
+			{"text": "No, it's a waste of time", "next_id": "Oh"}
+		]
+	},
+	{
+		"id": "Love_Confession",
+		"name": "Finneas",
+		"text": "(Now I need to find a door this opens.)",
+		"next_id": "None"
+	},
+	{
+		"id": "Oh",
+		"name": "Finneas",
+		"text": "I need to find Penelope, this isn't any of my business.",
+		"next_id": "None"
+	}
+]

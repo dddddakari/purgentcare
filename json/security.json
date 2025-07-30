@@ -1,0 +1,55 @@
+[
+	{
+		"id": "security_start",
+		"name": "Security",
+		"text": "HEY KID!! How did you get here?!? This area is OFF-LIMITS. Leave. NOW!!",
+		"next_id": "finn_response"
+	},
+	{
+		"id": "finn_response",
+		"name": "Finneas",
+		"text": "(I need to get to the basement quick. Would he believe me though?)",
+		"options": [
+		  { "text": "I should take my chances and convince him.", "next_id": "nice_response" },
+		  { "text": "He doesn't look like he would. I have to find another way.", "next_id": "bad_response" }
+		]
+  	},
+	{
+		"id": "nice_response",
+		"name": "Finneas",
+		"text": "Please sir. I'm really worried about my sister. I just want to check on her quickly and I'll be out of here as soon as I confirm she's okay.."
+	},
+	{
+		"id": "security_nice_response",
+		"name": "Security",
+		"text": "..."
+	},
+	{
+		"id": "security_nice_response",
+		"name": "Security",
+		"text": "*sigh* Fine. Truth is, I'm also a bit worried about what's happening down there. I've been hearing.. weird.. noises recently. But no one's allowed down there except for the Admin and his assistants."
+	},
+	{
+		"id": "security_nice_response",
+		"name": "Security",
+		"text": "I'll let you go, but you need to be out of there before the Admin comes. Good luck."
+	},
+	{
+		"id": "security_nice_response",
+		"name": "Security",
+		"text": "Go now. I hear someone approaching.",
+		"next_id": "teleport_basement"
+	},
+	{
+		"id": "teleport_basement",
+		"action": "change_scene",
+		"scene_path": "res://scenes/hospital/b_hallway_area/B_HallwayArea.tscn",
+		"next_id": "teleport_basement"
+	},
+	{
+		"id": "bad_response",
+		"name": "Finneas",
+		"text": "I'm really sorry about this..",
+		"action": "start_combat",
+	}
+]

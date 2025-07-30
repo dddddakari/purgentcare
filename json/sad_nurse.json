@@ -1,0 +1,14 @@
+[
+	{
+		"id": "FinneasGuy",
+		"name": "Nurse",
+		"text": "*Angry Muttering*",
+		"next_id": "MoreSad"
+	},
+	{
+		"id": "MoreSad",
+		"name": "Nurse",
+		"text": "This sucks :( How did this tip over by itself!",
+		"next_id": "None"
+	}
+]

@@ -1,0 +1,110 @@
+[
+	{
+		"name": "Finneas",
+		"text": "(The door creaks open to reveal a nightmare - Penelope trembling in a hospital gown, Yosef gripping her arm as staff advance)",
+		"next_id": "Sees_You"
+	},
+	{
+		"id": "Sees_You",
+		"name": "Director",
+		"text": "Ah, Finneas O'Dessa.. I knew you'd find your way here, maybe you can help us?",
+		"portrait": "",
+		"next_id": "Continue_Gaslight"
+	},
+	{
+		"id": "Continue_Gaslight",
+		"name": "Director",
+		"text": "As you can see a ROGUE patient has taken your sister, we need to calm him down before he hurts her",
+		"portrait": "",
+		"next_id": "Rebuttal"
+	},
+	{
+		"id": "Rebuttal",
+		"name": "Yosef",
+		"text": "Sir they are LYING! They did something.. I-I don't know what it is, but it changes us",
+		"next_id": "Doctor_Gaslight"
+	},
+	{
+		"id": "Doctor_Gaslight",
+		"name": "Director",
+		"text": "Yosef is schizophrenic, he's just making himself paranoid. He is a high risk patient.",
+		"portrait": "",
+		"next_id": "Yosef_Insists"
+	},
+	{
+		"id": "Yosef_Insists",
+		"name": "Yosef",
+		"text": "NO! THEY'RE MAKING ZOMBIES! YOU SEE JAMIE? SMART YOUNG BOY, HE WALKS BUT THERE'S NO PERSON INSIDE!",
+		"emotion": "",
+		"next_id": "Penelope_Clues"
+	},
+	{
+		"id": "Penelope_Clues",
+		"name": "",
+		"text": "(Penelope silently mouths 'PLEASE' while tapping her own blackening veins)",
+		"next_id": "Before_Choice"
+	},
+	{
+		"id": "Before_Choice",
+		"name": "Head Nurse",
+		"text": "Finn, be a good brother. Just help us strap down Yosef and calm him down",
+		"next_id": "critical_choice"
+	},
+	{
+		"id": "critical_choice",
+		"name": "Finneas",
+		"text": "(I don't know who to believe...)",
+		"options": [
+			{
+				"text": "I believe the Staff", 
+				"next_id": "Trust_Doctors", 
+				"points": { "good": 0, "bad": 2 }
+			},
+			{
+				"text": "I believe Yosef", 
+				"next_id": "Trust_Yosef", 
+				"points": { "good": 2, "bad": 0 }
+			}
+		]
+	},
+	{
+		"id": "Trust_Yosef",
+		"name": "Yosef",
+		"text": "SMART MAN! GO STAIR!",
+		"next_id": "Staff_Reaction_Bad"
+	},
+	{
+		"id": "Staff_Reaction_Bad",
+		"name": "Director",
+		"text": "Stop them! We can't lose Patient 0!",
+		"portrait": "voss_angry",
+		"next_id": "Escape_Sequence"
+	},
+	{
+		"id": "Escape_Sequence",
+		"name": "",
+		"text": "(The fire alarm shrieks as Yosef hurls a chair through the observation window)",
+		"effect": "glass_break",
+		"next_id": "Good_End_Setup"
+	},
+	{
+		"id": "Trust_Doctors",
+		"name": "Yosef",
+		"text": "NO FINN!",
+		"next_id": "Bad_End_Setup"
+	},
+	{
+		"id": "Good_End_Setup",
+		"name": "Yosef",
+		"text": "vro didnt set this up yet",
+		"action": "conditional_scene_change",
+		"next_id": "None"
+	},
+	{
+		"id": "Bad_End_Setup",
+		"name": "System Voice",
+		"text": "LLLLL they losssse.",
+		"action": "conditional_scene_change",
+		"next_id": "None"
+	}
+]

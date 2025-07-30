@@ -1,0 +1,22 @@
+[
+	{
+		"id": "jamie_door_start",
+		"name": "Room B101",
+		"text": "hrrGHH h-elp...please...",
+		"next_id": "finn_response"
+	},
+	{
+		"id": "finn_response",
+		"name": "Finneas",
+		"text": "(Should I go in this door?)",
+		"options": [
+		  { "text": "Yes", "next_id": "open_door" },
+		  { "text": "No, I should check the other doors first.", "next_id": "leave" }
+		]
+  	},
+	{
+		"id": "open_door",
+		"action": "change_scene",
+		"scene_path": "res://scenes/hospital/b_rooms/jamie_room/JamieRoom.tscn",
+	},
+]

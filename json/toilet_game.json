@@ -1,0 +1,22 @@
+[
+	{
+		"id": "game_start",
+		"name": "",
+		"text": ".......",
+		"next_id": "finn_sneaky"
+	},
+	{
+		"id": "finn_sneaky",
+		"name": "Finneas",
+		"text": "Should I mess with this toilet?",
+		"options": [
+		  { "text": "Yes", "next_id": "open_toilet" },
+		  { "text": "No, That's kinda gross", "next_id": "leave" }
+		]
+  	},
+	{
+		"id": "open_toilet",
+		"action": "change_scene",
+		"scene_path": "res://scenes/hospital/f1_rooms_area/Bathroom/BathroomPooped.tscn",
+	},
+]

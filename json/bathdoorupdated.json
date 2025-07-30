@@ -1,0 +1,22 @@
+[
+  {
+	"id": "start",
+	"name": "Finneas",
+	"text": "Should I Leave The Bathroom?",
+	"options": [
+	  { "text": "Yeah, it stinks in here", "next_id": "teleport" },
+	  { "text": "No I love poop", "next_id": "stay_here" }
+	]
+  },
+  {
+	"id": "stay_here",
+	"name": "Finneas",
+	"text": "Actually it's fantastic in here... Who was I searching for again?"
+  },
+  {
+	"id": "teleport",
+	"name": "Finneas",
+	"action": "change_scene",
+	"scene_path": "res://scenes/hospital/f1_rooms_area/Room_AreaUnlocked.tscn"
+  }
+]
