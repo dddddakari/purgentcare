@@ -1,0 +1,93 @@
+[gd_scene load_steps=6 format=3 uid="uid://blh740ge2nw5d"]
+
+[ext_resource type="Script" uid="uid://dgekw0g5rw7qo" path="res://entities/npcs/chat_detection_angry.gd" id="2_2siyl"]
+[ext_resource type="Texture2D" uid="uid://dr2lccu8q4pil" path="res://assets/npcs/pats.png" id="2_6ekok"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y6ljr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6ekok")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_6ekok")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6ekok")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_6ekok")
+}],
+"loop": true,
+"name": &"walk_e",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6ekok")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_6ekok")
+}],
+"loop": true,
+"name": &"walk_n",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6ekok")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_6ekok")
+}],
+"loop": true,
+"name": &"walk_s",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6ekok")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_6ekok")
+}],
+"loop": true,
+"name": &"walk_w",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gtklh"]
+radius = 7.00206
+height = 65.9979
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gtklh"]
+radius = 72.1734
+
+[node name="npc" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(3, -1)
+scale = Vector2(0.480936, 0.481872)
+sprite_frames = SubResource("SpriteFrames_y6ljr")
+animation = &"walk_w"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 39)
+rotation = 1.57183
+shape = SubResource("CapsuleShape2D_gtklh")
+
+[node name="chat_detection" type="Area2D" parent="."]
+script = ExtResource("2_2siyl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chat_detection"]
+position = Vector2(1, 14)
+shape = SubResource("CircleShape2D_gtklh")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="chat_detection" to="chat_detection" method="_on_body_entered"]

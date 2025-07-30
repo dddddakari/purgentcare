@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bps2i2ug5faaa"]
+
+[ext_resource type="Texture2D" uid="uid://hgl4tfe0esqf" path="res://assets/npcs/yosef.webp" id="1_t3pjo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3bl37"]
+radius = 26.8328
+
+[node name="Yosef" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-5, 0)
+scale = Vector2(0.178, 0.156646)
+texture = ExtResource("1_t3pjo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 5)
+shape = SubResource("CircleShape2D_3bl37")

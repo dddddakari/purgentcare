@@ -1,0 +1,68 @@
+{
+	"items": [
+		{
+			"name": "Wine",
+			"quantity": 1,
+			"texture": "res://assets/icons/Food/Wine.png",
+			"item_type": 2,
+			"description": "A fine bottle of wine that restores health and spirits.",
+			"can_use": true,
+			"can_stack": true,
+			"max_stack_size": 10,
+			"health_restore": 20,
+			"is_quest_item": false,
+			"rarity": "Uncommon",
+			"value": 50
+		},
+		{
+			"name": "Shrimp",
+			"quantity": 39,
+			"texture": "res://assets/icons/Food/Shrimp.png",
+			"item_type": 1,
+			"description": "Fresh cooked shrimp that provides nourishment and health.",
+			"can_use": true,
+			"can_stack": true,
+			"max_stack_size": 20,
+			"health_restore": 30,
+			"is_quest_item": false,
+			"rarity": "Common",
+			"value": 25
+		},
+		{
+			"name": "Cookie",
+			"quantity": 5,
+			"texture": "res://assets/icons/Food/Cookie.png",
+			"item_type": 1,
+			"description": "Yummy Cookies! Chocolate Chip is Pen's Favourite.",
+			"can_use": true,
+			"can_stack": true,
+			"max_stack_size": 20,
+			"health_restore": 50,
+			"is_quest_item": false,
+			"rarity": "Rare",
+			"value": 100
+		},
+		{
+			"name": "Magic Bread",
+			"quantity": 8,
+			"texture": "res://assets/icons/Food/Bread.png",
+			"item_type": 1,
+			"description": "Enchanted bread that provides excellent nourishment.",
+			"can_use": true,
+			"can_stack": true,
+			"max_stack_size": 20,
+			"health_restore": 40,
+			"is_quest_item": false,
+			"rarity": "Uncommon",
+			"value": 30
+		},
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null
+	]
+}

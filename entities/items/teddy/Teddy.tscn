@@ -1,0 +1,29 @@
+[gd_scene load_steps=8 format=3 uid="uid://vmx6bj5ti0r4"]
+
+[ext_resource type="Script" uid="uid://fi1ounbfrv2s" path="res://entities/items/teddy/teddy.gd" id="1_oqcju"]
+[ext_resource type="Texture2D" uid="uid://cpsnmi057kdyq" path="res://assets/items_hospital/teddy.png" id="2_qn0af"]
+[ext_resource type="Shader" uid="uid://dto2di2cjda4x" path="res://entities/items/teddy/Teddy.gdshader" id="2_tir87"]
+[ext_resource type="PackedScene" uid="uid://balrieb8xarpl" path="res://systems/interactionsystem/interactable.tscn" id="3_tir87"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h3sj1"]
+shader = ExtResource("2_tir87")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h3sj1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5ckfk"]
+radius = 19.0263
+
+[node name="Teddy" type="Area2D"]
+script = ExtResource("1_oqcju")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_h3sj1")
+texture = ExtResource("2_qn0af")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_h3sj1")
+
+[node name="interactable" parent="." instance=ExtResource("3_tir87")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable"]
+shape = SubResource("CircleShape2D_5ckfk")

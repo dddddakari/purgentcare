@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://bpqmipk5q3spb"]
+
+[ext_resource type="Texture2D" uid="uid://clpsr40dt38ry" path="res://assets/misc/Love_Letter.png" id="1_8s886"]
+[ext_resource type="Script" uid="uid://b13mywifsr7il" path="res://entities/items/loveletter/loverletter.gd" id="1_vrikg"]
+[ext_resource type="PackedScene" uid="uid://balrieb8xarpl" path="res://systems/interactionsystem/interactable.tscn" id="2_vqw6w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8s886"]
+size = Vector2(26, 25)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vrikg"]
+radius = 82.1184
+
+[node name="Loverletter" type="Area2D"]
+scale = Vector2(0.487168, 0.491936)
+script = ExtResource("1_vrikg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, 1)
+scale = Vector2(0.25625, 0.25625)
+texture = ExtResource("1_8s886")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0.5)
+shape = SubResource("RectangleShape2D_8s886")
+disabled = true
+
+[node name="interactable" parent="." instance=ExtResource("2_vqw6w")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable"]
+shape = SubResource("CircleShape2D_vrikg")
