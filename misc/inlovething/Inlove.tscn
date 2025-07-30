@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://ds2077g2u7d5"]
+
+[ext_resource type="PackedScene" uid="uid://balrieb8xarpl" path="res://systems/interactionsystem/interactable.tscn" id="1_2ksfk"]
+[ext_resource type="Script" uid="uid://dt4ryfmgy0xhd" path="res://scenes/hospital/f1_rooms_area/Bathroom/inlove.gd" id="1_vwjug"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vwjug"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mvagn"]
+radius = 113.442
+
+[node name="Inlove" type="Area2D"]
+script = ExtResource("1_vwjug")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_vwjug")
+
+[node name="interactable" parent="." instance=ExtResource("1_2ksfk")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable"]
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_mvagn")
