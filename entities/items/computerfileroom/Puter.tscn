@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4euslbhl7i1u"]
+
+[ext_resource type="PackedScene" uid="uid://balrieb8xarpl" path="res://systems/interactionsystem/interactable.tscn" id="1_33ceh"]
+[ext_resource type="Script" uid="uid://d2la2avcof2mn" path="res://entities/items/computerfileroom/puter.gd" id="1_nfcaf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ocafa"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_33ceh"]
+radius = 22.0227
+
+[node name="Puter" type="Area2D"]
+script = ExtResource("1_nfcaf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ocafa")
+
+[node name="interactable" parent="." instance=ExtResource("1_33ceh")]
+position = Vector2(-2, -54)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable"]
+position = Vector2(3, 62)
+shape = SubResource("CircleShape2D_33ceh")

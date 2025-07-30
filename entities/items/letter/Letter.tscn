@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://bqfmymrbtgbe6"]
+
+[ext_resource type="Script" uid="uid://brol46wgc17iy" path="res://entities/items/letter/letter.gd" id="1_mr72c"]
+[ext_resource type="Texture2D" uid="uid://d1440o7a1fnwt" path="res://BGassets/TopDownHouse_SmallItems.png" id="2_dv88b"]
+[ext_resource type="PackedScene" uid="uid://balrieb8xarpl" path="res://systems/interactionsystem/interactable.tscn" id="3_78erq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4kv1v"]
+size = Vector2(12, 13)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_miny8"]
+radius = 15.0333
+
+[node name="Letter" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_mr72c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_4kv1v")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_dv88b")
+region_enabled = true
+region_rect = Rect2(33.4815, 19.75, 14.0185, 12.8796)
+
+[node name="interactable" parent="." instance=ExtResource("3_78erq")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable"]
+shape = SubResource("CircleShape2D_miny8")

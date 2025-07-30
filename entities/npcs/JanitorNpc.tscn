@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bk8mgtb0sumsy"]
+
+[ext_resource type="Script" uid="uid://dhpn2pbveacb0" path="res://entities/npcs/janitor.gd" id="1_ninfj"]
+[ext_resource type="Texture2D" uid="uid://ulhyhvs7tsab" path="res://entities/npcs/npcs_sprite/kurimanj.png" id="2_yu2rp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d4fgn"]
+radius = 46.0109
+
+[node name="Janitor" type="Area2D"]
+script = ExtResource("1_ninfj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2, -44)
+scale = Vector2(0.0862312, 0.094375)
+texture = ExtResource("2_yu2rp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -24)
+shape = SubResource("CircleShape2D_d4fgn")

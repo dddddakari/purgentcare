@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://jicmp1ue2x5v"]
+
+[ext_resource type="Texture2D" uid="uid://bthbo8fsd2hbt" path="res://BGassets/TopDownHouse_FurnitureState1.png" id="1_5xtsl"]
+[ext_resource type="Script" uid="uid://b4h05qss4ejbt" path="res://entities/items/fridge/fridge.gd" id="1_rtrvl"]
+[ext_resource type="PackedScene" uid="uid://balrieb8xarpl" path="res://systems/interactionsystem/interactable.tscn" id="3_c5g4t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c5g4t"]
+size = Vector2(26, 55)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ga3xa"]
+radius = 22.0907
+
+[node name="Fridge" type="Area2D"]
+script = ExtResource("1_rtrvl")
+
+[node name="Fridge" type="Sprite2D" parent="."]
+texture = ExtResource("1_5xtsl")
+region_enabled = true
+region_rect = Rect2(32, 192, 30, 64)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_c5g4t")
+
+[node name="interactable" parent="." instance=ExtResource("3_c5g4t")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable"]
+position = Vector2(0, 10)
+shape = SubResource("CircleShape2D_ga3xa")

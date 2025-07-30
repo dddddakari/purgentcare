@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1theyee7bb6k"]
+
+[ext_resource type="Texture2D" uid="uid://bl08hoa1ph3nt" path="res://assets/npcs/zombies.webp" id="1_e744v"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e744v"]
+radius = 10.0499
+
+[node name="HostileZombies" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -0.999999)
+scale = Vector2(0.0985, 0.0896003)
+texture = ExtResource("1_e744v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("CircleShape2D_e744v")

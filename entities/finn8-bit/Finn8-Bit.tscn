@@ -1,0 +1,81 @@
+[gd_scene load_steps=6 format=3 uid="uid://8l53ov4mf11v"]
+
+[ext_resource type="Texture2D" uid="uid://bgac3ohxirg3g" path="res://entities/finn8-bit/finn8-bit.png" id="2_v1ms7"]
+[ext_resource type="PackedScene" uid="uid://balrieb8xarpl" path="res://systems/interactionsystem/interactable.tscn" id="3_v1ms7"]
+
+[sub_resource type="GDScript" id="GDScript_2d8fw"]
+script/source = "extends CharacterBody2D
+
+const SPEED = 200
+var current_dir = \"none\"
+var can_move = true
+
+func _ready():
+	add_to_group(\"player\")
+
+func set_movement_enabled(enabled: bool) -> void:
+	can_move = enabled
+	print(\"set_movement_enabled called with:\", enabled)
+	if not enabled:
+		velocity = Vector2.ZERO
+		move_and_slide()
+
+func _physics_process(delta):
+	player_movement(delta)
+
+func player_movement(delta):
+	if not can_move:
+		return
+
+	if Input.is_action_pressed(\"ui_right\"):
+		current_dir = \"right\"
+		velocity.x = SPEED
+		velocity.y = 0
+	elif Input.is_action_pressed(\"ui_left\"):
+		current_dir = \"left\"
+		velocity.x = -SPEED
+		velocity.y = 0
+	elif Input.is_action_pressed(\"ui_down\"):
+		current_dir = \"down\"
+		velocity.y = SPEED
+		velocity.x = 0
+	elif Input.is_action_pressed(\"ui_up\"):
+		current_dir = \"up\"
+		velocity.y = -SPEED
+		velocity.x = 0
+	else: 
+		velocity = Vector2.ZERO
+	
+	move_and_slide()
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v1ms7"]
+size = Vector2(17, 36)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_66hk4"]
+size = Vector2(16.5, 35)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(-31, 125)
+script = SubResource("GDScript_2d8fw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-9, -9.5)
+scale = Vector2(4.5, 4.4375)
+texture = ExtResource("2_v1ms7")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(5, -22)
+shape = SubResource("RectangleShape2D_v1ms7")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(4, -20)
+zoom = Vector2(3, 3)
+
+[node name="interactable" parent="." instance=ExtResource("3_v1ms7")]
+position = Vector2(5, -21)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_66hk4")

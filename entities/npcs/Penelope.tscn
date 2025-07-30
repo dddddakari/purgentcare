@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://718yx8jykyi5"]
+
+[ext_resource type="Texture2D" uid="uid://b1gj43uvdb68q" path="res://assets/npcs/peneope.png" id="1_6snte"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_10rme"]
+radius = 8.06226
+
+[node name="Penelope" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, -3)
+scale = Vector2(0.0113439, 0.00928278)
+texture = ExtResource("1_6snte")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("CircleShape2D_10rme")

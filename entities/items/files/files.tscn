@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://cydwkmkrwkohc"]
+
+[ext_resource type="Texture2D" uid="uid://svyjysuaajwx" path="res://assets/items_hospital/files.png" id="1_q3jps"]
+[ext_resource type="PackedScene" uid="uid://balrieb8xarpl" path="res://systems/interactionsystem/interactable.tscn" id="2_8vbnn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_37a6p"]
+size = Vector2(261.813, 179.579)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8vbnn"]
+radius = 74.9569
+
+[node name="Files" type="Area2D"]
+position = Vector2(-2, -1)
+scale = Vector2(0.507996, 0.417642)
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(-31, 26)
+rotation = -0.368591
+texture = ExtResource("1_q3jps")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(37, 42)
+rotation = -0.195045
+texture = ExtResource("1_q3jps")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-10, 7)
+rotation = -0.368591
+texture = ExtResource("1_q3jps")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(20, 9)
+rotation = 0.339186
+texture = ExtResource("1_q3jps")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(-4, 32)
+rotation = -0.140111
+texture = ExtResource("1_q3jps")
+
+[node name="interactable" parent="." instance=ExtResource("2_8vbnn")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable"]
+position = Vector2(0.984249, 65.8458)
+shape = SubResource("RectangleShape2D_37a6p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.96852, 16.7607)
+shape = SubResource("CircleShape2D_8vbnn")
