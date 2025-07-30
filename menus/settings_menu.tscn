@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://drh77lyyehqep"]
+
+[ext_resource type="Texture2D" uid="uid://c4lc22awddbqt" path="res://assets/button/settings_menu.PNG" id="1_83qjl"]
+[ext_resource type="Script" uid="uid://8xaqgjmxmkmk" path="res://menus/settings_menu.gd" id="1_i7r6j"]
+[ext_resource type="Texture2D" uid="uid://do01g1ul4webi" path="res://assets/button/RESUME.PNG" id="2_n4a8d"]
+[ext_resource type="Texture2D" uid="uid://bxsxc0wjexbrx" path="res://assets/button/MAINMENU.PNG" id="3_7h2wy"]
+[ext_resource type="Texture2D" uid="uid://b4sk3kch3qxpf" path="res://assets/button/CREDITS.PNG" id="4_7h2wy"]
+[ext_resource type="Texture2D" uid="uid://stwgt2xgh8lt" path="res://assets/button/PLAY.PNG" id="5_f368g"]
+[ext_resource type="Texture2D" uid="uid://ddlar8v85j414" path="res://assets/button/IMG_6037.PNG" id="6_qiwpd"]
+
+[node name="SettingsMenu" type="Node2D"]
+scale = Vector2(0.230078, 0.212376)
+script = ExtResource("1_i7r6j")
+
+[node name="Menu" type="Sprite2D" parent="."]
+position = Vector2(2, -9)
+texture = ExtResource("1_83qjl")
+
+[node name="RESUME" type="TextureButton" parent="."]
+offset_left = -413.0
+offset_top = -424.0
+offset_right = 419.0
+offset_bottom = 408.0
+texture_normal = ExtResource("2_n4a8d")
+
+[node name="MAIN MENU" type="TextureButton" parent="."]
+offset_left = -413.0
+offset_top = -424.0
+offset_right = 419.0
+offset_bottom = 408.0
+texture_normal = ExtResource("3_7h2wy")
+
+[node name="CREDITS" type="TextureButton" parent="."]
+offset_left = -300.0
+offset_top = 15.0
+offset_right = 532.0
+offset_bottom = 847.0
+scale = Vector2(0.907125, 1.01888)
+texture_normal = ExtResource("4_7h2wy")
+
+[node name="volume" type="TextureButton" parent="."]
+offset_left = -416.0
+offset_top = -425.0
+offset_right = 416.0
+offset_bottom = 407.0
+texture_normal = ExtResource("5_f368g")
+
+[node name="EXIT" type="TextureButton" parent="."]
+offset_left = -521.0
+offset_top = -123.0
+offset_right = 434.0
+offset_bottom = 709.0
+scale = Vector2(1.24152, 0.987571)
+texture_normal = ExtResource("6_qiwpd")
