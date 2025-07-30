@@ -1,0 +1,29 @@
+[
+	{
+			"id": "FinnSneaky",
+		"name": "Finneas",
+		"text": "(The Nurse's keycard might work on this door should i try it?)",
+		"options": [
+			{"text": "Well Yeah, might aswell", "next_id": "Try_It"},
+			{"text": "No don't wanna", "next_id": "Oh"}
+		]
+	},
+	{
+		"id": "Try_It",
+		"name": "Finneas",
+		"text": "(IT WORKS!)",
+		"next_id": "going_through"
+	},
+	{
+		"id": "going_through",
+		"action": "change_scene",
+		"scene_path": "res://scenes/hospital/f1_rooms_area/Fileroom/FileRoom.tscn",
+		"text": "None"
+	},
+	{
+		"id": "Oh",
+		"name": "Finneas",
+		"text": "I need to find Penelope, this isn't any of my business.",
+		"next_id": "None"
+	}
+]

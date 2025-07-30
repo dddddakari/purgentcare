@@ -1,0 +1,8 @@
+[
+	{
+		"id": "default",
+		"name": "Nurse",
+		"text": "Have you seen the janitor? I need to speak with him...",
+		"next_id": "None"
+	}
+]

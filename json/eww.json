@@ -1,0 +1,13 @@
+[
+	{
+		"id": "FinnNosey",
+		"name": "Nurse And Janitor",
+		"text": "*Flirty Whispers and Giggles*",
+		"next_id": "Gross",
+	},
+	{
+		"id": "Gross",
+		"name": "Finneas",
+		"text": "(Gross... maybe I shouldn't be here.)"
+	}
+]

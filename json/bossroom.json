@@ -1,0 +1,47 @@
+[
+  {
+	"id": "boss_door",
+	"name": "Finneas",
+	"text": "(The door is unnaturally heavy and reinforced.. I also hear sounds of struggle behind it?)",
+	"next_id": "warning"
+  },
+	{
+	"id": "warning",
+	"name": "",
+	"text": "WARNING, this is an end game choice! Once you enter, you can NOT exit",
+	"next_id": "official_decision"
+	},
+	{
+		"id": "official_decision",
+		"name": "Finneas",
+		"text": "... Should I go through?",
+		"options": [
+		  {
+			"text": "Enter",
+			"next_id": "enter_decision",
+		  },
+		  {
+			"text": "Turn Back.",
+			"next_id": "leave_decision",
+		  }
+		]	
+	},
+	{
+		"id": "enter_decision",
+		"name": "",
+		"text": "(With a shaky sigh, Finneas enters the room, revealing...)",
+		"next_id": "boss_encounter"
+  },
+  {
+	"id": "leave_decision",
+	"name": "Finneas",
+	"text": "Im not ready...",
+	"next_id": "none"
+  },
+  {
+	"id": "boss_encounter",
+	"action": "change_scene",
+	"scene_path": "res://scenes/hospital/f2_boss_room/final_boss_room.tscn",
+	"next_id": "none"
+  },
+]

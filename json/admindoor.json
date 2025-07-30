@@ -1,0 +1,29 @@
+[
+  {
+	"id": "AdminDoorPrompt",
+	"name": "Finneas",
+	"text": "(This admin door looks important... should I try entering?)",
+	"options": [
+	  {"text": "Yes, check it out", "next_id": "AttemptEntry"},
+	  {"text": "No, stay focused", "next_id": "LeaveIt"}
+	]
+  },
+  {
+	"id": "AttemptEntry",
+	"name": "Finneas",
+	"text": "(The code works! This must be where they keep sensitive records...)",
+	"next_id": "EnterAdmin"
+  },
+  {
+	"id": "EnterAdmin",
+	"action": "change_scene",
+	"scene_path": "res://scenes/hospital/f1_rooms_area/Adminroom/AdminRoom.tscn",
+	"text": "None"
+  },
+  {
+	"id": "LeaveIt",
+	"name": "Finneas",
+	"text": "I should focus on finding Clara first.",
+	"next_id": "None"
+  }
+]

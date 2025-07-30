@@ -1,0 +1,58 @@
+[
+	{
+		"id": "closet_start",
+		"name": "",
+		"text": "*door opens*",
+		"next_id": "2"
+	},
+	{
+		"id": "2",
+		"name": "Finneas",
+		"text": "(I wonder who it is.. I gotta be quiet for a bit.)",
+		"next_id": "3"
+	},
+	{
+		"id": "3",
+		"name": "Voice 1",
+		"text": "WHERE THE HELL IS SHE?!?",
+		"next_id": "4"
+	},
+	{
+		"id": "4",
+		"name": "Voice 2",
+		"text": "I'm terribly sorry sir, I was preoccupied with something and didn't check.. I apologize for my carelessness",
+		"next_id": "5"
+	},
+	{
+		"id": "5",
+		"name": "Voice 1",
+		"text": "YOU USELESS PIECE OF GARBAGE, HOW COULD YOU-"
+	},
+	{
+		"name": "Voice 1",
+		"text": "Whatever. Go and alert the Receptionist. Lock down the whole hospita-",
+		"next_id": "7"
+	},
+	{
+		"id": "7",
+		"name": "",
+		"text": "*clank*"
+	},
+	{
+		"name": "Voice 1",
+		"text": "What was that noise?",
+		"next_id": "8"
+	},
+	{
+		"id": "8",
+		"name": "Finneas",
+		"text": "(Oh no.... I hear them getting closer..)",
+		"next_id": "minigame_start"
+	},
+	{
+		"id": "minigame_start",
+		"action": "change_scene",
+		"scene_path": "res://minigames/heartbeat/Heartbeat_Map.tscn",
+		"next_id": "end"
+	},
+]

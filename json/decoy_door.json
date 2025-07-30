@@ -1,0 +1,22 @@
+[
+	{
+		"id": "door_start",
+		"name": "",
+		"text": ".......",
+		"next_id": "finn_response"
+	},
+	{
+		"id": "finn_response",
+		"name": "Finneas",
+		"text": "(Should I go in this door?)",
+		"options": [
+		  { "text": "Yes", "next_id": "open_door" },
+		  { "text": "No, I should check the other doors first.", "next_id": "leave" }
+		]
+  	},
+	{
+		"id": "open_door",
+		"action": "change_scene",
+		"scene_path": "",
+	},
+]

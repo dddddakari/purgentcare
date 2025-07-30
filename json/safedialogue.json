@@ -1,0 +1,33 @@
+[
+  {
+	"id": "start",
+	"name": "Finneas",
+	"text": "There's a safe here. Looks like it's unlocked...",
+	"options": [
+	  { "text": "Open it", "next_id": "open_safe" },
+	  { "text": "Leave it alone", "next_id": "leave_it" }
+	]
+  },
+  {
+	"id": "open_safe",
+	"name": "Finneas",
+	"text": "There's a document inside... 'Patient Transfer: Penelope O'Dessa to Basement Wubg, Room B01. Special condition: Do not disturb after 8PM.'",
+	"next_id": "remember_info" 
+  },
+{
+  "id": "remember_info",
+  "name": "Finneas",
+  "text": "Pen... that's my sister! She's in the basement... !",
+  "next_id": "found_info" 
+},
+{
+  "id": "found_info",
+  "name": "Finneas",
+  "text": "(I need to get to the basement to find Pen...)",
+},
+  {
+	"id": "leave_it",
+	"name": "Finneas",
+	"text": "Probably best not to mess with hospital property."
+  }
+]

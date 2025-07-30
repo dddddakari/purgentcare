@@ -1,0 +1,14 @@
+[
+	{
+		"id": "pengame_start",
+		"name": "",
+		"text": "*footsteps*",
+		"next_id": "2"
+	},
+	{
+		"id": "2",
+		"name": "Finneas",
+		"text": "(Oh no.. I hear footsteps outside... I gotta find somewhere to hide)",
+		"next_id": "3"
+	},
+]

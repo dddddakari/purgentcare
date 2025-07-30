@@ -1,0 +1,22 @@
+[
+  {
+	"id": "start",
+	"name": "Finneas",
+	"text": "What should I do?",
+	"options": [
+	  { "text": "Sneak In?", "next_id": "teleport" },
+	  { "text": "Nuh Uh", "next_id": "stay_here" }
+	]
+  },
+  {
+	"id": "stay_here",
+	"name": "Finneas",
+	"text": "No, I think I can Convince The Receptionist"
+  },
+  {
+	"id": "teleport",
+	"name": "Finneas",
+	"action": "change_scene",
+	"scene_path": "res://minigames/maze/MazeUI.tscn"
+  }
+]

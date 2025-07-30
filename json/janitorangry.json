@@ -1,0 +1,27 @@
+[
+	{
+		"id": "door_start",
+		"name": "",
+		"text": ".......",
+		"next_id": "angryjan_opening"
+	},
+	{
+		"id": "angryjan_opening",
+		"name": "Janitor",
+		"text": "What the hell...? Did you do this?",
+		"options": [
+		  { "text": "No (Lie)", "next_id": "SadJanitor" },
+		  { "text": "Yes (Truth)", "next_id": "AngyJan" }
+		]
+  	},
+	{
+		"id": "SadJanitor",
+		"text": ".. I believe you, just get out of here kid.",
+		"next_id": "Saja Boys"
+	},
+	{
+		"id":"AngyJan",
+		"text":"Why the hell would you do that? You lit- Nevermind, just leave. I gotta clean this mess",
+		"next_id": "Huntrix"
+	}
+]

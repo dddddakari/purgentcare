@@ -1,0 +1,17 @@
+[
+  {
+		"id": "start",
+		"name": "Finneas",
+		"text": "(The start of a new hallway... it looks dark.)",
+		"options": [
+			{"text": "Try to open it", "next_id": "teleport"},
+			{"text": "Leave it be", "next_id": "access_denied"}
+		],
+  },
+  {
+	"id": "teleport",
+	"name": "Finneas",
+	"action": "change_scene",
+	"scene_path": "res://scenes/hospital/f1_security/SecurityArea.tscn"
+  }
+]

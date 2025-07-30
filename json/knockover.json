@@ -1,0 +1,34 @@
+[
+	{
+		"id": "FinnNosey",
+		"name": "Finneas",
+		"text": "(The nurse doesn't seem to be looking... should I knock this cabinet over as a distraction?)",
+		"options": [
+			{"text": "KNOCK IT OVER", "next_id": "bad_ending_vro"},
+			{"text": "No, there must be a better way...", "next_id": "Look_for_Love"}
+		]
+	},
+	{
+		"id": "bad_ending_vro",
+		"name": "Finneas",
+		"text": "(With a loud CRASH, the cabinet topples over! The nurse jumps in surprise.)",
+		"next_id": "bad_ending_action"
+	},
+	{
+		"id": "bad_ending_action",
+		"action": "complete_quest_bad",
+		"next_id": "bad_ending_scene"
+	},
+	{
+		"id": "bad_ending_scene",
+		"action": "change_scene",
+		"scene_path": "res://scenes/hospital/f1_rooms_area/Room_AreaCabinetSpilled.tscn",
+		"text": ""
+	},
+	{
+		"id": "Look_for_Love",
+		"name": "Finneas",
+		"text": "Hmm... I wonder why the Nurse is always looking for the Janitor? Maybe there's a better way...",
+		"next_id": "None"
+	}
+]

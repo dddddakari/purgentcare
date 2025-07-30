@@ -1,0 +1,32 @@
+[
+  {
+	"id": "JanitorIntercept",
+	"name": "Janitor",
+	"text": "Wait... I don't think you're supposed to be here",
+	"options": [
+	  {
+		"text": "Use an Excuse",
+		"next_id": "game_continue",
+	  },
+	  {
+		"text": "Ignore and Try to walk past him confidently",
+		"next_id": "game_end",
+		"points": { "good": 0, "bad": 1 }
+	  }
+	]
+  },
+  {
+	"id": "game_continue",
+	"name": "Janitor",
+	"text": "Oh The bathroom? Be my guest!",
+	"next_id": "none"
+  },
+  {
+	"id": "game_end",
+	"name": "Receptionist",
+	"text": "Uh No Way Kid, SECURITY.",
+	"action": "change_scene",
+	"scene_path": "res://scenes/outside/Receptionist.tscn",
+	"next_id": "none"
+  }
+]
