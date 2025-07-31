@@ -19,18 +19,6 @@ region_rect = Rect2(32, 192, 30, 64)
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_c5g4t")
 
-[node name="interactable" parent="."]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
-script = null
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable"]
+[node name="interactable#CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2(0, 10)
 shape = SubResource("CircleShape2D_ga3xa")
