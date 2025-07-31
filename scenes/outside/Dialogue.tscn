@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=3 uid="uid://dihmncmu3hwns"]
+
+[ext_resource type="Script" uid="uid://v53nmmmukcug" path="res://systems/dialoguesystem/DialoguePlayer.gd" id="1_4u0ds"]
+[ext_resource type="Texture2D" uid="uid://dhk6gwfdikkme" path="res://assets/dialogue_box.png" id="2_71t4a"]
+
+[node name="Dialogue" type="CanvasLayer"]
+script = ExtResource("1_4u0ds")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+offset_left = 274.0
+offset_top = 1255.0
+offset_right = 1721.0
+offset_bottom = 1477.0
+texture = ExtResource("2_71t4a")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="name" type="RichTextLabel" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = -75.0
+offset_right = 428.0
+offset_bottom = -6.0
+theme_override_font_sizes/normal_font_size = 40
+text = "Name"
+fit_content = true
+scroll_active = false
+
+[node name="text" type="RichTextLabel" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 20.0
+offset_right = 1424.0
+offset_bottom = 201.0
+theme_override_font_sizes/normal_font_size = 30
+text = "Dialogue Text blah "
+fit_content = true
+scroll_active = false
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.4
+
+[node name="Options" type="VBoxContainer" parent="."]
+offset_left = 737.0
+offset_top = 244.0
+offset_right = 1043.0
+offset_bottom = 483.0
+
+[node name="SampleButton" type="Button" parent="Options"]
+layout_mode = 2
+text = "Sample Button"
+
+[node name="SampleButton2" type="Button" parent="Options"]
+layout_mode = 2
+text = "Sample Button"

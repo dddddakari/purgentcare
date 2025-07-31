@@ -1,0 +1,5 @@
+[
+	{"name": "plunger", "atk": 15},
+	{"name": "old_syringe", "atk": 8},
+	{"name": "magic_wand", "atk": 100}
+]

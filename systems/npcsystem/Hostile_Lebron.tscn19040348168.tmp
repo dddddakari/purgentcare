@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=3 uid="uid://bxxq6psd6bhwx"]
+
+[ext_resource type="Texture2D" uid="uid://dncg1rrqy45e7" path="res://assets/npcs/NPC.jpg" id="1_7k7pf"]
+[ext_resource type="Script" uid="uid://uvaa25nd6iqg" path="res://systems/npcsystem/npc_hostile.gd" id="1_sw0jy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8x4hh"]
+radius = 64.846
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8x4hh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7k7pf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_7k7pf")
+}],
+"loop": true,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7k7pf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_7k7pf")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7k7pf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_7k7pf")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="HostileLebron" type="CharacterBody2D"]
+script = ExtResource("1_sw0jy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(72, 8)
+shape = SubResource("CircleShape2D_8x4hh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(75.9942, 9.42664)
+rotation = 0.000111889
+scale = Vector2(0.0982557, 0.244947)
+sprite_frames = SubResource("SpriteFrames_8x4hh")
+animation = &"idle"
+frame_progress = 0.237216
