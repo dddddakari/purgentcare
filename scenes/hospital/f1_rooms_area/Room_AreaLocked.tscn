@@ -131,19 +131,6 @@ polygon = PackedVector2Array(215, 140, 211, 603, 1125, 616, 1112, 112, 267, 121,
 
 [node name="ContainerCanvas" type="CanvasLayer" parent="."]
 
-[node name="InventoryScreen" parent="ContainerCanvas"]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
-visible = false
-script = null
-
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(287, 189)
 
