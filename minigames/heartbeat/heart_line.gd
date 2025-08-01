@@ -24,5 +24,5 @@ func _input(event: InputEvent) -> void:
 			print("fail")
 
 func game_pass():
-	if score == 5:
+	if score == 10:
 		get_tree().change_scene_to_file.call_deferred("res://scenes/hospital/b_rooms/penelope_room/PenelopeRoomLocked.tscn")

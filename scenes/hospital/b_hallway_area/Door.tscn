@@ -12,7 +12,11 @@ radius = 18.0
 [node name="Door" type="Area2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.25, 0)
+scale = Vector2(1.46875, 1.3)
 texture = ExtResource("1_wkhxp")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 5.85324)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -0.5)
