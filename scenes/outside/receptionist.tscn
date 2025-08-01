@@ -1,6 +1,4 @@
-
 [gd_scene load_steps=22 format=4 uid="uid://eiugeqvbddnx"]
-
 
 [ext_resource type="TileSet" uid="uid://3u7x6qwnbj0a" path="res://scenes/outside/receptionist.tres" id="1_f1sf5"]
 [ext_resource type="Script" uid="uid://c1k1vgpumw22u" path="res://scenes/outside/receptionist.gd" id="1_kcnfd"]

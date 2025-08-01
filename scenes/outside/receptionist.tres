@@ -1,12 +1,10 @@
-[gd_resource type="TileSet" load_steps=17 format=3 uid="uid://3u7x6qwnbj0a"]
+[gd_resource type="TileSet" load_steps=15 format=3 uid="uid://3u7x6qwnbj0a"]
 
 [ext_resource type="Texture2D" uid="uid://igr6e5jf2xfs" path="res://BGassets/pixil-frame-0 (3).png" id="1_6i1fi"]
 [ext_resource type="Texture2D" uid="uid://bugbxoug022co" path="res://assets/admin_desk.png" id="2_eqhl4"]
 [ext_resource type="Texture2D" uid="uid://b2uquptlc06cw" path="res://BGassets/Room_Builder_Walls_48x48.png" id="3_tqbic"]
 [ext_resource type="Texture2D" uid="uid://bthbo8fsd2hbt" path="res://BGassets/TopDownHouse_FurnitureState1.png" id="3_w8k0g"]
 [ext_resource type="Texture2D" uid="uid://c6m5t6m54akkk" path="res://BGassets/Room_Builder_Walls_16x16.png" id="5_bsnnd"]
-[ext_resource type="Texture2D" uid="uid://dqn8yt1dl4qf4" path="res://scenes/hospital/f1_security/wall.png" id="6_ql3nm"]
-[ext_resource type="Texture2D" uid="uid://5owbwy4wijro" path="res://scenes/hospital/f1_security/realwall.png" id="7_5qd3x"]
 [ext_resource type="Texture2D" uid="uid://vu05n7554rxv" path="res://BGassets/walls.png" id="8_bsnnd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ow7i4"]
@@ -10151,7 +10149,6 @@ texture = ExtResource("5_bsnnd")
 16:19/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tgsg8"]
-texture = ExtResource("6_ql3nm")
 texture_region_size = Vector2i(16, 10)
 0:0/0 = 0
 0:1/0 = 0
@@ -10165,7 +10162,6 @@ texture_region_size = Vector2i(16, 10)
 0:9/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1wfck"]
-texture = ExtResource("7_5qd3x")
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ql3nm"]
