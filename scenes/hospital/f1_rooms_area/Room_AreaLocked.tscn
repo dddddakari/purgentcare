@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://b3ifv2yjd8xr7"]
+[gd_scene load_steps=18 format=4 uid="uid://b3ifv2yjd8xr7"]
 
 [ext_resource type="Script" uid="uid://ynytnyndo86q" path="res://scenes/hospital/f1_rooms_area/rooms_area.gd" id="1_ebyxo"]
 [ext_resource type="TileSet" uid="uid://gubk0tyb1lfj" path="res://BGassets/RoomsArea/Rooms_Area.tres" id="2_5x4xn"]
@@ -10,7 +10,6 @@
 [ext_resource type="Script" uid="uid://duser0rvjm7ur" path="res://entities/items/bathroomdoor/bathroom_doorunpooped.gd" id="8_5x4xn"]
 [ext_resource type="PackedScene" uid="uid://cnt7hrqujimic" path="res://entities/npcs/Nurse.tscn" id="8_lk5v6"]
 [ext_resource type="PackedScene" uid="uid://b1ajd3pr8b3ig" path="res://entities/items/cabinet/Cabinet.tscn" id="9_y8jm5"]
-[ext_resource type="PackedScene" path="res://systems/inventorysystem/InventoryScreen.tscn" id="10_lhveh"]
 [ext_resource type="PackedScene" uid="uid://dklxgwl1bkqaa" path="res://systems/dialoguesystem/Dialogue.tscn" id="11_icrkd"]
 [ext_resource type="PackedScene" uid="uid://bfbh0ln8t5v78" path="res://entities/npcs/Janitor.tscn" id="12_nkgjf"]
 
@@ -132,8 +131,18 @@ polygon = PackedVector2Array(215, 140, 211, 603, 1125, 616, 1112, 112, 267, 121,
 
 [node name="ContainerCanvas" type="CanvasLayer" parent="."]
 
-[node name="InventoryScreen" parent="ContainerCanvas" instance=ExtResource("10_lhveh")]
+[node name="InventoryScreen" parent="ContainerCanvas"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
 visible = false
+script = null
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(287, 189)
