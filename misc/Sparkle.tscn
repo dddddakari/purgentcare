@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://bh23sr8l1f426"]
+
+[ext_resource type="Texture2D" uid="uid://06i2okt2gsk7" path="res://assets/misc/sparkle.png" id="1_oevby"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_etqj0"]
+atlas = ExtResource("1_oevby")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_elurq"]
+atlas = ExtResource("1_oevby")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n63ll"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_etqj0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_elurq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Sparkle" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_n63ll")
+autoplay = "default"
+frame_progress = 0.845399
