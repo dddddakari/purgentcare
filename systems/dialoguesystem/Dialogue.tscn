@@ -1,0 +1,58 @@
+[gd_scene load_steps=4 format=3 uid="uid://dklxgwl1bkqaa"]
+
+[ext_resource type="Script" uid="uid://v53nmmmukcug" path="res://systems/dialoguesystem/DialoguePlayer.gd" id="1_oah3n"]
+[ext_resource type="Texture2D" uid="uid://dhk6gwfdikkme" path="res://assets/dialogue_box.png" id="1_snqsu"]
+[ext_resource type="PackedScene" uid="uid://dbni2dhbasmnq" path="res://systems/dialoguesystem/Button.tscn" id="3_ck8dn"]
+
+[node name="Dialogue" type="CanvasLayer"]
+script = ExtResource("1_oah3n")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+offset_left = 11.0
+offset_top = 520.0
+offset_right = 1435.0
+offset_bottom = 776.0
+texture = ExtResource("1_snqsu")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="name" type="RichTextLabel" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = -77.0
+offset_right = 443.0
+offset_bottom = -8.0
+theme_override_font_sizes/normal_font_size = 40
+text = "Name"
+fit_content = true
+scroll_active = false
+
+[node name="text" type="RichTextLabel" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 26.0
+offset_right = 1394.0
+offset_bottom = 220.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+text = "Dialogue Text blah "
+fit_content = true
+scroll_active = false
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.4
+
+[node name="Options" type="VBoxContainer" parent="."]
+offset_left = 1093.0
+offset_top = 211.0
+offset_right = 1417.0
+offset_bottom = 414.0
+
+[node name="Button" parent="Options" instance=ExtResource("3_ck8dn")]
+layout_mode = 2
+
+[node name="Button2" parent="Options" instance=ExtResource("3_ck8dn")]
+layout_mode = 2
+text = "sample Button Text njjnsfsjdfnkjsdbfjkbskdjbgkabgkj"

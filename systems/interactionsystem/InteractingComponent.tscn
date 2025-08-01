@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuq3e8q041hyd"]
+
+[ext_resource type="Script" uid="uid://bot4163s5u1s0" path="res://systems/interactionsystem/interactingcomponent.gd" id="1_ew3te"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ew3te"]
+
+[node name="InteractingComponent" type="Node2D"]
+script = ExtResource("1_ew3te")
+
+[node name="InteractRange" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractRange"]
+position = Vector2(39.5, 60.5)
+shape = SubResource("CircleShape2D_ew3te")
+
+[connection signal="area_entered" from="InteractRange" to="." method="_on_interact_range_area_entered"]
+[connection signal="area_exited" from="InteractRange" to="." method="_on_interact_range_area_exited"]
