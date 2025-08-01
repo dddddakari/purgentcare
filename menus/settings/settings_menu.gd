@@ -1,6 +1,6 @@
 extends Node2D
 
-const SettingsScene = preload("res://menus/settings_menu.tscn")
+const SettingsScene = preload("res://menus/settings/settings_menu.tscn")
 
 func _ready() -> void:
 	pass # You might not need this if you're not doing anything in ready

@@ -5,9 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://d24ci1skwk6n2" path="res://assets/button/NEW_GAME.PNG" id="2_lumme"]
 [ext_resource type="Texture2D" uid="uid://bjo7su05273pd" path="res://assets/button/CONTINUE.PNG" id="3_l3mcm"]
 [ext_resource type="Texture2D" uid="uid://becllrjxgayyp" path="res://assets/button/QUIT.PNG" id="5_j0xya"]
-[ext_resource type="AudioStream" uid="uid://q34cii45y5io" path="res://audio/music/SwitchWithMeTheme.wav" id="7_n21s3"]
+[ext_resource type="AudioStream" uid="uid://q34cii45y5io" path="res://menus/settings/SwitchWithMeTheme.wav" id="7_n21s3"]
 [ext_resource type="Texture2D" uid="uid://ccecwl6cmli85" path="res://assets/button/SPEAKER_ON.png" id="8_rfu7b"]
-[ext_resource type="Script" uid="uid://btlohi51um8lb" path="res://audio/music/muteButton.gd" id="9_7ld8a"]
+[ext_resource type="Script" uid="uid://btlohi51um8lb" path="res://menus/settings/muteButton.gd" id="9_7ld8a"]
 
 [node name="StartScreen" type="Node2D"]
 scale = Vector2(0.5, 0.5)
