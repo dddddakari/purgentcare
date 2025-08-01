@@ -1,0 +1,103 @@
+[gd_scene load_steps=20 format=3 uid="uid://dqu34qk6ogv86"]
+
+[ext_resource type="Script" uid="uid://dr55tlji8lyrp" path="res://scenes/bikecutscene/bike.gd" id="1_hgu6w"]
+[ext_resource type="Texture2D" uid="uid://cilih7lirod4k" path="res://scenes/bikecutscene/thelove/sprite_02.png" id="4_ar4jr"]
+[ext_resource type="Texture2D" uid="uid://c7n8n48666fhr" path="res://scenes/bikecutscene/thelove/sprite_03.png" id="5_fdfnn"]
+[ext_resource type="Texture2D" uid="uid://cehep3gvnl2et" path="res://scenes/bikecutscene/thelove/sprite_05.png" id="6_ny66b"]
+[ext_resource type="Texture2D" uid="uid://b7kgssspfgfe" path="res://scenes/bikecutscene/thelove/sprite_06.png" id="7_678uj"]
+[ext_resource type="Texture2D" uid="uid://0v8pm3liakxy" path="res://scenes/bikecutscene/thelove/sprite_07.png" id="8_sj2nk"]
+[ext_resource type="Texture2D" uid="uid://b0cpcks4i8uer" path="res://scenes/bikecutscene/thelove/sprite_08.png" id="9_qqa0i"]
+[ext_resource type="Texture2D" uid="uid://bsco1aoh0xrmx" path="res://scenes/bikecutscene/thelove/sprite_09.png" id="10_uub8x"]
+[ext_resource type="Texture2D" uid="uid://fyfmr751t6md" path="res://scenes/bikecutscene/thelove/sprite_10.png" id="11_x2hgf"]
+[ext_resource type="Texture2D" uid="uid://2tyxaps0fdx" path="res://scenes/bikecutscene/thelove/sprite_11.png" id="12_o81gb"]
+[ext_resource type="Texture2D" uid="uid://5u57r3i8653n" path="res://scenes/bikecutscene/thelove/sprite_12.png" id="13_fv2fy"]
+[ext_resource type="Texture2D" uid="uid://raa3c3chrryi" path="res://scenes/bikecutscene/thelove/sprite_13.png" id="14_vsvm1"]
+[ext_resource type="Texture2D" uid="uid://cessq5biwns08" path="res://scenes/bikecutscene/thelove/sprite_14.png" id="15_mkoov"]
+[ext_resource type="Texture2D" uid="uid://bc5ol3fdmg25v" path="res://scenes/bikecutscene/thelove/sprite_15.png" id="16_gth54"]
+[ext_resource type="Texture2D" uid="uid://bh6oqmracghoa" path="res://scenes/bikecutscene/thelove/sprite_16.png" id="17_ttjup"]
+[ext_resource type="Texture2D" uid="uid://c1o0n115cv4pd" path="res://scenes/bikecutscene/thelove/sprite_17.png" id="18_qbd3w"]
+[ext_resource type="Texture2D" uid="uid://dwr1w51i7foev" path="res://scenes/bikecutscene/thelove/sprite_18.png" id="19_rj7km"]
+[ext_resource type="Texture2D" uid="uid://dqa27303v7qu2" path="res://scenes/bikecutscene/thelove/sprite_19.png" id="20_p8kat"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wx3lb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ar4jr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fdfnn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ny66b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_678uj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_sj2nk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_qqa0i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_uub8x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_x2hgf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_o81gb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_fv2fy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_vsvm1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_mkoov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_gth54")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ttjup")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_qbd3w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_rj7km")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_p8kat")
+}],
+"loop": false,
+"name": &"Bike_Cutscene",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Bike" type="Node2D"]
+script = ExtResource("1_hgu6w")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2682.9, 1769.99)
+scale = Vector2(1.39207, 1.55681)
+sprite_frames = SubResource("SpriteFrames_wx3lb")
+animation = &"Bike_Cutscene"
+
+[node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D"]
+position = Vector2(-52.9062, 1.25983)
+zoom = Vector2(0.2, 0.2)
+
+[node name="InputBlocker" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

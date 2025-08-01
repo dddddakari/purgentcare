@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b8d3qqab2c21t"]
+
+[node name="BadEnding" type="Node2D"]
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 249.0
+offset_top = 98.0
+offset_right = 864.0
+offset_bottom = 336.0
+text = "YOU LOST"

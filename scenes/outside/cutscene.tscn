@@ -1,0 +1,55 @@
+[gd_scene load_steps=4 format=3 uid="uid://bcuuvvkg4intp"]
+
+[ext_resource type="PackedScene" uid="uid://dqm0mk3hhq2c0" path="res://entities/player/player.tscn" id="3_hl3hb"]
+
+[sub_resource type="GDScript" id="GDScript_i0xxk"]
+script/source = "extends Area2D
+
+var entered = false
+
+func _on_body_entered(_body: PhysicsBody2D):
+	entered = true 
+
+func _on_body_exited(_body):
+		entered = false
+
+func _process(_delta):
+	if entered == true: 
+		if Input.is_action_just_pressed(\"interact\"):
+			get_tree().change_scene_to_file(\"res://scenes/kitchen/kitchen01.tscn\")
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hl3hb"]
+size = Vector2(1126, 639)
+
+[node name="Cutscene" type="Node2D"]
+
+[node name="Black" type="Sprite2D" parent="."]
+position = Vector2(497.852, 203)
+scale = Vector2(0.903735, 0.791789)
+
+[node name="Area2D" type="Area2D" parent="."]
+script = SubResource("GDScript_i0xxk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+position = Vector2(582, 331.5)
+shape = SubResource("RectangleShape2D_hl3hb")
+
+[node name="Player" parent="Area2D" instance=ExtResource("3_hl3hb")]
+position = Vector2(498, 188)
+
+[node name="Camera2D2" type="Camera2D" parent="Area2D/Player"]
+position = Vector2(-122, -74)
+scale = Vector2(5, 5)
+anchor_mode = 0
+zoom = Vector2(7, 7)
+limit_left = -25
+limit_top = -25
+limit_right = 1000
+limit_bottom = 1000
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

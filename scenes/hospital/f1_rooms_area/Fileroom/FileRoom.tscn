@@ -1,0 +1,107 @@
+[gd_scene load_steps=12 format=4 uid="uid://qu57swq6c6c"]
+
+[ext_resource type="TileSet" uid="uid://c348q58upmtsm" path="res://rooms.tres" id="1_fvqlo"]
+[ext_resource type="PackedScene" uid="uid://dqm0mk3hhq2c0" path="res://entities/player/player.tscn" id="2_20puf"]
+[ext_resource type="PackedScene" uid="uid://cydwkmkrwkohc" path="res://entities/items/files/files.tscn" id="3_6x235"]
+[ext_resource type="PackedScene" uid="uid://c4260nhp2fa7f" path="res://entities/items/roomdoor/file_room.tscn" id="3_r1gox"]
+[ext_resource type="PackedScene" uid="uid://dklxgwl1bkqaa" path="res://systems/dialoguesystem/Dialogue.tscn" id="4_r1gox"]
+[ext_resource type="Script" uid="uid://b1jx1scc77mhm" path="res://entities/items/files/files.gd" id="7_fqtgs"]
+[ext_resource type="Script" uid="uid://c1ua7o4cdpmkh" path="res://scenes/hospital/f1_rooms_area/Fileroom/fileroomexit.gd" id="8_gpq7r"]
+[ext_resource type="PackedScene" uid="uid://c4euslbhl7i1u" path="res://entities/items/computerfileroom/Puter.tscn" id="8_in7a4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fvqlo"]
+size = Vector2(36, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_20puf"]
+size = Vector2(18.5, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r445n"]
+size = Vector2(10, 15)
+
+[node name="FileRoom" type="Node2D"]
+
+[node name="TileMap Layers" type="Node2D" parent="."]
+position = Vector2(-192, -80)
+scale = Vector2(1.32366, 1.38489)
+
+[node name="Floor" type="TileMapLayer" parent="TileMap Layers"]
+tile_map_data = PackedByteArray("AAAcAA0AAgAAAAIAAAAdAA0AAgABAAIAAAAeAA0AAgACAAIAAAAfAA0AAgAAAAIAAAAgAA0AAgABAAIAAAAhAA0AAgACAAIAAAAcAAsAAgAAAAIAAAAcAAwAAgAAAAMAAAAdAAsAAgABAAIAAAAdAAwAAgABAAMAAAAeAAsAAgACAAIAAAAeAAwAAgACAAMAAAAfAAsAAgAAAAIAAAAfAAwAAgAAAAMAAAAgAAsAAgABAAIAAAAgAAwAAgABAAMAAAAhAAsAAgACAAIAAAAhAAwAAgACAAMAAAAiAAsAAgAAAAIAAAAiAAwAAgAAAAMAAAAjAAsAAgABAAIAAAAjAAwAAgABAAMAAAAkAAsAAgACAAIAAAAkAAwAAgACAAMAAAAiAA0AAgAAAAIAAAAjAA0AAgABAAIAAAAkAA0AAgACAAIAAAAdAA4AAgABAAMAAAAeAA4AAgACAAMAAAAfAA4AAgAAAAMAAAAgAA4AAgABAAMAAAAhAA4AAgACAAMAAAAiAA4AAgAAAAMAAAAjAA4AAgABAAMAAAA=")
+tile_set = ExtResource("1_fvqlo")
+
+[node name="Walls" type="TileMapLayer" parent="TileMap Layers"]
+tile_map_data = PackedByteArray("AAAcAAkAAQAAAAAAAAAcAAoAAQAAAAEAAAAdAAkAAQAAAAAAAAAdAAoAAQAAAAEAAAAeAAkAAQAAAAAAAAAeAAoAAQAAAAEAAAAfAAkAAQAAAAAAAAAfAAoAAQAAAAEAAAAgAAkAAQAAAAAAAAAgAAoAAQAAAAEAAAAhAAkAAQAAAAAAAAAhAAoAAQAAAAEAAAAiAAkAAQAAAAAAAAAiAAoAAQAAAAEAAAAjAAkAAQAAAAAAAAAjAAoAAQAAAAEAAAAkAAkAAQAAAAAAAAAkAAoAAQAAAAEAAAA=")
+tile_set = ExtResource("1_fvqlo")
+
+[node name="WallBlock" type="TileMapLayer" parent="TileMap Layers"]
+tile_map_data = PackedByteArray("AAAhAAoABwAAAAEAAAAhAAsABwAAAAIAAAAiAAkABwABAAAAAAAiAAoABwABAAEAAAAiAAsABwABAAIAAAAfAAkAEgAAAAAAAAAfAAoAEgAAAAEAAAAfAAsAEgAAAAIAAAAgAAkAEgABAAAAAAAgAAoAEgABAAEAAAAgAAsAEgABAAIAAAAeAAkADAAAAAAAAAAeAAoADAAAAAEAAAAeAAsADAAAAAIAAAAcAAkABAAAAAAAAAAcAAoABAAAAAEAAAAcAAsABAAAAAIAAAAdAAkABAABAAAAAAAdAAoABAABAAEAAAAdAAsABAABAAIAAAAjAAkADAAAAAAAAAAjAAoADAAAAAEAAAAjAAsADAAAAAIAAAAkAAoACwAAAAAAAAAkAAsACwAAAAEAAAA=")
+tile_set = ExtResource("1_fvqlo")
+
+[node name="Computer" type="TileMapLayer" parent="TileMap Layers"]
+position = Vector2(171, 37)
+scale = Vector2(0.685848, 0.795595)
+tile_map_data = PackedByteArray("AAAgAAkABgAAAAAAAAAgAAoABgAAAAEAAAAhAAkABgABAAAAAAAhAAoABgABAAEAAAA=")
+tile_set = ExtResource("1_fvqlo")
+
+[node name="bot" type="TileMapLayer" parent="TileMap Layers"]
+position = Vector2(-5.99998, -23)
+tile_map_data = PackedByteArray("AAAgAA0ACQAAAAAAAAAgAA4ACQAAAAEAAAAhAA0ACQABAAAAAAAhAA4ACQABAAEAAAA=")
+tile_set = ExtResource("1_fvqlo")
+
+[node name="top" type="TileMapLayer" parent="TileMap Layers"]
+position = Vector2(-5.28835, 13.7195)
+scale = Vector2(0.999095, 0.85959)
+tile_map_data = PackedByteArray("AAAgAA0ACQAAAAAAAAAgAA4ACQAAAAEAAAAhAA0ACQABAAAAAAAhAA4ACQABAAEAAAA=")
+tile_set = ExtResource("1_fvqlo")
+
+[node name="Player" parent="TileMap Layers" instance=ExtResource("2_20puf")]
+position = Vector2(559.811, 214.457)
+scale = Vector2(0.755479, 0.722081)
+
+[node name="topping" type="TileMapLayer" parent="TileMap Layers"]
+position = Vector2(9.82124, -10.1091)
+scale = Vector2(1.00074, 1.00716)
+tile_map_data = PackedByteArray("AAAfAAwACQAAAAAAAAAgAAwACQABAAAAAAA=")
+tile_set = ExtResource("1_fvqlo")
+
+[node name="Clutter" type="TileMapLayer" parent="."]
+position = Vector2(-190, -110)
+scale = Vector2(1.32366, 1.38489)
+tile_map_data = PackedByteArray("AAAcAA0AEQAAAAAAAAAcAA4AEQAAAAEAAAAkAA0AEAAAAAAAAAAkAA4AEAAAAAEAAAAkAA8AEAAAAAIAAAAkAAoACgAAAAAAAAAkAAsACgAAAAEAAAA=")
+tile_set = ExtResource("1_fvqlo")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(509, 188)
+
+[node name="counters" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-10, 19)
+shape = SubResource("RectangleShape2D_fvqlo")
+
+[node name="cabinet" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-96.25, 11.5)
+shape = SubResource("RectangleShape2D_20puf")
+
+[node name="skeleton" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(74, 27.5)
+shape = SubResource("RectangleShape2D_r445n")
+
+[node name="outside" type="CollisionPolygon2D" parent="StaticBody2D"]
+build_mode = 1
+polygon = PackedVector2Array(-107, -33, 83, -32, 83, 42, 61, 42, 62, 65, -87, 65, -87, 41, -109, 42, -109, -36)
+
+[node name="Dialogue" parent="." instance=ExtResource("4_r1gox")]
+
+[node name="Files" parent="." instance=ExtResource("3_6x235")]
+position = Vector2(500, 187)
+scale = Vector2(0.189133, 0.185764)
+script = ExtResource("7_fqtgs")
+
+[node name="Puter" parent="." instance=ExtResource("8_in7a4")]
+position = Vector2(512, 147)
+
+[node name="AdminRoom" parent="." instance=ExtResource("3_r1gox")]
+position = Vector2(496, 259)
+script = ExtResource("8_gpq7r")
+dialogue_file = "res://json/fileroomexit.json"
+dialogue_player_path = NodePath("/root/FileRoom/Dialogue")
+
+[connection signal="body_entered" from="AdminRoom" to="AdminRoom" method="_on_body_entered"]

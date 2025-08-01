@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqurclr366727"]
+
+[ext_resource type="PackedScene" uid="uid://cavlfqqc5cnml" path="res://entities/npcs/Lebron.tscn" id="1_etc3n"]
+[ext_resource type="Texture2D" uid="uid://b8sevr1yaknu7" path="res://scenes/hospital/b_rooms/jamie_room/jamie.png" id="2_0ocpo"]
+
+[node name="Jamie" instance=ExtResource("1_etc3n")]
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(-0.499998, -17.5)
+scale = Vector2(0.0190909, 0.0249361)
+texture = ExtResource("2_0ocpo")

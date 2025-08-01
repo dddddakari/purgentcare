@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://c773rcy0ot00q"]
+
+[node name="GoodEnding" type="Node2D"]
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_right = 792.0
+offset_bottom = 319.0
+text = "YOU WON!!!
+"

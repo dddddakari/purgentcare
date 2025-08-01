@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://tbo0yarr1v22"]
+
+[ext_resource type="Texture2D" uid="uid://bl1fqv0j6ukd1" path="res://BGassets/RoomsArea/Hospital_Singles_177.png" id="1_wkhxp"]
+[ext_resource type="PackedScene" uid="uid://balrieb8xarpl" path="res://systems/interactionsystem/interactable.tscn" id="2_ou0wf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u6xeq"]
+size = Vector2(18, 29)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kc83k"]
+radius = 18.0
+
+[node name="Door" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_wkhxp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_u6xeq")
+
+[node name="interactable" parent="." instance=ExtResource("2_ou0wf")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable"]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_kc83k")
