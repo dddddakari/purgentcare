@@ -1,0 +1,196 @@
+[gd_scene load_steps=22 format=4 uid="uid://c7m7fi8xqq4q7"]
+
+[ext_resource type="TileSet" uid="uid://3u7x6qwnbj0a" path="res://scenes/outside/receptionist.tres" id="1_f1sf5"]
+[ext_resource type="Script" uid="uid://c1k1vgpumw22u" path="res://scenes/outside/receptionist.gd" id="1_kcnfd"]
+[ext_resource type="Texture2D" uid="uid://bugbxoug022co" path="res://assets/admin_desk.png" id="2_an1l2"]
+[ext_resource type="PackedScene" uid="uid://dvaclcjg42xwn" path="res://entities/npcs/Admin.tscn" id="3_exwjl"]
+[ext_resource type="Script" uid="uid://1i5onfr3rnvk" path="res://entities/npcs/admin.gd" id="4_n0sui"]
+[ext_resource type="Texture2D" uid="uid://b474nd2262k6r" path="res://assets/noFilter.png" id="5_fxqvf"]
+[ext_resource type="Script" uid="uid://brktf8ur54vtd" path="res://scenes/outside/area_2d.gd" id="6_kcnfd"]
+[ext_resource type="PackedScene" uid="uid://dqm0mk3hhq2c0" path="res://entities/player/player.tscn" id="7_nmxwb"]
+[ext_resource type="PackedScene" uid="uid://dklxgwl1bkqaa" path="res://systems/dialoguesystem/Dialogue.tscn" id="8_an1l2"]
+[ext_resource type="AudioStream" uid="uid://q34cii45y5io" path="res://audio/music/SwitchWithMeTheme.wav" id="8_fxqvf"]
+[ext_resource type="Script" uid="uid://c83wm85rle1y5" path="res://scenes/outside/maze_2d.gd" id="9_an1l2"]
+[ext_resource type="Texture2D" uid="uid://ccecwl6cmli85" path="res://assets/button/SPEAKER_ON.png" id="9_kcnfd"]
+[ext_resource type="Script" uid="uid://btlohi51um8lb" path="res://audio/music/muteButton.gd" id="10_nmxwb"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iulj1"]
+texture = ExtResource("2_an1l2")
+0:0/0 = 0
+1:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_a2g0y"]
+sources/0 = SubResource("TileSetAtlasSource_iulj1")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1k55b"]
+radius = 129.355
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i5ocv"]
+size = Vector2(101, 62)
+
+[sub_resource type="GDScript" id="GDScript_i0xxk"]
+script/source = "extends Area2D
+
+var entered = false
+
+func _on_body_entered(_body: PhysicsBody2D):
+	entered = true 
+
+func _on_body_exited(_body):
+		entered = false
+
+func _process(_delta):
+	if entered == true: 
+		if Input.is_action_just_pressed(\"interact\"):
+			get_tree().change_scene_to_file(\"res://scenes/kitchen/kitchen01.tscn\")
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y4gf8"]
+size = Vector2(956.124, 701.049)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_an1l2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_exwjl"]
+size = Vector2(210, 25)
+
+[node name="Hospital" type="Node2D"]
+script = ExtResource("1_kcnfd")
+
+[node name="Layers" type="Node2D" parent="."]
+
+[node name="floor" type="TileMapLayer" parent="Layers"]
+tile_map_data = PackedByteArray("AAAjAA8AAAAEAAUAAAAkAA8AAAABAAUAAAAlAA8AAAACAAUAAAAmAA8AAAADAAUAAAAnAA8AAAAEAAUAAAAoAA8AAAABAAUAAAApAA8AAAACAAUAAAAqAA8AAAADAAUAAAArAA8AAAAEAAUAAAAsAA8AAAABAAUAAAAtAA8AAAACAAUAAAAuAA8AAAADAAUAAAAvAA8AAAAEAAUAAAAjABAAAAAEAAYAACAkABAAAAABAAYAACAlABAAAAACAAYAACAmABAAAAADAAYAACAnABAAAAAEAAYAACAoABAAAAABAAYAACApABAAAAACAAYAACAqABAAAAADAAYAACArABAAAAAEAAYAACAsABAAAAABAAYAACAtABAAAAACAAYAACAuABAAAAADAAYAACAvABAAAAAEAAYAACAjABEAAAAEAAUAACAkABEAAAABAAUAACAlABEAAAACAAUAACAmABEAAAADAAUAACAnABEAAAAEAAUAACAoABEAAAABAAUAACApABEAAAACAAUAACAqABEAAAADAAUAACArABEAAAAEAAUAACAsABEAAAABAAUAACAtABEAAAACAAUAACAuABEAAAADAAUAACAvABEAAAAEAAUAACAjABIAAAAEAAUAAAAjABMAAAAEAAYAAAAjABQAAAAEAAYAACAkABIAAAABAAUAAAAkABMAAAABAAYAAAAkABQAAAABAAYAACAlABIAAAACAAUAAAAlABMAAAACAAYAAAAlABQAAAACAAYAACAmABIAAAADAAUAAAAmABMAAAADAAYAAAAmABQAAAADAAYAACAnABIAAAAEAAUAAAAnABMAAAAEAAYAAAAnABQAAAAEAAYAACAoABIAAAABAAUAAAAoABMAAAABAAYAAAAoABQAAAABAAYAACApABIAAAACAAUAAAApABMAAAACAAYAAAApABQAAAACAAYAACAqABIAAAADAAUAAAAqABMAAAADAAYAAAAqABQAAAADAAYAACArABIAAAAEAAUAAAArABMAAAAEAAYAAAArABQAAAAEAAYAACAsABIAAAABAAUAAAAsABMAAAABAAYAAAAsABQAAAABAAYAACAtABIAAAACAAUAAAAtABMAAAACAAYAAAAtABQAAAACAAYAACAuABIAAAADAAUAAAAuABMAAAADAAYAAAAuABQAAAADAAYAACAvABMAAAAEAAYAAAAvABQAAAAEAAYAACAjABUAAAAEAAUAACAkABUAAAABAAUAACAlABUAAAACAAUAACAmABUAAAADAAUAACAnABUAAAAEAAUAACAoABUAAAABAAUAACApABUAAAACAAUAACAqABUAAAADAAUAACArABUAAAAEAAUAACAsABUAAAABAAUAACAtABUAAAACAAUAACAuABUAAAADAAUAACAvABUAAAAEAAUAACAjABYAAAABAAUAAAAjABcAAAABAAYAAAAjABgAAAABAAcAAAAkABYAAAACAAUAAAAkABcAAAACAAYAAAAkABgAAAACAAcAAAAlABYAAAADAAUAAAAlABcAAAADAAYAAAAlABgAAAADAAcAAAAmABYAAAAEAAUAAAAmABcAAAAEAAYAAAAmABgAAAAEAAcAAAAnABYAAAABAAUAAAAnABcAAAABAAYAAAAnABgAAAABAAcAAAAoABYAAAACAAUAAAAoABcAAAACAAYAAAAoABgAAAACAAcAAAApABYAAAADAAUAAAApABcAAAADAAYAAAApABgAAAADAAcAAAAqABYAAAAEAAUAAAAqABcAAAAEAAYAAAAqABgAAAAEAAcAAAArABYAAAABAAUAAAArABcAAAABAAYAAAArABgAAAABAAcAAAAsABYAAAABAAUAAAAsABcAAAABAAYAAAAsABgAAAABAAcAAAAtABYAAAACAAUAAAAtABcAAAACAAYAAAAtABgAAAACAAcAAAAuABYAAAADAAUAAAAuABcAAAADAAYAAAAuABgAAAADAAcAAAAvABYAAAAEAAUAAAAvABcAAAAEAAYAAAAvABgAAAAEAAcAAAA=")
+tile_set = ExtResource("1_f1sf5")
+
+[node name="Admin" parent="Layers" instance=ExtResource("3_exwjl")]
+position = Vector2(651, 246)
+scale = Vector2(1.49924, 1.53806)
+script = ExtResource("4_n0sui")
+
+[node name="desk" type="TileMapLayer" parent="Layers"]
+position = Vector2(130, -18)
+tile_map_data = PackedByteArray("AAAdABEAAAAAAAAAAAAdABIAAAAAAAEAAAAdABMAAAAAAAIAAAAdABQAAAAAAAMAAAAdABUAAAAAAAQAAAAeABEAAAABAAAAAAAeABIAAAABAAEAAAAeABMAAAABAAIAAAAeABQAAAABAAMAAAAeABUAAAABAAQAAAAfABMAAAACAAIAAAAfABQAAAACAAMAAAAfABUAAAACAAQAAAAgABMAAAADAAIAAAAgABQAAAADAAMAAAAgABUAAAADAAQAAAAhABMAAAAEAAIAAAAhABQAAAAEAAMAAAAhABUAAAAEAAQAAAAiABEAAAAFAAAAAAAiABIAAAAFAAEAAAAiABMAAAAFAAIAAAAiABQAAAAFAAMAAAAiABUAAAAFAAQAAAAjABEAAAAGAAAAAAAjABIAAAAGAAEAAAAjABMAAAAGAAIAAAAjABQAAAAGAAMAAAAjABUAAAAGAAQAAAA=")
+tile_set = SubResource("TileSet_a2g0y")
+
+[node name="Jumpscare" type="Sprite2D" parent="Layers"]
+visible = false
+position = Vector2(506, 468)
+scale = Vector2(0.35, 0.351675)
+texture = ExtResource("5_fxqvf")
+
+[node name="Area2D" type="Area2D" parent="Layers/Jumpscare"]
+script = ExtResource("6_kcnfd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layers/Jumpscare/Area2D"]
+position = Vector2(-0.000174522, 25.5918)
+shape = SubResource("CircleShape2D_1k55b")
+
+[node name="plants" type="TileMapLayer" parent="Layers"]
+position = Vector2(5, -59)
+tile_map_data = PackedByteArray("AAAjABIABAAAAAoAAAAjABMABAAAAAsAAAAuABIABAAAAAoAAAAuABMABAAAAAsAAAA=")
+tile_set = ExtResource("1_f1sf5")
+
+[node name="Desk" type="StaticBody2D" parent="."]
+position = Vector2(565, 475)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Desk"]
+position = Vector2(85, -186)
+shape = SubResource("RectangleShape2D_i5ocv")
+
+[node name="Black" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(575, 380)
+scale = Vector2(1.25398, 1.07066)
+
+[node name="Area2D" type="Area2D" parent="Black"]
+position = Vector2(-5.19031, 94.2249)
+script = SubResource("GDScript_i0xxk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Black/Area2D"]
+visible = false
+position = Vector2(4.57764e-05, 12.1581)
+shape = SubResource("RectangleShape2D_y4gf8")
+
+[node name="Player" parent="." instance=ExtResource("7_nmxwb")]
+position = Vector2(760, 304)
+
+[node name="Camera2D2" type="Camera2D" parent="Player"]
+position = Vector2(-4, -8)
+zoom = Vector2(7, 7)
+
+[node name="BGMusic" type="AudioStreamPlayer2D" parent="Player/Camera2D2"]
+position = Vector2(-275, -73)
+stream = ExtResource("8_fxqvf")
+autoplay = true
+
+[node name="MuteButton" type="TextureButton" parent="Player/Camera2D2"]
+offset_left = 116.0
+offset_top = 59.0
+offset_right = 276.0
+offset_bottom = 219.0
+scale = Vector2(0.203661, 0.188203)
+texture_normal = ExtResource("9_kcnfd")
+script = ExtResource("10_nmxwb")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Player"]
+position = Vector2(-1, 4)
+shape = SubResource("CircleShape2D_an1l2")
+
+[node name="Admin" parent="." instance=ExtResource("8_an1l2")]
+
+[node name="Dialogue" parent="." instance=ExtResource("8_an1l2")]
+
+[node name="Maze" parent="." instance=ExtResource("8_an1l2")]
+
+[node name="Desk area" type="Area2D" parent="."]
+position = Vector2(559, 240)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Desk area"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(570, 277)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(2, 1)
+polygon = PackedVector2Array(-11, -37, -14, 120, 196, 122, 198, -36, 228, -36, 227, 155, -33, 157, -40, -71, 231, -72, 228, -37, 197, -37)
+
+[node name="DialogueTrigger" type="Area2D" parent="."]
+position = Vector2(662, 380)
+script = ExtResource("9_an1l2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogueTrigger"]
+position = Vector2(3, 18.5)
+shape = SubResource("RectangleShape2D_exwjl")
+
+[connection signal="body_entered" from="Layers/Jumpscare/Area2D" to="Layers/Jumpscare/Area2D" method="_on_body_entered"]
+[connection signal="area_shape_entered" from="Black/Area2D" to="Black/Area2D" method="_on_area_shape_entered"]
+[connection signal="area_shape_exited" from="Black/Area2D" to="Black/Area2D" method="_on_area_shape_exited"]
+[connection signal="body_entered" from="DialogueTrigger" to="DialogueTrigger" method="_on_body_entered"]
