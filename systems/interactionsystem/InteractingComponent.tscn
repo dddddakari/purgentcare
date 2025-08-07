@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bot4163s5u1s0" path="res://systems/interactionsystem/interactingcomponent.gd" id="1_ew3te"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ew3te"]
+radius = 15.5724
 
 [node name="InteractingComponent" type="Node2D"]
 script = ExtResource("1_ew3te")
