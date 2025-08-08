@@ -1,6 +1,5 @@
 extends Area2D
 
-signal game_result
 
 @onready var heartbeat_moving: Area2D = $"../HeartbeatMoving"
 var overlap = false
