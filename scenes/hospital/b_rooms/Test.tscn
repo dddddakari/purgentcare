@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://7x7bx3ng2idc"]
+
+[ext_resource type="Script" uid="uid://cs6ef6c50k6m6" path="res://scenes/hospital/b_rooms/director_state.gd" id="1_s3xnv"]
+[ext_resource type="PackedScene" uid="uid://vuwf647juinh" path="res://entities/npcs/FinalDirector.tscn" id="2_jqi5m"]
+[ext_resource type="PackedScene" uid="uid://dqm0mk3hhq2c0" path="res://entities/player/player.tscn" id="3_43xv5"]
+[ext_resource type="PackedScene" uid="uid://dklxgwl1bkqaa" path="res://systems/dialoguesystem/Dialogue.tscn" id="4_43xv5"]
+[ext_resource type="Script" uid="uid://cu4p1r051ittm" path="res://scenes/hospital/b_rooms/area_2d.gd" id="5_obp1q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fbhpy"]
+size = Vector2(142, 87)
+
+[node name="Test" type="Node2D"]
+script = ExtResource("1_s3xnv")
+dialogue_player_path = NodePath("")
+
+[node name="FinalDirector" parent="." instance=ExtResource("2_jqi5m")]
+
+[node name="Player" parent="." instance=ExtResource("3_43xv5")]
+position = Vector2(56, 70)
+
+[node name="Dialogue" parent="." instance=ExtResource("4_43xv5")]
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("5_obp1q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(5, 3)
+shape = SubResource("RectangleShape2D_fbhpy")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

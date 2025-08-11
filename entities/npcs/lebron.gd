@@ -1,7 +1,6 @@
 #ref https://www.youtube.com/watch?v=24hXJnwRim0
 extends CharacterBody2D
 
-var lebron_hostile = false    
 
 @export_node_path("CanvasLayer") var dialogue_player_path : NodePath = "SecurityDialogue"
 

@@ -102,9 +102,6 @@
 	},
 	{
 		"id": "Bad_End_Setup",
-		"name": "System Voice",
-		"text": "LLLLL they losssse.",
-		"action": "conditional_scene_change",
-		"next_id": "None"
+		"action": "start_combat",
 	}
 ]
