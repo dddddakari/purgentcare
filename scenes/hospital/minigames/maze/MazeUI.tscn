@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://gnqqvbdpxyck"]
 
-[ext_resource type="Script" uid="uid://beb07h4cbtw05" path="res://minigames/maze/maze_ui.gd" id="1_m2url"]
+[ext_resource type="Script" uid="uid://beb07h4cbtw05" path="res://scenes/hospital/minigames/maze/maze_ui.gd" id="1_m2url"]
 [ext_resource type="Texture2D" uid="uid://bc0k0n713404e" path="res://assets/maze.png" id="2_m2url"]
 [ext_resource type="Texture2D" uid="uid://cl3xusiebmnb8" path="res://scenes/outside/black.jpg" id="3_a40ik"]
 [ext_resource type="PackedScene" uid="uid://8l53ov4mf11v" path="res://entities/finn8-bit/Finn8-Bit.tscn" id="4_fpce0"]

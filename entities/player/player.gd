@@ -36,7 +36,13 @@ func _on_interaction_area_body_entered(_body):
 func _on_interaction_area_body_exited(body):
 	print("Player exited area:", body.name)
 
+
 func _physics_process(_delta):
+	if not can_move:
+		velocity = Vector2.ZERO
+		return
+
+	velocity = Vector2.ZERO
 	player_movement(_delta)
 	enemy_atk()
 	attack()

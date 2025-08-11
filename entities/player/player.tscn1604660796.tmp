@@ -392,7 +392,7 @@ position = Vector2(-41, -62)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 scale = Vector2(1, 0.8985)
-zoom = Vector2(3, 3)
+zoom = Vector2(7, 7)
 
 [node name="InteractionArea" type="Area2D" parent="." groups=["player"]]
 visible = false

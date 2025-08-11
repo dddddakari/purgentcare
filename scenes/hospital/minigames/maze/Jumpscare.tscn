@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://b2yv832vrigy7" path="res://assets/misc/jumpscare/sprite_16.png" id="17_3fuag"]
 [ext_resource type="Texture2D" uid="uid://8g8jpispo7hh" path="res://assets/misc/jumpscare/sprite_17.png" id="18_cchqr"]
 [ext_resource type="Texture2D" uid="uid://cgetll8mhbvfs" path="res://assets/misc/jumpscare/sprite_18.png" id="19_kwe7g"]
-[ext_resource type="Script" uid="uid://rlgqctn2rwbh" path="res://minigames/maze/jumpscare.gd" id="20_mp0hq"]
+[ext_resource type="Script" uid="uid://rlgqctn2rwbh" path="res://scenes/hospital/minigames/maze/jumpscare.gd" id="20_mp0hq"]
 
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_t8lcq"]

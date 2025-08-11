@@ -96,15 +96,15 @@
 	{
 		"id": "Good_End_Setup",
 		"name": "Yosef",
-		"text": "vro didnt set this up yet",
-		"action": "conditional_scene_change",
+		"text": "Maxim's Setup",
+		"action": "boss_room_scene_change",
 		"next_id": "None"
 	},
 	{
 		"id": "Bad_End_Setup",
 		"name": "System Voice",
-		"text": "LLLLL they losssse.",
-		"action": "conditional_scene_change",
+		"text": "Dakari's Set Up",
+		"action": "boss_room_scene_change",
 		"next_id": "None"
 	}
 ]

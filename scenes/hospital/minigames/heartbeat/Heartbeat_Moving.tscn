@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bycdrnily5wnx"]
 
-[ext_resource type="Script" uid="uid://cvryusv08m12s" path="res://minigames/heartbeat/heartbeat_moving.gd" id="1_ni6ig"]
-[ext_resource type="Texture2D" uid="uid://dwa60ms6gs7qb" path="res://minigames/heartbeat/heart.png" id="2_ni6ig"]
+[ext_resource type="Script" uid="uid://cvryusv08m12s" path="res://scenes/hospital/minigames/heartbeat/heartbeat_moving.gd" id="1_ni6ig"]
+[ext_resource type="Texture2D" uid="uid://dwa60ms6gs7qb" path="res://scenes/hospital/minigames/heartbeat/heart.png" id="2_ni6ig"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ni6ig"]
 radius = 122.119
