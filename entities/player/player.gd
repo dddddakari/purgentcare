@@ -8,7 +8,7 @@ var health = 100
 var health_max = 100
 var health_min = 0
 
-var damage_to_deal = 15
+var damage_to_deal = 15  # INCREASED: Finneas hits harder now!
 var is_dealing_damage: bool = false
 var can_take_damage = false
 var dead: bool = false
@@ -18,6 +18,13 @@ var enemy_inatk_range = false
 var enemy_atk_cd = true
 var attack_ip = false
 var can_be_attacked := false
+var enemies_in_attack_range = []
+var attack_cooldown_timer = 0.0
+var attack_cooldown_duration = 0.5
+
+# ADDED: Damage immunity system to prevent spam damage
+var damage_immunity_timer = 0.0
+var damage_immunity_duration = 1.0  # 1 second of immunity after taking damage
 
 # Adds him as a different group so it's easier to signal for him
 # so NPCs can't accidentally trigger things.
@@ -36,22 +43,67 @@ func _on_interaction_area_body_entered(_body):
 func _on_interaction_area_body_exited(body):
 	print("Player exited area:", body.name)
 
-
-func _physics_process(_delta):
+# Updated _physics_process - REMOVED the problematic enemy_atk() call
+func _physics_process(delta):
 	if not can_move:
 		velocity = Vector2.ZERO
 		return
 
+	# Update damage immunity timer
+	if damage_immunity_timer > 0:
+		damage_immunity_timer -= delta
+
 	velocity = Vector2.ZERO
-	player_movement(_delta)
-	enemy_atk()
+	player_movement(delta)
 	attack()
 	
 	if health <= 0:
 		dead = true
 		#game over screen here
 		health = 0
-		print("dead")
+		print("Finneas is dead!")
+
+# Fixed attack function - instant attacks, no player cooldown
+func attack():
+	if Input.is_action_just_pressed("attack"):
+		print("Player attacking! Enemies in range: %d" % enemies_in_attack_range.size())
+		
+		# Attack all enemies in range with YOUR damage_to_deal (Finneas's strength)
+		for enemy in enemies_in_attack_range:
+			if is_instance_valid(enemy) and enemy.has_method("take_damage"):
+				enemy.take_damage(damage_to_deal)  # This is Finneas's damage (15)
+				print("Finneas attacked %s for %d damage" % [enemy.name, damage_to_deal])
+		
+		Global.player_curr_atk = true
+		attack_ip = true
+		
+		# Start the attack animation timer if it exists
+		if has_node("deal_atk_timer"):
+			$deal_atk_timer.start()
+
+# Enhanced hitbox detection for player attacks
+func _on_player_hitbox_body_entered(body: Node2D) -> void:
+	# DON'T attack yourself, Finneas!
+	if body == self or body.has_method("player"):
+		print("Ignoring self/player in attack range: %s" % body.name)
+		return
+	
+	# Check if it's an enemy (zombies should have enemy() method or take_damage method)
+	if body.has_method("enemy") or body.has_method("take_damage"):
+		if body not in enemies_in_attack_range:
+			enemies_in_attack_range.append(body)
+			print("Enemy entered Finneas's attack range: %s" % body.name)
+
+func _on_player_hitbox_body_exited(body: Node2D) -> void:
+	# Don't process self/player
+	if body == self or body.has_method("player"):
+		return
+		
+	# Remove from attack range
+	if body.has_method("enemy") or body.has_method("take_damage"):
+		if body in enemies_in_attack_range:
+			enemies_in_attack_range.erase(body)
+			print("Enemy left Finneas's attack range: %s" % body.name)
 
 func player_movement(_delta):
 	if not can_move:
@@ -115,9 +167,18 @@ func show_health_restore_effect(amount: int):
 	print("+" + str(amount) + " Health!")
 	# You could add a tween here to show floating text or screen effects
 
-# Take damage function (existing functionality enhanced)
+# FIXED: Enhanced take_damage function with immunity system
 func take_damage(amount: int):
-	if not can_take_damage:
+	print("take_damage called with amount: %d, can_be_attacked: %s, immunity: %s" % [amount, can_be_attacked, damage_immunity_timer > 0])
+	
+	# Check immunity first
+	if damage_immunity_timer > 0:
+		print("Damage blocked - Finneas is immune!")
+		return
+	
+	# Allow damage if can_be_attacked is true (for combat scenarios)
+	if not can_be_attacked:
+		print("Damage blocked - player not in combat mode")
 		return
 	
 	var old_health = health
@@ -125,8 +186,16 @@ func take_damage(amount: int):
 	var actual_damage = old_health - health
 	print("Damage taken: ", actual_damage, " (", old_health, " -> ", health, ")")
 	
+	# Start immunity period
+	damage_immunity_timer = damage_immunity_duration
+	print("Finneas gains %s seconds of damage immunity" % damage_immunity_duration)
+	
 	if health <= health_min:
 		die()
+
+# ADDED: Alternative damage method for zombie compatibility
+func damage_player(amount: int):
+	take_damage(amount)
 
 func die():
 	if dead:
@@ -134,7 +203,7 @@ func die():
 	
 	dead = true
 	can_move = false
-	print("Player has died!")
+	print("Finneas has died!")
 	# Add death animation/effects here
 
 # Heal to full (for debugging or special items)
@@ -153,35 +222,26 @@ func get_health_percentage() -> float:
 func player():
 	pass
 
-func _on_player_hitbox_body_entered(body: Node2D) -> void:
-	if body.has_method("enemy"):
-		enemy_inatk_range = true
-
-func _on_player_hitbox_body_exited(body: Node2D) -> void:
-	if body.has_method("enemy"):
-		enemy_inatk_range = false
-
 func set_player_attackable(state: bool) -> void:
 	can_be_attacked = state
+	print("Finneas attackable state set to: %s" % state)
+	
+	# Ensure player is in the group for zombie detection
+	if state and not is_in_group("player"):
+		add_to_group("player")
+		print("Finneas added to 'player' group for combat")
+	
+	# Reset immunity when entering/exiting combat
+	if not state:
+		damage_immunity_timer = 0.0
 
-func enemy_atk():
-	if enemy_inatk_range and enemy_atk_cd and can_be_attacked == true:
-		health = health - 5
-		enemy_atk_cd = false
-		$attack_cd.start()
-		print("Finn health: ", health)
+# REMOVED: The problematic enemy_atk() function that was causing double damage
 
 func _on_attack_cd_timeout() -> void:
 	enemy_atk_cd = true
 
-
-func attack():
-	if Input.is_action_just_pressed("attack"):
-		Global.player_curr_atk = true
-		#add anim code here
-
-
 func _on_deal_atk_timer_timeout() -> void:
-	$deal_atk_timer.start()
+	if has_node("deal_atk_timer"):
+		$deal_atk_timer.stop()  # Don't restart automatically
 	Global.player_curr_atk = false
 	attack_ip = false

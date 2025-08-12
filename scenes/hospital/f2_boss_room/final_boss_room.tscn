@@ -45,3 +45,9 @@ position = Vector2(492, 327)
 position = Vector2(394, 267)
 
 [node name="Dialogue" parent="." instance=ExtResource("8_x5nku")]
+
+[node name="boss_room_area" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="boss_room_area"]
+build_mode = 1
+polygon = PackedVector2Array(385, 172, 384, 319, 400, 320, 401, 351, 561, 351, 560, 318, 577, 319, 577, 191, 561, 192, 560, 174, 402, 175, 403, 192, 385, 193)

@@ -1,6 +1,6 @@
-[gd_scene load_steps=10 format=4 uid="uid://b7mo8ox06bt6o"]
+[gd_scene load_steps=11 format=4 uid="uid://b7mo8ox06bt6o"]
 
-[ext_resource type="Script" uid="uid://dhtso6438kg20" path="res://scenes/hospital/f2_boss_room/boss_room.gd" id="1_n1rw3"]
+[ext_resource type="Script" uid="uid://dadawjan3il58" path="res://scenes/hospital/Endings/bad_ending/bad_ending.gd" id="1_2t332"]
 [ext_resource type="TileSet" uid="uid://cswphu7kioahn" path="res://rooms.tres" id="2_xkt3i"]
 [ext_resource type="PackedScene" uid="uid://c1theyee7bb6k" path="res://entities/npcs/HostileZombies.tscn" id="3_3swga"]
 [ext_resource type="PackedScene" uid="uid://cr4q58p5skp00" path="res://entities/npcs/Director.tscn" id="4_wvif6"]
@@ -9,9 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://dqm0mk3hhq2c0" path="res://entities/player/player.tscn" id="7_0ff6c"]
 [ext_resource type="PackedScene" uid="uid://dklxgwl1bkqaa" path="res://systems/dialoguesystem/Dialogue.tscn" id="8_wd7gj"]
 [ext_resource type="Texture2D" uid="uid://clpsr40dt38ry" path="res://assets/misc/Love_Letter.png" id="9_2t332"]
+[ext_resource type="Script" uid="uid://begugliy85iw4" path="res://scenes/hospital/Endings/bad_ending/boss_room_area.gd" id="10_y2ul2"]
 
-[node name="Bad_Ending" type="Node2D"]
-script = ExtResource("1_n1rw3")
+[node name="BadEnding" type="Node2D"]
+script = ExtResource("1_2t332")
 
 [node name="Tilemaps" type="Node2D" parent="."]
 
@@ -31,16 +32,16 @@ position = Vector2(481, 213)
 position = Vector2(531, 221)
 
 [node name="HostileZombies3" parent="." instance=ExtResource("3_3swga")]
-position = Vector2(433, 219)
+position = Vector2(435, 221)
 
 [node name="Director" parent="." instance=ExtResource("4_wvif6")]
-position = Vector2(478, 242)
+position = Vector2(478, 247)
 
 [node name="Yosef" parent="." instance=ExtResource("5_w3atf")]
-position = Vector2(466, 316)
+position = Vector2(476, 281)
 
 [node name="Penelope" parent="." instance=ExtResource("6_65un1")]
-position = Vector2(492, 327)
+position = Vector2(504, 338)
 
 [node name="Player" parent="." instance=ExtResource("7_0ff6c")]
 position = Vector2(394, 267)
@@ -51,3 +52,10 @@ position = Vector2(394, 267)
 position = Vector2(565, 302)
 scale = Vector2(0.11875, 0.13125)
 texture = ExtResource("9_2t332")
+
+[node name="boss_room_area" type="Area2D" parent="."]
+script = ExtResource("10_y2ul2")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="boss_room_area"]
+build_mode = 1
+polygon = PackedVector2Array(385, 172, 384, 319, 400, 320, 401, 351, 561, 351, 560, 318, 577, 319, 577, 191, 561, 192, 560, 174, 402, 175, 403, 192, 385, 193)
