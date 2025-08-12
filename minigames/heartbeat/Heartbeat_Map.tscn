@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://dm5ckeb8fc35s"]
+
+[ext_resource type="PackedScene" uid="uid://bycdrnily5wnx" path="res://minigames/heartbeat/Heartbeat_Moving.tscn" id="1_18pmp"]
+[ext_resource type="Script" uid="uid://8oaeogoyyul1" path="res://minigames/heartbeat/heart_line.gd" id="2_ukjo3"]
+
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q0quy"]
+size = Vector2(256, 320)
+
+[node name="HeartbeatMap" type="Node2D"]
+
+[node name="HeartLine" type="Area2D" parent="."]
+script = ExtResource("2_ukjo3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HeartLine"]
+position = Vector2(142, 452)
+shape = SubResource("RectangleShape2D_q0quy")
+
+[node name="HeartbeatMoving" parent="." instance=ExtResource("1_18pmp")]
+position = Vector2(1323, 431)
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 40
+text = "Conceal your heartbeat. Press space to start."
+
+[connection signal="area_entered" from="HeartLine" to="HeartLine" method="_on_area_entered"]
+[connection signal="area_exited" from="HeartLine" to="HeartLine" method="_on_area_exited"]
+[connection signal="body_entered" from="HeartLine" to="HeartLine" method="_on_body_entered"]
