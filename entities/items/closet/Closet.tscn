@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bjyeo2orc2hh"]
+[gd_scene load_steps=7 format=3 uid="uid://bjyeo2orc2hh"]
 
 [ext_resource type="Script" uid="uid://dvdc6h1xpx8jj" path="res://entities/items/closet/closet.gd" id="1_lopi0"]
 [ext_resource type="Texture2D" uid="uid://q26osu4ewl7b" path="res://assets/items_hospital/New Piskel.png" id="1_mp8bo"]
 [ext_resource type="PackedScene" uid="uid://balrieb8xarpl" path="res://systems/interactionsystem/interactable.tscn" id="2_lopi0"]
+[ext_resource type="PackedScene" uid="uid://bh23sr8l1f426" path="res://misc/Sparkle.tscn" id="4_upqvr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_upqvr"]
 radius = 29.0172
@@ -36,3 +37,5 @@ offset_top = -145.0
 offset_right = 219.0
 offset_bottom = 167.0
 color = Color(0, 0, 0, 1)
+
+[node name="Sparkle" parent="." instance=ExtResource("4_upqvr")]

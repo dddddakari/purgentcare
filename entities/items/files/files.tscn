@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cydwkmkrwkohc"]
+[gd_scene load_steps=6 format=3 uid="uid://cydwkmkrwkohc"]
 
 [ext_resource type="Texture2D" uid="uid://svyjysuaajwx" path="res://assets/items_hospital/files.png" id="1_q3jps"]
 [ext_resource type="PackedScene" uid="uid://balrieb8xarpl" path="res://systems/interactionsystem/interactable.tscn" id="2_8vbnn"]
+[ext_resource type="PackedScene" uid="uid://bh23sr8l1f426" path="res://misc/Sparkle.tscn" id="3_37a6p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_37a6p"]
 size = Vector2(261.813, 179.579)
@@ -47,3 +48,6 @@ shape = SubResource("RectangleShape2D_37a6p")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1.96852, 16.7607)
 shape = SubResource("CircleShape2D_8vbnn")
+
+[node name="Sparkle" parent="." instance=ExtResource("3_37a6p")]
+scale = Vector2(3, 3)

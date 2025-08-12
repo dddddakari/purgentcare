@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://b2g0jrahw0q02"]
+[gd_scene load_steps=7 format=3 uid="uid://b2g0jrahw0q02"]
 
 [ext_resource type="Texture2D" uid="uid://bl1fqv0j6ukd1" path="res://BGassets/RoomsArea/Hospital_Singles_177.png" id="1_d85uy"]
 [ext_resource type="Script" uid="uid://rwk435epuplq" path="res://entities/items/bathroomdoor/bathroom_door.gd" id="1_q7faf"]
 [ext_resource type="PackedScene" uid="uid://balrieb8xarpl" path="res://systems/interactionsystem/interactable.tscn" id="2_q7faf"]
+[ext_resource type="PackedScene" uid="uid://bh23sr8l1f426" path="res://misc/Sparkle.tscn" id="4_dng3j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dng3j"]
 size = Vector2(46, 70)
@@ -27,3 +28,7 @@ shape = SubResource("RectangleShape2D_dng3j")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="interactable"]
 position = Vector2(14, 44)
 shape = SubResource("CircleShape2D_o1qom")
+
+[node name="Sparkle" parent="." instance=ExtResource("4_dng3j")]
+position = Vector2(9, 0)
+scale = Vector2(3, 3)

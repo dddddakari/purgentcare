@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://vuwf647juinh"]
+
+[ext_resource type="PackedScene" uid="uid://cavlfqqc5cnml" path="res://entities/npcs/Lebron.tscn" id="1_rv13r"]
+[ext_resource type="Texture2D" uid="uid://bsy1o56jhpyqm" path="res://assets/npcs/admin.webp" id="2_2pt8g"]
+
+[node name="FinalDirector" instance=ExtResource("1_rv13r")]
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(-1.90735e-06, -21)
+scale = Vector2(0.0338013, 0.0677082)
+texture = ExtResource("2_2pt8g")

@@ -189,12 +189,19 @@ func next_script(optional_id = null):
 			print("[Points] Bad points increased by %d, now: %d" % [pts["bad"], GameState.bad_points])
 
 
-# Display text and name if present
+# Get references to labels
 	var name_label = $NinePatchRect.get_node("name")
 	var text_label = $NinePatchRect.get_node("text")
 
+	# Set label text from JSON (defaults to "")
 	name_label.text = current_line.get("name", "")
 	text_label.text = current_line.get("text", "")
+
+	# Hide NinePatchRect if both are empty
+	if name_label.text.strip_edges() == "" and text_label.text.strip_edges() == "":
+		$NinePatchRect.visible = false
+	else:
+		$NinePatchRect.visible = true
 
 	print("Displaying:", name_label.text, "-", text_label.text)
 

@@ -1,0 +1,61 @@
+[gd_scene load_steps=11 format=3 uid="uid://vuxeb0q3k5ft"]
+
+[ext_resource type="Texture2D" uid="uid://dqvdb22uvnevg" path="res://scenes/hospital/Endings/good_ending/final_sprites/frame_00001.png" id="1_2adnf"]
+[ext_resource type="Texture2D" uid="uid://cq3wichuwx3xw" path="res://scenes/hospital/Endings/good_ending/final_sprites/frame_00002.png" id="2_jvtaw"]
+[ext_resource type="Texture2D" uid="uid://l3dsgjj1qcxn" path="res://scenes/hospital/Endings/good_ending/final_sprites/frame_00003.png" id="3_m5va4"]
+[ext_resource type="Texture2D" uid="uid://egrt1kh1bpbq" path="res://scenes/hospital/Endings/good_ending/final_sprites/frame_00004.png" id="4_n3eem"]
+[ext_resource type="Texture2D" uid="uid://xmdwhgskmj4w" path="res://scenes/hospital/Endings/good_ending/final_sprites/frame_00005.png" id="5_emdlx"]
+[ext_resource type="Texture2D" uid="uid://bod8i3ehmiyvy" path="res://scenes/hospital/Endings/good_ending/final_sprites/frame_00006.png" id="6_b32l1"]
+[ext_resource type="Texture2D" uid="uid://fexhsvs2q6ri" path="res://scenes/hospital/Endings/good_ending/final_sprites/frame_00007.png" id="7_k2vpn"]
+
+[sub_resource type="Animation" id="Animation_4nm22"]
+resource_name = "new_animation"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dqlcw"]
+_data = {
+&"new_animation": SubResource("Animation_4nm22")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dkw7h"]
+animations = [{
+"frames": [{
+"duration": 1.5,
+"texture": ExtResource("1_2adnf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_jvtaw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_m5va4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_n3eem")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_emdlx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_b32l1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_k2vpn")
+}],
+"loop": false,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="FinalScene" type="Node2D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_dqlcw")
+}
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(714, 412)
+scale = Vector2(1.13889, 1.13889)
+sprite_frames = SubResource("SpriteFrames_dkw7h")
+autoplay = "default"
+frame = 6
+frame_progress = 1.0

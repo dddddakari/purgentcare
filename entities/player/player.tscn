@@ -387,7 +387,6 @@ rotation = 1.55683
 shape = SubResource("RectangleShape2D_8fjmc")
 
 [node name="InteractingComponent" parent="." instance=ExtResource("3_sglur")]
-visible = false
 position = Vector2(-41, -62)
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -425,14 +424,14 @@ position = Vector2(-4, -25)
 rotation = -1.5708
 scale = Vector2(0.994585, 1.42253)
 sprite_frames = SubResource("SpriteFrames_g3pa7")
-animation = &"attack_up"
-frame_progress = 0.915362
+animation = &"attack_left"
+frame_progress = 0.783186
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
-offset_left = -100.0
-offset_top = -55.0
-offset_right = -35.0
-offset_bottom = -50.0
+offset_left = -115.0
+offset_top = -64.0
+offset_right = -50.0
+offset_bottom = -57.0
 show_percentage = false
 
 [connection signal="body_entered" from="player_hitbox" to="." method="_on_player_hitbox_body_entered"]

@@ -70,7 +70,7 @@
 	{
 		"id": "Trust_Yosef",
 		"name": "Yosef",
-		"text": "SMART MAN! GO STAIR!",
+		"text": "THE STAIR",
 		"next_id": "Staff_Reaction_Bad"
 	},
 	{
@@ -83,7 +83,7 @@
 	{
 		"id": "Escape_Sequence",
 		"name": "",
-		"text": "(The fire alarm shrieks as Yosef hurls a chair through the observation window)",
+		"text": "(The hospital staff get in front of the staircase to bllock it.)",
 		"effect": "glass_break",
 		"next_id": "Good_End_Setup"
 	},
@@ -95,9 +95,8 @@
 	},
 	{
 		"id": "Good_End_Setup",
-		"name": "Yosef",
-		"text": "Maxim's Setup",
-		"action": "boss_room_scene_change",
+		"action": "change_scene",
+		"scene_path": "res://scenes/hospital/Endings/good_ending/Test.tscn",
 		"next_id": "None"
 	},
 	{
