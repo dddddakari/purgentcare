@@ -1,12 +1,19 @@
 [
 	{
-		"id": "bad_start",
+		"id": "good_start",
 		"name": "Finneas",
 		"text": "I really hope I'm not making the wrong choice..",
 		"next_id": "2"
 	},
 	{
 		"id": "2",
-		"action": "start_combat"
+		"name": "Yosef",
+		"text": "Knock them out. I protect little girl. Director has antidote in pocket.",
+		"next_id": "3"
+	},
+	{
+		"id": "3",
+		"action": "start_combat",
+		"next_id": "end"
 	}
 ]

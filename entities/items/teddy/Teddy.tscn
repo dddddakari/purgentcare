@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://vmx6bj5ti0r4"]
+[gd_scene load_steps=9 format=3 uid="uid://vmx6bj5ti0r4"]
 
 [ext_resource type="Script" uid="uid://fi1ounbfrv2s" path="res://entities/items/teddy/teddy.gd" id="1_oqcju"]
 [ext_resource type="Texture2D" uid="uid://cpsnmi057kdyq" path="res://assets/items_hospital/teddy.png" id="2_qn0af"]
 [ext_resource type="Shader" uid="uid://dto2di2cjda4x" path="res://entities/items/teddy/Teddy.gdshader" id="2_tir87"]
 [ext_resource type="PackedScene" uid="uid://balrieb8xarpl" path="res://systems/interactionsystem/interactable.tscn" id="3_tir87"]
+[ext_resource type="PackedScene" uid="uid://bh23sr8l1f426" path="res://misc/Sparkle.tscn" id="5_tir87"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_h3sj1"]
 shader = ExtResource("2_tir87")
@@ -27,3 +28,5 @@ shape = SubResource("CircleShape2D_h3sj1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="interactable"]
 shape = SubResource("CircleShape2D_5ckfk")
+
+[node name="Sparkle" parent="." instance=ExtResource("5_tir87")]

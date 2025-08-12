@@ -1,11 +1,31 @@
 extends Node2D
 
 @onready var player: CharacterBody2D = $Player
-@onready var lebron: CharacterBody2D = $Jamie
-@onready var hitbox_area   : Area2D = $Jamie/enemy_hitbox        # adjust if different
-@onready var detect_area   : Area2D = $Jamie/detection_area      # adjust if different
-@onready var hitbox_shape  : CollisionShape2D = $Jamie/enemy_hitbox/CollisionShape2D
-@onready var detect_shape  : CollisionShape2D = $Jamie/detection_area/CollisionShape2D
+
+
+@onready var jamies := [
+	{
+		"node": $Jamie,
+		"hitbox_area": $Jamie/enemy_hitbox,
+		"detect_area": $Jamie/detection_area,
+		"hitbox_shape": $Jamie/enemy_hitbox/CollisionShape2D,
+		"detect_shape": $Jamie/detection_area/CollisionShape2D
+	},
+	{
+		"node": $Jamie2,
+		"hitbox_area": $Jamie2/enemy_hitbox,
+		"detect_area": $Jamie2/detection_area,
+		"hitbox_shape": $Jamie2/enemy_hitbox/CollisionShape2D,
+		"detect_shape": $Jamie2/detection_area/CollisionShape2D
+	},
+	{
+		"node": $Jamie3,
+		"hitbox_area": $Jamie3/enemy_hitbox,
+		"detect_area": $Jamie3/detection_area,
+		"hitbox_shape": $Jamie3/enemy_hitbox/CollisionShape2D,
+		"detect_shape": $Jamie3/detection_area/CollisionShape2D
+	}
+]
 
 var lebron_hostile = false   
 var can_get_attacked = false
@@ -25,7 +45,7 @@ func _ready() -> void:
 
 func set_lebron_hostile(state: bool):
 	if lebron_hostile == state:
-		return                     
+		return
 	lebron_hostile = state
 	_refresh_combat_state()
 
@@ -36,7 +56,9 @@ func _on_start_combat():
 		set_lebron_hostile(true)
 
 func _refresh_combat_state():
-	hitbox_area.monitoring  = lebron_hostile
-	detect_area.monitoring  = lebron_hostile
-	hitbox_shape.disabled   = !lebron_hostile
-	detect_shape.disabled   = !lebron_hostile
+	for jamie in jamies:
+		jamie["hitbox_area"].monitoring = lebron_hostile
+		jamie["detect_area"].monitoring = lebron_hostile
+		jamie["hitbox_shape"].disabled  = !lebron_hostile
+		jamie["detect_shape"].disabled  = !lebron_hostile
+		

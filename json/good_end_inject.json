@@ -1,0 +1,56 @@
+[
+	{
+		"id": "start",
+		"name": "Finneas",
+		"text": "Are you both okay??",
+		"next_id": "2"
+	},
+	{
+		"id": "2",
+		"name": "Penelope",
+		"text": "Finn... Mr. Yosef.. He blocked the nurse from injecting me with the bad stuff earlier. *sob*",
+		"next_id": "3"
+	},
+	{
+		"id": "3",
+		"name": "Yosef",
+		"text": "I am *grunt* ok. Give antidote to little girl. Hurry, I take you out of here.",
+		"next_id": "4"
+	},
+	{
+		"id": "4",
+		"name": "Finneas",
+		"text": "Ok Pen, you have to be brave for me. I promise this is the last time you will ever get hurt.",
+		"next_id": "5"
+	},
+	{
+		"id": "5",
+		"name": "Yosef",
+		"text": "Boy. It seems I am at my limit. Too many poison in my body. I cannot go with you. Go stairs.. You will find small door there.",
+		"next_id": "6"
+	},
+	{
+		"id": "6",
+		"name": "Finneas",
+		"text": "But- Is there really no way?..",
+		"next_id": "7"
+	},
+	{
+		"id": "7",
+		"name": "Yosef",
+		"text": "*shakes head* Do not worry me. I am sorry I could not help her earlier. *sigh* Take care of you and her. Go now..",
+		"next_id": "8"
+	},
+	{
+		"id": "8",
+		"name": "Finneas",
+		"text": "I.. see. Thank you. Thank you for helping us. I hope you can finally rest.",
+		"next_id": "9"
+	},
+	{
+		"id": "9",
+		"action": "change_scene",
+		"scene_path": "res://scenes/hospital/Endings/good_ending/FinalScene.tscn",
+		"next_id": "end"
+	},
+]

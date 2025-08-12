@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://c4euslbhl7i1u"]
+[gd_scene load_steps=6 format=3 uid="uid://c4euslbhl7i1u"]
 
 [ext_resource type="PackedScene" uid="uid://balrieb8xarpl" path="res://systems/interactionsystem/interactable.tscn" id="1_33ceh"]
 [ext_resource type="Script" uid="uid://d2la2avcof2mn" path="res://entities/items/computerfileroom/puter.gd" id="1_nfcaf"]
+[ext_resource type="PackedScene" uid="uid://bh23sr8l1f426" path="res://misc/Sparkle.tscn" id="3_4kr6h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ocafa"]
 
@@ -20,3 +21,5 @@ position = Vector2(-2, -54)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="interactable"]
 position = Vector2(3, 62)
 shape = SubResource("CircleShape2D_33ceh")
+
+[node name="Sparkle" parent="." instance=ExtResource("3_4kr6h")]

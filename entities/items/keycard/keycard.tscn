@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cvgncy1pi4dae"]
+[gd_scene load_steps=7 format=3 uid="uid://cvgncy1pi4dae"]
 
 [ext_resource type="Script" uid="uid://bvdfhpt06y5mp" path="res://entities/items/keycard/keycard.gd" id="1_m38sw"]
 [ext_resource type="Texture2D" uid="uid://xi8u8yhofytu" path="res://assets/items_hospital/keycard.jpg" id="1_vausv"]
 [ext_resource type="PackedScene" uid="uid://balrieb8xarpl" path="res://systems/interactionsystem/interactable.tscn" id="2_hw0dm"]
+[ext_resource type="PackedScene" uid="uid://bh23sr8l1f426" path="res://misc/Sparkle.tscn" id="4_kp6we"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m38sw"]
 size = Vector2(12, 6)
@@ -25,3 +26,5 @@ shape = SubResource("RectangleShape2D_m38sw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="interactable"]
 shape = SubResource("CircleShape2D_kp6we")
+
+[node name="Sparkle" parent="." instance=ExtResource("4_kp6we")]
