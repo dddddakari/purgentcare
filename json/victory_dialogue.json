@@ -1,0 +1,14 @@
+[
+	{
+		"id": "AdminSeethe",
+		"name": "Director",
+		"text": "No..These creatures were made to THRIVE in combat... youre CHEATING",
+		"next_id": "finn_response"
+	},
+	{
+		"id": "finn_response",
+		"name": "Finneas",
+		"text": "What are you talking about?",
+		"next_id": "none"
+  	},
+]

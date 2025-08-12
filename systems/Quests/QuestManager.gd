@@ -75,12 +75,18 @@ func complete_quest_good():
 	print("QuestManager: Completing quest via GOOD path")
 	set_path_chosen("good")  # Set the path when completing quest
 	quest_progress.emit("good")
-	GameState.good_points += 1
+	
+	# Update good_points via setter
+	GameState.good_points = GameState.good_points + 1
+	
 	print("Current good points: %d, bad points: %d" % [GameState.good_points, GameState.bad_points])
 
 func complete_quest_bad():
 	print("QuestManager: Completing quest via BAD path")
 	set_path_chosen("bad")  # Set the path when completing quest
 	quest_progress.emit("bad")
-	GameState.bad_points += 1
+	
+	# Update bad_points via setter
+	GameState.bad_points = GameState.bad_points + 1
+	
 	print("Current good points: %d, bad points: %d" % [GameState.good_points, GameState.bad_points])

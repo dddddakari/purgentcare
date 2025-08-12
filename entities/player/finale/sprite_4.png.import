@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwa60ms6gs7qb"
-path="res://.godot/imported/heart.png-500f60f721c8f67449c11c1b25c485ba.ctex"
+uid="uid://0pqor3uohkco"
+path="res://.godot/imported/sprite_4.png-5879a07c9cd657c573dca2e9c7131bf8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://minigames/heartbeat/heart.png"
-dest_files=["res://.godot/imported/heart.png-500f60f721c8f67449c11c1b25c485ba.ctex"]
+source_file="res://entities/player/finale/sprite_4.png"
+dest_files=["res://.godot/imported/sprite_4.png-5879a07c9cd657c573dca2e9c7131bf8.ctex"]
 
 [params]
 

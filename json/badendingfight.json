@@ -1,0 +1,15 @@
+[
+	{
+		"id": "Fight Begin",
+		"name": "Director",
+		"text": "Good Choice Finneas..., GET HIM!",
+		"next_id": "Fight",
+	},
+	{
+		"id": "Fight",
+		"name": "Finneas",
+		"text": "wait.. WHAT?",
+		"action": "start_combat",
+		"next_id": "None"
+	}
+]

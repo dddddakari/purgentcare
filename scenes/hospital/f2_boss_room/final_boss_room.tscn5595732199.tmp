@@ -9,8 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://dqm0mk3hhq2c0" path="res://entities/player/player.tscn" id="7_4krby"]
 [ext_resource type="PackedScene" uid="uid://dklxgwl1bkqaa" path="res://systems/dialoguesystem/Dialogue.tscn" id="8_x5nku"]
 
-[node name="FinalBossRoom" type="Node2D"]
+[node name="FinalBossRoom" type="Area2D"]
 script = ExtResource("1_qo1w3")
+good_ending_scene = null
+bad_ending_scene = null
 
 [node name="Tilemaps" type="Node2D" parent="."]
 
@@ -45,9 +47,3 @@ position = Vector2(492, 327)
 position = Vector2(394, 267)
 
 [node name="Dialogue" parent="." instance=ExtResource("8_x5nku")]
-
-[node name="boss_room_area" type="Area2D" parent="."]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="boss_room_area"]
-build_mode = 1
-polygon = PackedVector2Array(385, 172, 384, 319, 400, 320, 401, 351, 561, 351, 560, 318, 577, 319, 577, 191, 561, 192, 560, 174, 402, 175, 403, 192, 385, 193)

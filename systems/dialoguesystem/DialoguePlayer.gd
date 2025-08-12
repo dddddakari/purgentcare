@@ -6,6 +6,7 @@ signal start_combat
 @export_file("*.json") var d_file: String
 const SampleButtonScene = preload("res://systems/dialoguesystem/Button.tscn")
 
+signal action_triggered(action_name)
 var dialogue := []
 var curr_dialogue_id := -1
 var d_active := false
@@ -137,9 +138,9 @@ func next_script(optional_id = null):
 
 	var current_line = dialogue[curr_dialogue_id]
 
-# Handle actions (regardless of whether there's text)
-# Handle actions (regardless of whether there's text)
+	# Handle actions (regardless of whether there's text)
 	if current_line.has("action"):
+		emit_signal("action_triggered", current_line["action"])
 		match current_line["action"]:
 			"change_scene":
 				var scene_path = current_line.get("scene_path", "")
@@ -177,6 +178,16 @@ func next_script(optional_id = null):
 				else:
 					print("ERROR: No nurse found in group")
 				QuestManager.complete_quest_good()
+				
+	if current_line.has("points"):
+		var pts = current_line["points"]
+		if pts.has("good"):
+			GameState.good_points += int(pts["good"])
+			print("[Points] Good points increased by %d, now: %d" % [pts["good"], GameState.good_points])
+		if pts.has("bad"):
+			GameState.bad_points += int(pts["bad"])
+			print("[Points] Bad points increased by %d, now: %d" % [pts["bad"], GameState.bad_points])
+
 
 # Display text and name if present
 	var name_label = $NinePatchRect.get_node("name")

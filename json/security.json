@@ -17,7 +17,8 @@
 	{
 		"id": "nice_response",
 		"name": "Finneas",
-		"text": "Please sir. I'm really worried about my sister. I just want to check on her quickly and I'll be out of here as soon as I confirm she's okay.."
+		"text": "Please sir. I'm really worried about my sister. I just want to check on her quickly and I'll be out of here as soon as I confirm she's okay..",
+		"points": { "good": 1, "bad": 0 }
 	},
 	{
 		"id": "security_nice_response",
@@ -51,5 +52,7 @@
 		"name": "Finneas",
 		"text": "I'm really sorry about this..",
 		"action": "start_combat",
+		"points": { "good": 0, "bad": 1 },
+		"next_id": "None"
 	}
 ]

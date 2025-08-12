@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dm5ckeb8fc35s"]
 
-[ext_resource type="PackedScene" uid="uid://bycdrnily5wnx" path="res://minigames/heartbeat/Heartbeat_Moving.tscn" id="1_18pmp"]
-[ext_resource type="Script" uid="uid://8oaeogoyyul1" path="res://minigames/heartbeat/heart_line.gd" id="2_ukjo3"]
+[ext_resource type="PackedScene" uid="uid://bycdrnily5wnx" path="res://scenes/hospital/minigames/heartbeat/Heartbeat_Moving.tscn" id="1_18pmp"]
+[ext_resource type="Script" uid="uid://8oaeogoyyul1" path="res://scenes/hospital/minigames/heartbeat/heart_line.gd" id="2_ukjo3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q0quy"]
 size = Vector2(256, 320)
