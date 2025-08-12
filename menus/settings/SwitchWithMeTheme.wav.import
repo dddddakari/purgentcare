@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://q34cii45y5io"
-path="res://.godot/imported/SwitchWithMeTheme.wav-38a42f9c482129f7232d971bce9b23f9.sample"
+path="res://.godot/imported/SwitchWithMeTheme.wav-443b5653a5ebea45d2e84d3714bbb15e.sample"
 
 [deps]
 
-source_file="res://audio/music/SwitchWithMeTheme.wav"
-dest_files=["res://.godot/imported/SwitchWithMeTheme.wav-38a42f9c482129f7232d971bce9b23f9.sample"]
+source_file="res://menus/settings/SwitchWithMeTheme.wav"
+dest_files=["res://.godot/imported/SwitchWithMeTheme.wav-443b5653a5ebea45d2e84d3714bbb15e.sample"]
 
 [params]
 

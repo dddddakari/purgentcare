@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=4 uid="uid://bpgckbqg0nw5n"]
+[gd_scene load_steps=64 format=4 uid="uid://bpgckbqg0nw5n"]
 
 [ext_resource type="TileSet" uid="uid://r1du6y3s73lq" path="res://scenes/kitchen/kitchen01.tres" id="1_6fhro"]
 [ext_resource type="Script" uid="uid://c6cwekcutkd2n" path="res://scenes/kitchen/kitchen_01.gd" id="1_7fes2"]
@@ -16,7 +16,6 @@
 [ext_resource type="PackedScene" uid="uid://cv06fbmr1s2b0" path="res://entities/items/newspaper/Newspaper.tscn" id="11_6fhro"]
 [ext_resource type="Script" uid="uid://btlohi51um8lb" path="res://menus/settings/muteButton.gd" id="11_7fes2"]
 [ext_resource type="Script" uid="uid://c6nlguc53vuli" path="res://scenes/kitchen/kitchen_area.gd" id="12_3imob"]
-[ext_resource type="PackedScene" uid="uid://drh77lyyehqep" path="res://menus/settings/settings_menu.tscn" id="14_qbm3f"]
 [ext_resource type="Texture2D" uid="uid://ccecwl6cmli85" path="res://assets/button/SPEAKER_ON.png" id="17_dxum3"]
 [ext_resource type="AudioStream" uid="uid://q34cii45y5io" path="res://menus/settings/SwitchWithMeTheme.wav" id="18_dxum3"]
 [ext_resource type="PackedScene" uid="uid://dklxgwl1bkqaa" path="res://systems/dialoguesystem/Dialogue.tscn" id="20_qbm3f"]
@@ -2088,7 +2087,6 @@ script = ExtResource("8_0iy2g")
 metadata/_edit_use_anchors_ = true
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
-visible = false
 zoom = Vector2(5, 5)
 
 [node name="BGMusic" type="AudioStreamPlayer2D" parent="Player/Camera2D2"]
@@ -2104,10 +2102,6 @@ offset_bottom = 211.0
 scale = Vector2(0.203661, 0.188203)
 texture_normal = ExtResource("17_dxum3")
 script = ExtResource("11_7fes2")
-
-[node name="SettingsMenu2" parent="Player" instance=ExtResource("14_qbm3f")]
-visible = true
-position = Vector2(-1, -7)
 
 [node name="Fridge" parent="." instance=ExtResource("1_mal84")]
 position = Vector2(50, 81)
