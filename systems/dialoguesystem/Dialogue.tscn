@@ -1,17 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://dklxgwl1bkqaa"]
+[gd_scene load_steps=5 format=3 uid="uid://dklxgwl1bkqaa"]
 
 [ext_resource type="Script" uid="uid://v53nmmmukcug" path="res://systems/dialoguesystem/DialoguePlayer.gd" id="1_oah3n"]
-[ext_resource type="Texture2D" uid="uid://dhk6gwfdikkme" path="res://assets/dialogue_box.png" id="1_snqsu"]
+[ext_resource type="Texture2D" uid="uid://dm1ubdlgpleo7" path="res://systems/dialoguesystem/dia.png" id="2_ck8dn"]
 [ext_resource type="PackedScene" uid="uid://dbni2dhbasmnq" path="res://systems/dialoguesystem/Button.tscn" id="3_ck8dn"]
+[ext_resource type="Texture2D" uid="uid://2holseylb0we" path="res://systems/dialoguesystem/finn_default.png" id="4_jcfbr"]
 
 [node name="Dialogue" type="CanvasLayer"]
 script = ExtResource("1_oah3n")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
+offset_left = 32.0
 offset_top = 520.0
-offset_right = 1204.0
-offset_bottom = 702.0
-texture = ExtResource("1_snqsu")
+offset_right = 1236.0
+offset_bottom = 732.0
+scale = Vector2(0.954172, 0.960598)
+texture = ExtResource("2_ck8dn")
+region_rect = Rect2(22, 58, 80, 22)
 patch_margin_left = 4
 patch_margin_top = 4
 patch_margin_right = 4
@@ -19,10 +23,10 @@ patch_margin_bottom = 4
 
 [node name="name" type="RichTextLabel" parent="NinePatchRect"]
 layout_mode = 0
-offset_left = 18.0
-offset_top = -77.0
-offset_right = 443.0
-offset_bottom = -8.0
+offset_left = 243.143
+offset_top = -56.2149
+offset_right = 668.143
+offset_bottom = 12.7851
 theme_override_font_sizes/normal_font_size = 40
 text = "Name"
 fit_content = true
@@ -30,15 +34,21 @@ scroll_active = false
 
 [node name="text" type="RichTextLabel" parent="NinePatchRect"]
 layout_mode = 0
-offset_left = 11.0
-offset_top = 8.0
-offset_right = 1382.0
-offset_bottom = 202.0
+offset_left = 30.0
+offset_top = 15.0
+offset_right = 1377.0
+offset_bottom = 218.0
+scale = Vector2(0.854361, 0.878613)
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 30
 text = "Dialogue Text blah "
 fit_content = true
 scroll_active = false
+
+[node name="Portrait" type="Sprite2D" parent="NinePatchRect"]
+position = Vector2(108.831, -117.472)
+scale = Vector2(0.445019, 0.442042)
+texture = ExtResource("4_jcfbr")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.4

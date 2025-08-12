@@ -95,9 +95,8 @@
 	},
 	{
 		"id": "Good_End_Setup",
-		"name": "Yosef",
-		"text": "Maxim's Setup",
-		"action": "boss_room_scene_change",
+		"action": "change_scene",
+		"scene_path": "res://scenes/hospital/Endings/good_ending/good_ending.tscn",
 		"next_id": "None"
 	},
 	{

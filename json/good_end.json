@@ -1,0 +1,12 @@
+[
+	{
+		"id": "bad_start",
+		"name": "Finneas",
+		"text": "I really hope I'm not making the wrong choice..",
+		"next_id": "2"
+	},
+	{
+		"id": "2",
+		"action": "start_combat"
+	}
+]

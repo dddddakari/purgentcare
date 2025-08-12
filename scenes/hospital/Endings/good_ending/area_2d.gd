@@ -13,5 +13,5 @@ func _on_body_entered(body: Node2D) -> void:
 func use_dialogue():
 	var dialogue = get_parent().get_node("Dialogue")
 	if dialogue:
-		dialogue.d_file = "res://json/finalshowdown.json"
+		dialogue.d_file = "res://json/good_end.json"
 		dialogue.start()

@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=4 uid="uid://drtcfwxwmngr8"]
 
 [ext_resource type="Script" uid="uid://dhtso6438kg20" path="res://scenes/hospital/f2_boss_room/boss_room.gd" id="1_qo1w3"]
-[ext_resource type="TileSet" uid="uid://cswphu7kioahn" path="res://rooms.tres" id="2_oo3ug"]
+[ext_resource type="TileSet" uid="uid://c348q58upmtsm" path="res://rooms.tres" id="2_oo3ug"]
 [ext_resource type="PackedScene" uid="uid://718yx8jykyi5" path="res://entities/npcs/Penelope.tscn" id="3_i0itb"]
 [ext_resource type="PackedScene" uid="uid://c1theyee7bb6k" path="res://entities/npcs/HostileZombies.tscn" id="3_qci1g"]
 [ext_resource type="PackedScene" uid="uid://cr4q58p5skp00" path="res://entities/npcs/Director.tscn" id="4_7dhka"]
