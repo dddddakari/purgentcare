@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://c1theyee7bb6k"]
 
-[ext_resource type="Script" uid="uid://2dtia7psfgin" path="res://entities/npcs/hostile_zombies.gd" id="1_8acoa"]
+[ext_resource type="Script" path="res://entities/npcs/hostile_zombies.gd" id="1_8acoa"]
 [ext_resource type="Texture2D" uid="uid://bl08hoa1ph3nt" path="res://assets/npcs/zombies.webp" id="1_e744v"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_e744v"]

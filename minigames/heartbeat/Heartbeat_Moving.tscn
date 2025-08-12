@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bycdrnily5wnx"]
+
+[ext_resource type="Texture2D" uid="uid://b474nd2262k6r" path="res://assets/noFilter.png" id="1_1h10t"]
+[ext_resource type="Script" uid="uid://cvryusv08m12s" path="res://minigames/heartbeat/heartbeat_moving.gd" id="1_ni6ig"]
+
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ni6ig"]
+radius = 122.119
+
+[node name="HeartbeatMoving" type="Area2D"]
+script = ExtResource("1_ni6ig")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_1h10t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-6, 23)
+shape = SubResource("CircleShape2D_ni6ig")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

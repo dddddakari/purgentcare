@@ -2106,7 +2106,6 @@ texture_normal = ExtResource("17_dxum3")
 script = ExtResource("11_7fes2")
 
 [node name="SettingsMenu2" parent="Player" instance=ExtResource("14_qbm3f")]
-visible = true
 position = Vector2(-1, -7)
 
 [node name="Fridge" parent="." instance=ExtResource("1_mal84")]
