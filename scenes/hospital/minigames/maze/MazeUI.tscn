@@ -1,12 +1,12 @@
 [gd_scene load_steps=11 format=3 uid="uid://gnqqvbdpxyck"]
 
-[ext_resource type="Script" uid="uid://beb07h4cbtw05" path="res://minigames/maze/maze_ui.gd" id="1_m2url"]
+[ext_resource type="Script" uid="uid://beb07h4cbtw05" path="res://scenes/hospital/minigames/maze/maze_ui.gd" id="1_m2url"]
 [ext_resource type="Texture2D" uid="uid://bc0k0n713404e" path="res://assets/maze.png" id="2_m2url"]
 [ext_resource type="Texture2D" uid="uid://cl3xusiebmnb8" path="res://scenes/outside/black.jpg" id="3_a40ik"]
 [ext_resource type="PackedScene" uid="uid://8l53ov4mf11v" path="res://entities/finn8-bit/Finn8-Bit.tscn" id="4_fpce0"]
-[ext_resource type="AudioStream" uid="uid://q34cii45y5io" path="res://audio/music/SwitchWithMeTheme.wav" id="5_q7tyo"]
+[ext_resource type="AudioStream" uid="uid://q34cii45y5io" path="res://menus/settings/SwitchWithMeTheme.wav" id="5_q7tyo"]
 [ext_resource type="Texture2D" uid="uid://ccecwl6cmli85" path="res://assets/button/SPEAKER_ON.png" id="6_4ey82"]
-[ext_resource type="Script" uid="uid://btlohi51um8lb" path="res://audio/music/muteButton.gd" id="7_wwipl"]
+[ext_resource type="Script" uid="uid://btlohi51um8lb" path="res://menus/settings/muteButton.gd" id="7_wwipl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qmi00"]
 size = Vector2(11796.4, 13818.2)

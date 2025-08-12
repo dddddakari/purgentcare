@@ -8,10 +8,9 @@
 script = ExtResource("1_oah3n")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
-offset_left = 11.0
 offset_top = 520.0
-offset_right = 1435.0
-offset_bottom = 776.0
+offset_right = 1204.0
+offset_bottom = 702.0
 texture = ExtResource("1_snqsu")
 patch_margin_left = 4
 patch_margin_top = 4
@@ -31,10 +30,10 @@ scroll_active = false
 
 [node name="text" type="RichTextLabel" parent="NinePatchRect"]
 layout_mode = 0
-offset_left = 23.0
-offset_top = 26.0
-offset_right = 1394.0
-offset_bottom = 220.0
+offset_left = 11.0
+offset_top = 8.0
+offset_right = 1382.0
+offset_bottom = 202.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 30
 text = "Dialogue Text blah "
@@ -45,10 +44,10 @@ scroll_active = false
 wait_time = 0.4
 
 [node name="Options" type="VBoxContainer" parent="."]
-offset_left = 1093.0
-offset_top = 211.0
-offset_right = 1417.0
-offset_bottom = 414.0
+offset_left = 870.0
+offset_top = 110.0
+offset_right = 1194.0
+offset_bottom = 313.0
 
 [node name="Button" parent="Options" instance=ExtResource("3_ck8dn")]
 layout_mode = 2

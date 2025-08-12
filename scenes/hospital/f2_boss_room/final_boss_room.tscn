@@ -1,21 +1,13 @@
-
 [gd_scene load_steps=9 format=4 uid="uid://drtcfwxwmngr8"]
 
 [ext_resource type="Script" uid="uid://dhtso6438kg20" path="res://scenes/hospital/f2_boss_room/boss_room.gd" id="1_qo1w3"]
-[ext_resource type="TileSet" uid="uid://c348q58upmtsm" path="res://rooms.tres" id="2_oo3ug"]
-
-[gd_scene load_steps=7 format=4 uid="uid://drtcfwxwmngr8"]
-
-[ext_resource type="Script" uid="uid://dhtso6438kg20" path="res://scenes/hospital/f2_boss_room/boss_room.gd" id="1_qo1w3"]
-
+[ext_resource type="TileSet" uid="uid://cswphu7kioahn" path="res://rooms.tres" id="2_oo3ug"]
 [ext_resource type="PackedScene" uid="uid://718yx8jykyi5" path="res://entities/npcs/Penelope.tscn" id="3_i0itb"]
 [ext_resource type="PackedScene" uid="uid://c1theyee7bb6k" path="res://entities/npcs/HostileZombies.tscn" id="3_qci1g"]
 [ext_resource type="PackedScene" uid="uid://cr4q58p5skp00" path="res://entities/npcs/Director.tscn" id="4_7dhka"]
 [ext_resource type="PackedScene" uid="uid://bps2i2ug5faaa" path="res://entities/npcs/Yosef.tscn" id="5_jtq2u"]
 [ext_resource type="PackedScene" uid="uid://dqm0mk3hhq2c0" path="res://entities/player/player.tscn" id="7_4krby"]
-
 [ext_resource type="PackedScene" uid="uid://dklxgwl1bkqaa" path="res://systems/dialoguesystem/Dialogue.tscn" id="8_x5nku"]
-
 
 [node name="FinalBossRoom" type="Node2D"]
 script = ExtResource("1_qo1w3")
@@ -24,16 +16,12 @@ script = ExtResource("1_qo1w3")
 
 [node name="floors" type="TileMapLayer" parent="Tilemaps"]
 tile_map_data = PackedByteArray("AAAYAA0AAgAMABAAAAAYAA4AAgAMABIAAAAZAA0AAgANABAAAAAZAA4AAgANABEAAAAaAA0AAgAOABAAAAAaAA4AAgAMABIAAAAbAA0AAgAMABIAAAAbAA4AAgAMABMAAAAcAA0AAgANABIAAAAcAA4AAgANABMAAAAdAA0AAgAOABIAAAAdAA4AAgAOABMAAAAeAA0AAgAMABIAAAAeAA4AAgAMABMAAAAfAA0AAgAMABIAAAAfAA4AAgANABMAAAAgAA0AAgAMABIAAAAgAA4AAgAOABMAAAAYAA8AAgAMABIAAAAYABAAAgAMABMAAAAZAA8AAgANABIAAAAZABAAAgANABMAAAAaAA8AAgAOABIAAAAaABAAAgAOABMAAAAbAA8AAgAMABIAAAAbABAAAgAMABMAAAAcAA8AAgANABIAAAAcABAAAgANABMAAAAdAA8AAgAOABIAAAAdABAAAgAOABMAAAAeAA8AAgAMABIAAAAeABAAAgAMABIAAAAfAA8AAgANABIAAAAfABAAAgANABIAAAAgAA8AAgAOABIAAAAgABAAAgAOABIAAAAYABEAAgAMABIAAAAYABIAAgAMABMAAAAZABEAAgANABIAAAAZABIAAgANABMAAAAaABEAAgAOABIAAAAaABIAAgAOABMAAAAbABEAAgAMABIAAAAbABIAAgAMABIAAAAcABEAAgANABIAAAAcABIAAgANABIAAAAdABEAAgAMABAAAAAdABIAAgAMABEAAAAeABEAAgANABAAAAAfABEAAgAOABAAAAAfABIAAgAOABEAAAAgABEAAgAOABMAAAAgABIAAgAOABMAAAAhAA0AAgAMABAAAAAhAA4AAgAMABIAAAAiAA0AAgANABAAAAAiAA4AAgANABEAAAAjAA0AAgAOABAAAAAjAA4AAgAOABEAAAAhAA8AAgAMABIAAAAhABAAAgAMABMAAAAiAA8AAgAMABIAAAAiABAAAgANABMAAAAjAA8AAgAOABEAAAAjABAAAgAOABMAAAAhABEAAgAMABIAAAAhABIAAgAMABMAAAAiABEAAgANABIAAAAiABIAAgANABMAAAAjABEAAgAOABIAAAAjABIAAgAOABMAAAAYABMAAgAMABAAAAAZABMAAgANABAAAAAZABQAAgAOABAAAAAaABMAAgAOABAAAAAaABQAAgAOABEAAAAbABMAAgAMABMAAAAbABQAAgAMABMAAAAcABMAAgANABMAAAAcABQAAgANABMAAAAdABMAAgAOABMAAAAdABQAAgAOABMAAAAeABMAAgAMABIAAAAeABQAAgAMABMAAAAfABMAAgANABIAAAAfABQAAgANABMAAAAgABMAAgAOABIAAAAgABQAAgAMABIAAAAhABMAAgAMABIAAAAhABQAAgANABIAAAAiABMAAgANABIAAAAiABQAAgAOABIAAAAjABMAAgAOABIAAAAZABUAAgAOABEAAAAaABUAAgANABIAAAAbABUAAgAOABIAAAAcABUAAgANABIAAAAdABUAAgAOABIAAAAeABUAAgAMABIAAAAfABUAAgAMABIAAAAgABUAAgAMABMAAAAhABUAAgAMABIAAAAiABUAAgANABAAAAAZAAsAAgAMABIAAAAZAAwAAgAMABMAAAAaAAsAAgANABIAAAAaAAwAAgANABMAAAAbAAsAAgAOABIAAAAbAAwAAgAOABMAAAAcAAsAAgAMABIAAAAcAAwAAgAMABMAAAAdAAsAAgANABIAAAAdAAwAAgANABMAAAAeAAsAAgAOABIAAAAeAAwAAgAOABMAAAAfAAsAAgAMABAAAAAfAAwAAgAMABIAAAAgAAsAAgANABAAAAAgAAwAAgANABEAAAAhAAsAAgAOABAAAAAhAAwAAgAOABEAAAAiAAsAAgANABIAAAAiAAwAAgANABMAAAAeABIAAgANABEAAAA=")
-
 tile_set = ExtResource("2_oo3ug")
-
 
 [node name="walls" type="TileMapLayer" parent="Tilemaps"]
 position = Vector2(0, 30)
 tile_map_data = PackedByteArray("AAAZAAoAAgAMABkAAAAaAAoAAgANABkAAAAbAAoAAgAOABkAAAAcAAoAAgAMABkAAAAeAAoAAgAOABkAAAAfAAoAAgAMABkAAAAgAAoAAgAMABkAAAAhAAoAAgANABkAAAAiAAoAAgAOABkAAAAYAAsAAgAOABkAAAAjAAsAAgAMABkAAAAZAAkAAgAMABgAAAAaAAkAAgANABgAAAAbAAkAAgAOABgAAAAcAAkAAgAMABgAAAAdAAkAAgANABgAAAAeAAkAAgAOABgAAAAfAAkAAgAMABgAAAAgAAkAAgAMABgAAAAhAAkAAgANABgAAAAiAAkAAgAOABgAAAAjAAoAAgAMABgAAAAYAAoAAgAOABgAAAAZAAgAAgAAACIAAAAaAAgAAgAAACIAAAAbAAgAAgAAACIAAAAcAAgAAgAAACIAAAAdAAgAAgAAACIAAAAeAAgAAgAAACIAAAAfAAgAAgAAACIAAAAgAAgAAgAAACIAAAAhAAgAAgAAACIAAAAiAAgAAgAAACIAAAAjAAkAAgAAACIAAAAYAAkAAgAAACIAAAAdAAoAAgANABkAAAA=")
-
 tile_set = ExtResource("2_oo3ug")
-
 
 [node name="HostileZombies" parent="." instance=ExtResource("3_qci1g")]
 position = Vector2(481, 213)
@@ -56,17 +44,10 @@ position = Vector2(492, 327)
 [node name="Player" parent="." instance=ExtResource("7_4krby")]
 position = Vector2(394, 267)
 
-
 [node name="Dialogue" parent="." instance=ExtResource("8_x5nku")]
-[node name="Dialogue" parent="."]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
-script = null
 
+[node name="boss_room_area" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="boss_room_area"]
+build_mode = 1
+polygon = PackedVector2Array(385, 172, 384, 319, 400, 320, 401, 351, 561, 351, 560, 318, 577, 319, 577, 191, 561, 192, 560, 174, 402, 175, 403, 192, 385, 193)

@@ -1,14 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://dd8tq5378pqb1"]
+[gd_scene load_steps=9 format=3 uid="uid://dd8tq5378pqb1"]
 
 [ext_resource type="Script" uid="uid://ct7w1r5k4orfn" path="res://menus/start_screen.gd" id="1_cdxmd"]
 [ext_resource type="Texture2D" uid="uid://vy26xihmmn3m" path="res://menus/main screen.png" id="2_4ttyr"]
 [ext_resource type="Texture2D" uid="uid://d24ci1skwk6n2" path="res://assets/button/NEW_GAME.PNG" id="2_lumme"]
 [ext_resource type="Texture2D" uid="uid://bjo7su05273pd" path="res://assets/button/CONTINUE.PNG" id="3_l3mcm"]
 [ext_resource type="Texture2D" uid="uid://becllrjxgayyp" path="res://assets/button/QUIT.PNG" id="5_j0xya"]
-[ext_resource type="AudioStream" uid="uid://q34cii45y5io" path="res://audio/music/SwitchWithMeTheme.wav" id="7_n21s3"]
+[ext_resource type="AudioStream" uid="uid://q34cii45y5io" path="res://menus/settings/SwitchWithMeTheme.wav" id="7_n21s3"]
 [ext_resource type="Texture2D" uid="uid://ccecwl6cmli85" path="res://assets/button/SPEAKER_ON.png" id="8_rfu7b"]
-[ext_resource type="Script" uid="uid://btlohi51um8lb" path="res://audio/music/muteButton.gd" id="9_7ld8a"]
-[ext_resource type="Texture2D" uid="uid://tbhoof7abpey" path="res://assets/sadas.png" id="9_h034l"]
+[ext_resource type="Script" uid="uid://btlohi51um8lb" path="res://menus/settings/muteButton.gd" id="9_7ld8a"]
 
 [node name="StartScreen" type="Node2D"]
 scale = Vector2(0.5, 0.5)
@@ -21,16 +20,16 @@ texture = ExtResource("2_4ttyr")
 
 [node name="New Game" type="TextureButton" parent="."]
 offset_left = 396.0
-offset_top = 440.0
+offset_top = 374.0
 offset_right = 1164.0
-offset_bottom = 824.0
+offset_bottom = 758.0
 texture_normal = ExtResource("2_lumme")
 
 [node name="Continue" type="Button" parent="."]
 offset_left = 1126.0
-offset_top = 658.0
+offset_top = 592.0
 offset_right = 1134.0
-offset_bottom = 666.0
+offset_bottom = 600.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Continue"]
 position = Vector2(-348, 118)
@@ -40,9 +39,9 @@ region_rect = Rect2(133, 109, 441, 102)
 
 [node name="quit" type="TextureButton" parent="."]
 offset_left = 420.0
-offset_top = 736.0
+offset_top = 670.0
 offset_right = 1280.0
-offset_bottom = 1516.0
+offset_bottom = 1450.0
 texture_normal = ExtResource("5_j0xya")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -60,11 +59,6 @@ offset_right = 1852.0
 offset_bottom = 1006.0
 texture_normal = ExtResource("8_rfu7b")
 script = ExtResource("9_7ld8a")
-
-[node name="Sadas" type="Sprite2D" parent="."]
-position = Vector2(826, 382)
-scale = Vector2(0.429287, 0.407292)
-texture = ExtResource("9_h034l")
 
 [connection signal="pressed" from="New Game" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

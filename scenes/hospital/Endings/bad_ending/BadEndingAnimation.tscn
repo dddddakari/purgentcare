@@ -1,0 +1,64 @@
+[gd_scene load_steps=11 format=3 uid="uid://dsha7ie7anl25"]
+
+[ext_resource type="Texture2D" uid="uid://b424q1u3fko12" path="res://entities/player/finale/sprite_0.png" id="1_rc7jm"]
+[ext_resource type="Script" uid="uid://7v2mgogio7mf" path="res://scenes/hospital/Endings/bad_ending/bad_ending_animation.gd" id="1_vhg4x"]
+[ext_resource type="Texture2D" uid="uid://d0tdayos4m3pj" path="res://entities/player/finale/sprite_1.png" id="2_vhg4x"]
+[ext_resource type="Texture2D" uid="uid://bx7226dqlptxi" path="res://entities/player/finale/sprite_2.png" id="3_6d6bf"]
+[ext_resource type="Texture2D" uid="uid://cbhag2xms61d6" path="res://entities/player/finale/sprite_3.png" id="4_pk6sy"]
+[ext_resource type="Texture2D" uid="uid://0pqor3uohkco" path="res://entities/player/finale/sprite_4.png" id="5_0tqmu"]
+[ext_resource type="Texture2D" uid="uid://cmef1g5qiyvte" path="res://entities/player/finale/sprite_5.png" id="6_awafr"]
+[ext_resource type="Texture2D" uid="uid://iydfsu4q58w8" path="res://entities/player/finale/sprite_6.png" id="7_gfbb7"]
+[ext_resource type="Texture2D" uid="uid://cdaj4u51mm1fm" path="res://entities/player/finale/sprite_7.png" id="8_b37dn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wxd6a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rc7jm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_vhg4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6d6bf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pk6sy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_0tqmu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_awafr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_gfbb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_b37dn")
+}],
+"loop": false,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="BadEndingAnimation" type="Node2D"]
+script = ExtResource("1_vhg4x")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(627, 136)
+sprite_frames = SubResource("SpriteFrames_wxd6a")
+autoplay = "default"
+frame = 7
+frame_progress = 1.0
+
+[node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D"]
+zoom = Vector2(1.2, 0.7)
+
+[node name="InputBlocker" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 133.0
+offset_top = -354.0
+offset_right = 1138.0
+offset_bottom = 631.0
