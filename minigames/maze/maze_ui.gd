@@ -16,7 +16,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		get_tree().change_scene_to_file.call_deferred("res://minigames/maze/Jumpscare.tscn")
 
 
-func _on_exit_body_enterwed(_body: Node2D) -> void:
+func _on_exit_body_entered(_body: Node2D) -> void:
 	if _body.name == "CharacterBody2D":
 		get_tree().change_scene_to_file.call_deferred("res://scenes/hospital/f1_rooms_area/Room_AreaLocked.tscn")
 
