@@ -98,12 +98,10 @@
 		"action": "change_scene",
 		"scene_path": "res://scenes/hospital/Endings/good_ending/Test.tscn",
 		"next_id": "None"
-	},
-	{
+	},	{
 		"id": "Bad_End_Setup",
-		"name": "System Voice",
-		"text": "Dakari's Set Up",
-		"action": "boss_room_scene_change",
+		"action": "change_scene",
+		"scene_path": "res://scenes/hospital/Endings/bad_ending/bad_ending.tscn",
 		"next_id": "None"
 	}
 ]

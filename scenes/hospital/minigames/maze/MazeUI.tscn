@@ -83,6 +83,7 @@ stream = ExtResource("5_q7tyo")
 autoplay = true
 
 [node name="MuteButton" type="TextureButton" parent="CharacterBody2D"]
+visible = false
 offset_left = 192.222
 offset_top = 53.3333
 offset_right = 352.222

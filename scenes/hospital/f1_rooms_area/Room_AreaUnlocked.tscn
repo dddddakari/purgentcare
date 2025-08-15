@@ -114,6 +114,7 @@ stream = ExtResource("4_6lic6")
 autoplay = true
 
 [node name="MuteButton" type="TextureButton" parent="Player/Camera2D2"]
+visible = false
 offset_left = 58.495
 offset_top = 20.1225
 offset_right = 218.495
@@ -121,6 +122,7 @@ offset_bottom = 180.122
 scale = Vector2(0.154443, 0.157351)
 texture_normal = ExtResource("5_2rds4")
 script = ExtResource("6_dx3fw")
+metadata/_edit_use_anchors_ = true
 
 [node name="BathroomDoor" parent="." instance=ExtResource("7_pifqf")]
 position = Vector2(334, 343)

@@ -1,11 +1,11 @@
 [gd_scene load_steps=11 format=4 uid="uid://7x7bx3ng2idc"]
 
-[ext_resource type="Script" uid="uid://d30swrjyqqcnp" path="res://scenes/hospital/Endings/good_ending/jamie_room.gd" id="1_epthi"]
+[ext_resource type="Script" path="res://scenes/hospital/Endings/good_ending/jamie_room.gd" id="1_epthi"]
 [ext_resource type="PackedScene" uid="uid://vuwf647juinh" path="res://entities/npcs/FinalDirector.tscn" id="2_epthi"]
 [ext_resource type="TileSet" uid="uid://c348q58upmtsm" path="res://rooms.tres" id="2_o4qem"]
 [ext_resource type="PackedScene" uid="uid://dqm0mk3hhq2c0" path="res://entities/player/player.tscn" id="3_o4qem"]
 [ext_resource type="PackedScene" uid="uid://dklxgwl1bkqaa" path="res://systems/dialoguesystem/Dialogue.tscn" id="4_6da3a"]
-[ext_resource type="Script" uid="uid://cu4p1r051ittm" path="res://scenes/hospital/Endings/good_ending/area_2d.gd" id="5_2retn"]
+[ext_resource type="Script" path="res://scenes/hospital/Endings/good_ending/area_2d.gd" id="5_2retn"]
 [ext_resource type="PackedScene" uid="uid://cggxdxq8bpwv1" path="res://scenes/hospital/Endings/good_ending/Director.tscn" id="6_o4qem"]
 [ext_resource type="PackedScene" uid="uid://bps2i2ug5faaa" path="res://entities/npcs/Yosef.tscn" id="8_2retn"]
 [ext_resource type="PackedScene" uid="uid://718yx8jykyi5" path="res://entities/npcs/Penelope.tscn" id="9_dtxqx"]
