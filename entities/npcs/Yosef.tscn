@@ -1,7 +1,37 @@
-[gd_scene load_steps=5 format=3 uid="uid://bps2i2ug5faaa"]
+[gd_scene load_steps=10 format=3 uid="uid://bps2i2ug5faaa"]
 
 [ext_resource type="Script" path="res://entities/npcs/yosef.gd" id="1_nq1kv"]
+[ext_resource type="Texture2D" uid="uid://cbagxc3hg0ka8" path="res://entities/npcs/npcs_sprite/zombie - front copy 2.png" id="2_gkc58"]
 [ext_resource type="PackedScene" uid="uid://balrieb8xarpl" path="res://systems/interactionsystem/interactable.tscn" id="3_gkc58"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1le0k"]
+atlas = ExtResource("2_gkc58")
+region = Rect2(0, 0, 704, 704)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3yhxo"]
+atlas = ExtResource("2_gkc58")
+region = Rect2(704, 0, 704, 704)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8xydb"]
+atlas = ExtResource("2_gkc58")
+region = Rect2(1408, 0, 704, 704)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hg8qw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1le0k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3yhxo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8xydb")
+}],
+"loop": true,
+"name": &"yosef. default",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3bl37"]
 radius = 26.8328
@@ -13,12 +43,19 @@ radius = 40.6079
 script = ExtResource("1_nq1kv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(3.8147e-06, 7)
+scale = Vector2(0.0876243, 0.0854936)
+sprite_frames = SubResource("SpriteFrames_hg8qw")
+animation = &"yosef. default"
+frame_progress = 0.63439
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(-1, 5)
 shape = SubResource("CircleShape2D_3bl37")
 
 [node name="interactable" parent="." instance=ExtResource("3_gkc58")]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="interactable"]
 shape = SubResource("CircleShape2D_1le0k")

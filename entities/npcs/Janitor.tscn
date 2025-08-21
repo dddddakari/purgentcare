@@ -1,7 +1,29 @@
-[gd_scene load_steps=5 format=3 uid="uid://bfbh0ln8t5v78"]
+[gd_scene load_steps=8 format=3 uid="uid://bfbh0ln8t5v78"]
 
-[ext_resource type="Texture2D" uid="uid://ulhyhvs7tsab" path="res://entities/npcs/npcs_sprite/kurimanj.png" id="1_d4fgn"]
 [ext_resource type="Script" uid="uid://dhpn2pbveacb0" path="res://entities/npcs/janitor.gd" id="1_hwsd8"]
+[ext_resource type="Texture2D" uid="uid://uxrymqas4f4j" path="res://entities/npcs/npcs_sprite/Dakar copy copy(1).png" id="2_hwsd8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dkije"]
+atlas = ExtResource("2_hwsd8")
+region = Rect2(0, 0, 704, 704)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s1b3s"]
+atlas = ExtResource("2_hwsd8")
+region = Rect2(704, 0, 704, 704)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d4fgn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dkije")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s1b3s")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_d4fgn"]
 radius = 46.0109
@@ -12,10 +34,11 @@ size = Vector2(78.875, 101)
 [node name="Janitor" type="Area2D"]
 script = ExtResource("1_hwsd8")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(2, -44)
-scale = Vector2(0.0862312, 0.094375)
-texture = ExtResource("1_d4fgn")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-4, -24)
+scale = Vector2(0.165253, 0.173018)
+sprite_frames = SubResource("SpriteFrames_d4fgn")
+frame_progress = 0.97786
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -24)

@@ -9,11 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://b2g0jrahw0q02" path="res://entities/items/bathroomdoor/BathroomDoor.tscn" id="7_rf2ap"]
 [ext_resource type="PackedScene" uid="uid://b1ajd3pr8b3ig" path="res://entities/items/cabinet/Cabinet.tscn" id="9_bq1ib"]
 [ext_resource type="PackedScene" uid="uid://dklxgwl1bkqaa" path="res://systems/dialoguesystem/Dialogue.tscn" id="11_ouypf"]
+[ext_resource type="Texture2D" uid="uid://bru36m4nr6yuf" path="res://entities/npcs/npcs_sprite/Untitled 16.png" id="12_aljgc"]
 [ext_resource type="Script" uid="uid://ciypcuonykfnh" path="res://entities/items/medicinecart/knockedovercart.gd" id="13_aljgc"]
 [ext_resource type="PackedScene" uid="uid://c2vd78buj8vs7" path="res://entities/items/medicinecart/medicineCart.tscn" id="13_cf1m0"]
 [ext_resource type="PackedScene" uid="uid://blh740ge2nw5d" path="res://entities/npcs/SadNurse.tscn" id="14_aljgc"]
 [ext_resource type="PackedScene" uid="uid://cvgncy1pi4dae" path="res://entities/items/keycard/keycard.tscn" id="14_b562j"]
-[ext_resource type="Texture2D" uid="uid://b2h60k5vjur5m" path="res://assets/misc/pills.jpg" id="14_thcxa"]
 [ext_resource type="PackedScene" uid="uid://c4260nhp2fa7f" path="res://entities/items/roomdoor/file_room.tscn" id="16_iv8jv"]
 [ext_resource type="PackedScene" uid="uid://dnbu4gfni8oip" path="res://entities/items/roomdoor/admin_room.tscn" id="17_y0fg4"]
 
@@ -168,18 +168,19 @@ scale = Vector2(0.22924, 0.200282)
 script = ExtResource("13_aljgc")
 
 [node name="Pills" type="Sprite2D" parent="MedicineCart"]
-position = Vector2(21.759, -399.784)
+position = Vector2(15.4982, -566.056)
 rotation = 1.55875
-texture = ExtResource("14_thcxa")
+scale = Vector2(1.49892, 1.12752)
+texture = ExtResource("12_aljgc")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="MedicineCart"]
 position = Vector2(22.6966, -314.91)
 shape = SubResource("RectangleShape2D_b562j")
 
 [node name="npc" parent="MedicineCart" instance=ExtResource("14_aljgc")]
-position = Vector2(-334.151, -234.845)
+position = Vector2(-331.003, -344.745)
 rotation = -1.58184
-scale = Vector2(5.00974, 4.36235)
+scale = Vector2(5.60359, 4.66331)
 skew = -0.003425
 
 [node name="Keycard" parent="." instance=ExtResource("14_b562j")]

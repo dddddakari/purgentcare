@@ -1,7 +1,29 @@
-[gd_scene load_steps=6 format=3 uid="uid://cavlfqqc5cnml"]
+[gd_scene load_steps=9 format=3 uid="uid://cavlfqqc5cnml"]
 
 [ext_resource type="Script" uid="uid://qrxc241vxfme" path="res://entities/npcs/lebron.gd" id="1_iirex"]
-[ext_resource type="Texture2D" uid="uid://dncg1rrqy45e7" path="res://assets/npcs/NPC.jpg" id="1_yctku"]
+[ext_resource type="Texture2D" uid="uid://beoxwuvo2328y" path="res://entities/npcs/npcs_sprite/Idle - security guard.png" id="2_oyst7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0u4q2"]
+atlas = ExtResource("2_oyst7")
+region = Rect2(0, 0, 704, 704)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dq0fc"]
+atlas = ExtResource("2_oyst7")
+region = Rect2(704, 0, 704, 704)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ohdli"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0u4q2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dq0fc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yctku"]
 radius = 74.0068
@@ -16,10 +38,11 @@ size = Vector2(20, 40)
 position = Vector2(1, 0)
 script = ExtResource("1_iirex")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-0.605195, -17)
-scale = Vector2(0.124675, 0.270833)
-texture = ExtResource("1_yctku")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1.90735e-06, -15)
+scale = Vector2(0.0832709, 0.0797821)
+sprite_frames = SubResource("SpriteFrames_ohdli")
+frame_progress = 0.478441
 
 [node name="detection_area" type="Area2D" parent="."]
 collision_layer = 2

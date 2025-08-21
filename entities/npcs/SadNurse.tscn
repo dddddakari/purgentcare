@@ -1,16 +1,37 @@
-[gd_scene load_steps=6 format=3 uid="uid://blh740ge2nw5d"]
+[gd_scene load_steps=9 format=3 uid="uid://blh740ge2nw5d"]
 
+[ext_resource type="Texture2D" uid="uid://ljd0vbndd4c6" path="res://entities/npcs/npcs_sprite/Mike idle - front.png" id="1_dsgbc"]
 [ext_resource type="Script" uid="uid://dgekw0g5rw7qo" path="res://entities/npcs/chat_detection_angry.gd" id="2_2siyl"]
 [ext_resource type="Texture2D" uid="uid://dr2lccu8q4pil" path="res://assets/npcs/pats.png" id="2_6ekok"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_swi22"]
+atlas = ExtResource("1_dsgbc")
+region = Rect2(704, 0, 704, 704)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ekok"]
+atlas = ExtResource("1_dsgbc")
+region = Rect2(0, 0, 704, 704)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_y6ljr"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_6ekok")
+"texture": SubResource("AtlasTexture_swi22")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_6ekok")
+"texture": SubResource("AtlasTexture_6ekok")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_swi22")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_swi22")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ekok")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ekok")
 }],
 "loop": true,
 "name": &"idle",
@@ -66,15 +87,16 @@ radius = 7.00206
 height = 65.9979
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gtklh"]
-radius = 72.1734
+radius = 58.0086
 
 [node name="npc" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(3, -1)
-scale = Vector2(0.480936, 0.481872)
+position = Vector2(-3, 5)
+scale = Vector2(0.155236, 0.147837)
 sprite_frames = SubResource("SpriteFrames_y6ljr")
-animation = &"walk_w"
+animation = &"idle"
+frame_progress = 0.400675
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(4, 39)
@@ -85,7 +107,7 @@ shape = SubResource("CapsuleShape2D_gtklh")
 script = ExtResource("2_2siyl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chat_detection"]
-position = Vector2(1, 14)
+position = Vector2(1, 18)
 shape = SubResource("CircleShape2D_gtklh")
 
 [node name="Timer" type="Timer" parent="."]

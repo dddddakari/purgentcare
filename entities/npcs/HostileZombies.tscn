@@ -1,7 +1,43 @@
-[gd_scene load_steps=6 format=3 uid="uid://c1theyee7bb6k"]
+[gd_scene load_steps=11 format=3 uid="uid://c1theyee7bb6k"]
 
 [ext_resource type="Script" path="res://entities/npcs/hostile_zombies.gd" id="1_8acoa"]
-[ext_resource type="Texture2D" uid="uid://bl08hoa1ph3nt" path="res://assets/npcs/zombies.webp" id="1_e744v"]
+[ext_resource type="Texture2D" uid="uid://cbpskw281ps6q" path="res://entities/npcs/npcs_sprite/zombie - front copy.png" id="2_8acoa"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uqd1l"]
+atlas = ExtResource("2_8acoa")
+region = Rect2(0, 0, 704, 704)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mesar"]
+atlas = ExtResource("2_8acoa")
+region = Rect2(704, 0, 704, 704)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bx2hq"]
+atlas = ExtResource("2_8acoa")
+region = Rect2(1408, 0, 704, 704)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbknq"]
+atlas = ExtResource("2_8acoa")
+region = Rect2(2112, 0, 704, 704)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e7cw7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uqd1l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mesar")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bx2hq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hbknq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_e744v"]
 radius = 12.6491
@@ -15,16 +51,19 @@ size = Vector2(20, 40)
 [node name="HostileZombies" type="CharacterBody2D"]
 script = ExtResource("1_8acoa")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -0.999999)
-scale = Vector2(0.0985, 0.0896003)
-texture = ExtResource("1_e744v")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.093517, 0.0912921)
+sprite_frames = SubResource("SpriteFrames_e7cw7")
+frame = 1
+frame_progress = 0.773165
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(1, 0)
 shape = SubResource("CircleShape2D_e744v")
 
 [node name="detection_area" type="Area2D" parent="."]
+visible = false
 collision_layer = 2
 collision_mask = 2
 
@@ -33,6 +72,7 @@ position = Vector2(-2, 0)
 shape = SubResource("CircleShape2D_8acoa")
 
 [node name="enemy_hitbox" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enemy_hitbox"]
 shape = SubResource("RectangleShape2D_uqd1l")
