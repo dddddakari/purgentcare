@@ -1,13 +1,14 @@
-[gd_scene load_steps=11 format=4 uid="uid://7x7bx3ng2idc"]
+[gd_scene load_steps=12 format=4 uid="uid://buw7judcixxjh"]
 
-[ext_resource type="Script" uid="uid://d30swrjyqqcnp" path="res://scenes/hospital/Endings/good_ending/jamie_room.gd" id="1_epthi"]
+[ext_resource type="Script" path="res://scenes/hospital/Endings/good_ending/jamie_room.gd" id="1_epthi"]
 [ext_resource type="PackedScene" uid="uid://vuwf647juinh" path="res://entities/npcs/FinalDirector.tscn" id="2_epthi"]
 [ext_resource type="TileSet" uid="uid://c348q58upmtsm" path="res://rooms.tres" id="2_o4qem"]
 [ext_resource type="PackedScene" uid="uid://dqm0mk3hhq2c0" path="res://entities/player/player.tscn" id="3_o4qem"]
 [ext_resource type="PackedScene" uid="uid://dklxgwl1bkqaa" path="res://systems/dialoguesystem/Dialogue.tscn" id="4_6da3a"]
-[ext_resource type="Script" uid="uid://cu4p1r051ittm" path="res://scenes/hospital/Endings/good_ending/area_2d.gd" id="5_2retn"]
+[ext_resource type="Script" path="res://scenes/hospital/Endings/good_ending/area_2d.gd" id="5_2retn"]
 [ext_resource type="PackedScene" uid="uid://cggxdxq8bpwv1" path="res://scenes/hospital/Endings/good_ending/Director.tscn" id="6_o4qem"]
 [ext_resource type="PackedScene" uid="uid://bps2i2ug5faaa" path="res://entities/npcs/Yosef.tscn" id="8_2retn"]
+[ext_resource type="Texture2D" uid="uid://bswoatqqr38ll" path="res://scenes/hospital/Endings/good_ending/dir.png" id="8_dtxqx"]
 [ext_resource type="PackedScene" uid="uid://718yx8jykyi5" path="res://entities/npcs/Penelope.tscn" id="9_dtxqx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fbhpy"]
@@ -23,7 +24,7 @@ tile_map_data = PackedByteArray("AAACAAQAAgAMABAAAAACAAUAAgAMABIAAAACAAYAAgAMABI
 tile_set = ExtResource("2_o4qem")
 
 [node name="walls" type="TileMapLayer" parent="Tilemaps"]
-position = Vector2(0, 30)
+position = Vector2(0, 32)
 tile_map_data = PackedByteArray("AAACAP//AgAAACIAAAACAAAAAgAOABgAAAACAAEAAgAOABkAAAADAP7/AgAAACIAAAADAP//AgAMABgAAAADAAAAAgAMABkAAAAEAP7/AgAAACIAAAAEAP//AgANABgAAAAEAAAAAgANABkAAAAFAP7/AgAAACIAAAAFAP//AgAOABgAAAAFAAAAAgAOABkAAAAGAP7/AgAAACIAAAAGAP//AgAMABgAAAAGAAAAAgAMABkAAAAHAP7/AgAAACIAAAAHAP//AgANABgAAAAHAAAAAgANABkAAAAIAP7/AgAAACIAAAAIAP//AgAOABgAAAAIAAAAAgAOABkAAAAJAP7/AgAAACIAAAAJAP//AgAMABgAAAAJAAAAAgAMABkAAAAKAP7/AgAAACIAAAAKAP//AgAMABgAAAAKAAAAAgAMABkAAAALAP7/AgAAACIAAAALAP//AgANABgAAAALAAAAAgANABkAAAAMAP7/AgAAACIAAAAMAP//AgAOABgAAAAMAAAAAgAOABkAAAANAP//AgAAACIAAAANAAAAAgAMABgAAAANAAEAAgAMABkAAAA=")
 tile_set = ExtResource("2_o4qem")
 
@@ -32,9 +33,6 @@ visible = false
 
 [node name="Player" parent="." instance=ExtResource("3_o4qem")]
 position = Vector2(68, 125)
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(5, 5)
 
 [node name="Dialogue" parent="." instance=ExtResource("4_6da3a")]
 
@@ -51,6 +49,15 @@ shape = SubResource("RectangleShape2D_fbhpy")
 [node name="Jamie" parent="." instance=ExtResource("6_o4qem")]
 position = Vector2(137, 69)
 
+[node name="Director" parent="." instance=ExtResource("6_o4qem")]
+position = Vector2(137, 96)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Director"]
+position = Vector2(-3.6875, -15.625)
+scale = Vector2(0.102148, 0.102148)
+texture = ExtResource("8_dtxqx")
+hframes = 2
+
 [node name="Jamie3" parent="." instance=ExtResource("6_o4qem")]
 position = Vector2(170, 66)
 
@@ -62,5 +69,11 @@ position = Vector2(82, 179)
 
 [node name="Penelope" parent="." instance=ExtResource("9_dtxqx")]
 position = Vector2(108, 190)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+build_mode = 1
+polygon = PackedVector2Array(47, 61, 32, 61, 32, 176, 48, 176, 48, 209, 208, 209, 208, 176, 224, 176, 224, 64, 208, 64, 207, 46, 47, 46)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

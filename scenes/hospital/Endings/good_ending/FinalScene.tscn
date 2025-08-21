@@ -105,8 +105,8 @@ libraries = {
 }
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(714, 412)
-scale = Vector2(1.13889, 1.13889)
+position = Vector2(963, 556)
+scale = Vector2(1.49861, 1.49861)
 sprite_frames = SubResource("SpriteFrames_dkw7h")
 autoplay = "default"
 frame = 20

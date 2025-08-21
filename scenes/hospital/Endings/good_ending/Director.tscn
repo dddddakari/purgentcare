@@ -1,9 +1,49 @@
-[gd_scene load_steps=2 format=3 uid="uid://cggxdxq8bpwv1"]
+[gd_scene load_steps=8 format=3 uid="uid://cggxdxq8bpwv1"]
 
 [ext_resource type="PackedScene" uid="uid://cavlfqqc5cnml" path="res://entities/npcs/Lebron.tscn" id="1_so7c8"]
+[ext_resource type="Texture2D" uid="uid://cbpskw281ps6q" path="res://entities/npcs/npcs_sprite/zombie - front copy.png" id="2_ir18g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ucvu4"]
+atlas = ExtResource("2_ir18g")
+region = Rect2(0, 0, 704, 704)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gkdig"]
+atlas = ExtResource("2_ir18g")
+region = Rect2(704, 0, 704, 704)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lpj88"]
+atlas = ExtResource("2_ir18g")
+region = Rect2(1408, 0, 704, 704)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cotsq"]
+atlas = ExtResource("2_ir18g")
+region = Rect2(2112, 0, 704, 704)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4ms6k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ucvu4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gkdig")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lpj88")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cotsq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Jamie" instance=ExtResource("1_so7c8")]
 
 [node name="Sprite2D" parent="." index="0"]
-position = Vector2(-0.499998, -17.5)
-scale = Vector2(0.0190909, 0.0249361)
+position = Vector2(0.0325012, -9.21385)
+scale = Vector2(0.0709304, 0.0727595)
+sprite_frames = SubResource("SpriteFrames_4ms6k")
+autoplay = "default"
+frame_progress = 0.0

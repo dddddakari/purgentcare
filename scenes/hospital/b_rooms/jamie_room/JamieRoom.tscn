@@ -38,6 +38,9 @@ position = Vector2(138, 83)
 [node name="Player" parent="." instance=ExtResource("3_tu1cd")]
 position = Vector2(134, 157)
 
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(7, 7)
+
 [node name="Dialogue" parent="." instance=ExtResource("5_tu1cd")]
 
 [node name="Area2D" type="Area2D" parent="."]
