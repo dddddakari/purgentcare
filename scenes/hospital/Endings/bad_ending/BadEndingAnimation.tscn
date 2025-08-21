@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://dsha7ie7anl25"]
 
 [ext_resource type="Texture2D" uid="uid://b424q1u3fko12" path="res://entities/player/finale/sprite_0.png" id="1_rc7jm"]
-[ext_resource type="Script" path="res://scenes/hospital/Endings/bad_ending/bad_ending_animation.gd" id="1_vhg4x"]
+[ext_resource type="Script" uid="uid://7v2mgogio7mf" path="res://scenes/hospital/Endings/bad_ending/bad_ending_animation.gd" id="1_vhg4x"]
 [ext_resource type="Texture2D" uid="uid://d0tdayos4m3pj" path="res://entities/player/finale/sprite_1.png" id="2_vhg4x"]
 [ext_resource type="Texture2D" uid="uid://bx7226dqlptxi" path="res://entities/player/finale/sprite_2.png" id="3_6d6bf"]
 [ext_resource type="Texture2D" uid="uid://cbhag2xms61d6" path="res://entities/player/finale/sprite_3.png" id="4_pk6sy"]

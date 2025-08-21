@@ -34,7 +34,7 @@ position = Vector2(1, 9)
 scale = Vector2(0.0809323, 0.0783807)
 sprite_frames = SubResource("SpriteFrames_wudth")
 animation = &"pen_defaulr"
-frame_progress = 0.405395
+frame_progress = 0.172416
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_10rme")

@@ -42,7 +42,7 @@ script = ExtResource("1_iirex")
 position = Vector2(-1.90735e-06, -15)
 scale = Vector2(0.0832709, 0.0797821)
 sprite_frames = SubResource("SpriteFrames_ohdli")
-frame_progress = 0.478441
+frame_progress = 0.34621
 
 [node name="detection_area" type="Area2D" parent="."]
 collision_layer = 2

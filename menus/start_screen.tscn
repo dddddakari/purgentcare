@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dd8tq5378pqb1"]
+[gd_scene load_steps=10 format=3 uid="uid://dd8tq5378pqb1"]
 
 [ext_resource type="Script" uid="uid://ct7w1r5k4orfn" path="res://menus/start_screen.gd" id="1_cdxmd"]
 [ext_resource type="Texture2D" uid="uid://vy26xihmmn3m" path="res://menus/main screen.png" id="2_4ttyr"]
@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://q34cii45y5io" path="res://menus/settings/SwitchWithMeTheme.wav" id="7_n21s3"]
 [ext_resource type="Texture2D" uid="uid://ccecwl6cmli85" path="res://assets/button/SPEAKER_ON.png" id="8_rfu7b"]
 [ext_resource type="Script" uid="uid://btlohi51um8lb" path="res://menus/settings/muteButton.gd" id="9_7ld8a"]
+[ext_resource type="Texture2D" uid="uid://cjw68efcpi03m" path="res://menus/Burgentcare.png" id="9_h034l"]
 
 [node name="StartScreen" type="Node2D"]
 scale = Vector2(0.5, 0.5)
@@ -59,6 +60,11 @@ offset_right = 1852.0
 offset_bottom = 1006.0
 texture_normal = ExtResource("8_rfu7b")
 script = ExtResource("9_7ld8a")
+
+[node name="Burgentcare" type="Sprite2D" parent="."]
+position = Vector2(780.75, 362)
+scale = Vector2(0.403571, 0.356027)
+texture = ExtResource("9_h034l")
 
 [connection signal="pressed" from="New Game" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

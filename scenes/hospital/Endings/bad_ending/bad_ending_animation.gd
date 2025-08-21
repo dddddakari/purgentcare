@@ -1,14 +1,24 @@
-# bike.gd
+
 extends Node2D
 
-func _ready():
-	# Start bike cutscene
-	$InputBlocker.visible = true  # Block input during cutscene
-	$AnimatedSprite2D.play("Bike_Cutscene")
-	$AnimatedSprite2D.animation_finished.connect(_on_cutscene_finished)
+# File path to the showdown dialogue
+const DIALOGUE_FILE_PATH := "res://json/over.json"
 
-func _on_cutscene_finished():
-	# Cutscene finished handler
-	$InputBlocker.visible = false  # Re-enable input
-	# Transition to next scene
-	get_tree().change_scene_to_file("res://menus/start_screen.tscn")
+func _ready():
+	use_dialogue()
+
+# Start the final showdown dialogue
+func use_dialogue():
+	var dialogue = get_node_or_null("/root/BadEndingAnimation/Dialogue")
+	if not dialogue:
+		push_error("Dialogue node not found in FinalBossRoom!")
+		return
+	
+	if not FileAccess.file_exists(DIALOGUE_FILE_PATH):
+		push_error("Dialogue file not found: " + DIALOGUE_FILE_PATH)
+		return
+	
+	dialogue.d_file = DIALOGUE_FILE_PATH
+	dialogue.connect("action_triggered", Callable(self, "_on_dialogue_action"))
+	dialogue.start()
+	print("Final showdown dialogue started.")

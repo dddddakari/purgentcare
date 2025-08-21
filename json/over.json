@@ -1,0 +1,20 @@
+[
+		{
+		"name": "....",
+		"text": "And now my dear boy, it is over... no more fighting, no resting, just internal subservience",
+		"next_id": "continue"
+	},
+	{
+		"id": "continue",
+		"name": "....",
+		"text": "But will you try again..? your subservience to your own emotions overtook you and led you astray, please reconsider",
+		"portrait": "",
+		"next_id": "ending"
+	},
+	{
+		"id": "ending",
+		"action": "change_scene",
+		"scene_path": "res://menus/start_screen.tscn",
+		"next_id": "None"
+	},
+]
