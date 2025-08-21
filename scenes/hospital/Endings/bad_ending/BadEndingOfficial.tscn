@@ -1,6 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://dtsva7gj06pi1"]
+[gd_scene load_steps=7 format=3 uid="uid://bbgwt8hkc1ox8"]
 
-[ext_resource type="Script" path="res://scenes/hospital/Endings/bad_ending/bad_ending_animation.gd" id="1_ln5k8"]
+[ext_resource type="Script" uid="uid://7v2mgogio7mf" path="res://scenes/hospital/Endings/bad_ending/bad_ending_animation.gd" id="1_ln5k8"]
 [ext_resource type="Texture2D" uid="uid://c3ah6lwhujuii" path="res://entities/npcs/npcs_sprite/idle - front copy.png" id="2_ioism"]
 [ext_resource type="PackedScene" uid="uid://dklxgwl1bkqaa" path="res://systems/dialoguesystem/Dialogue.tscn" id="3_85ccm"]
 
@@ -67,10 +67,30 @@ script = ExtResource("1_ln5k8")
 
 [node name="Zombie_Stare" type="AnimatedSprite2D" parent="."]
 position = Vector2(771, 736)
-scale = Vector2(2.26989, 2.31676)
+scale = Vector2(2.27973, 2.3751)
 sprite_frames = SubResource("SpriteFrames_wxd6a")
 autoplay = "default"
 frame = 13
 frame_progress = 1.0
 
 [node name="Dialogue" parent="." instance=ExtResource("3_85ccm")]
+
+[node name="NinePatchRect" parent="Dialogue" index="0"]
+offset_left = 33.0
+offset_top = 540.0
+offset_right = 1634.0
+offset_bottom = 821.0
+
+[node name="text" parent="Dialogue/NinePatchRect" index="1"]
+offset_left = 10.4803
+offset_top = 8.32812
+offset_right = 1819.48
+offset_bottom = 428.328
+
+[node name="Options" parent="Dialogue" index="2"]
+offset_left = 1232.0
+offset_top = 322.0
+offset_right = 1556.0
+offset_bottom = 525.0
+
+[editable path="Dialogue"]

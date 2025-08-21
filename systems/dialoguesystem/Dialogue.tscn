@@ -9,10 +9,10 @@
 script = ExtResource("1_oah3n")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
-offset_left = 62.0
-offset_top = 778.0
-offset_right = 1941.0
-offset_bottom = 1059.0
+offset_left = 21.0
+offset_top = 704.0
+offset_right = 1622.0
+offset_bottom = 985.0
 scale = Vector2(0.954172, 0.960598)
 texture = ExtResource("2_ck8dn")
 region_rect = Rect2(22, 58, 80, 22)
@@ -34,10 +34,10 @@ scroll_active = false
 
 [node name="text" type="RichTextLabel" parent="NinePatchRect"]
 layout_mode = 0
-offset_left = 19.9126
-offset_top = 9.36914
-offset_right = 1828.91
-offset_bottom = 429.369
+offset_left = 20.9606
+offset_top = 12.4922
+offset_right = 1829.96
+offset_bottom = 432.492
 scale = Vector2(0.854361, 0.878613)
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 30
@@ -54,10 +54,10 @@ texture = ExtResource("4_jcfbr")
 wait_time = 0.4
 
 [node name="Options" type="VBoxContainer" parent="."]
-offset_left = 1523.0
-offset_top = 576.0
-offset_right = 1847.0
-offset_bottom = 779.0
+offset_left = 1218.0
+offset_top = 488.0
+offset_right = 1542.0
+offset_bottom = 691.0
 
 [node name="Button" parent="Options" instance=ExtResource("3_ck8dn")]
 layout_mode = 2

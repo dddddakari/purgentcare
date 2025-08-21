@@ -375,8 +375,8 @@ collision_mask = 3
 script = ExtResource("1_abrql")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-3, -8)
-scale = Vector2(-0.142169, 0.152318)
+position = Vector2(-2, -6)
+scale = Vector2(-0.155032, 0.162027)
 sprite_frames = SubResource("SpriteFrames_vewsg")
 autoplay = "default"
 frame_progress = 0.936144

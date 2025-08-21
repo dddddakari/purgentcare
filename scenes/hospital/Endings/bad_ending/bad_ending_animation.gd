@@ -1,7 +1,6 @@
 
 extends Node2D
 
-# File path to the showdown dialogue
 const DIALOGUE_FILE_PATH := "res://json/over.json"
 
 func _ready():
@@ -9,7 +8,7 @@ func _ready():
 
 # Start the final showdown dialogue
 func use_dialogue():
-	var dialogue = get_node_or_null("/root/BadEndingAnimation/Dialogue")
+	var dialogue = get_node_or_null("/root/BadEndingAnimation2/Dialogue")
 	if not dialogue:
 		push_error("Dialogue node not found in FinalBossRoom!")
 		return

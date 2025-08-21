@@ -33,7 +33,6 @@ tile_set = ExtResource("2_2bxdf")
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-visible = false
 position = Vector2(0, -64)
 build_mode = 1
 polygon = PackedVector2Array(17, 79, 913, 80, 912, 146, 17, 146)
@@ -50,21 +49,6 @@ position = Vector2(213, -4)
 scale = Vector2(1.4375, 1.46875)
 texture = ExtResource("3_20qnq")
 
-[node name="Door1" parent="." instance=ExtResource("3_t18j5")]
-position = Vector2(151, 7)
-script = ExtResource("3_efv56")
-
-[node name="Door2" parent="." instance=ExtResource("3_t18j5")]
-position = Vector2(212, 8)
-script = ExtResource("6_tspyp")
-
-[node name="Player" parent="." instance=ExtResource("2_gxpi4")]
-z_index = 2
-position = Vector2(42, 45)
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(8, 8)
-
 [node name="Dialogue" parent="." instance=ExtResource("4_kfmxm")]
 
 [node name="Door3" parent="." instance=ExtResource("3_t18j5")]
@@ -76,6 +60,21 @@ script = ExtResource("7_th4v4")
 position = Vector2(279, 82)
 scale = Vector2(1.2, 1.2)
 script = ExtResource("8_65rhk")
+
+[node name="Player" parent="." instance=ExtResource("2_gxpi4")]
+z_index = 2
+position = Vector2(99, 54)
+
+[node name="Camera2D2" type="Camera2D" parent="Player"]
+zoom = Vector2(8, 8)
+
+[node name="Door1" parent="." instance=ExtResource("3_t18j5")]
+position = Vector2(151, 7)
+script = ExtResource("3_efv56")
+
+[node name="Door2" parent="." instance=ExtResource("3_t18j5")]
+position = Vector2(212, 8)
+script = ExtResource("6_tspyp")
 
 [node name="BossRoomTrigger" type="Area2D" parent="."]
 script = ExtResource("9_65rhk")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://buw7judcixxjh"]
+[gd_scene load_steps=12 format=4 uid="uid://7x7bx3ng2idc"]
 
 [ext_resource type="Script" path="res://scenes/hospital/Endings/good_ending/jamie_room.gd" id="1_epthi"]
 [ext_resource type="PackedScene" uid="uid://vuwf647juinh" path="res://entities/npcs/FinalDirector.tscn" id="2_epthi"]
