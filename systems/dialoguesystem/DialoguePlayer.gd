@@ -178,14 +178,26 @@ func next_script(optional_id = null):
 					print("ERROR: No nurse found in group")
 				QuestManager.complete_quest_good()
 
-# Display text and name if present
-	var name_label = $NinePatchRect.get_node("name")
-	var text_label = $NinePatchRect.get_node("text")
+	# Get references
+	var panel = $NinePatchRect
+	var name_label = panel.get_node("name")
+	var text_label = panel.get_node("text")
 
-	name_label.text = current_line.get("name", "")
-	text_label.text = current_line.get("text", "")
+	# Get values from JSON, default to empty strings if missing
+	var name_text = current_line.get("name", "").strip_edges()
+	var text_text = current_line.get("text", "").strip_edges()
 
-	print("Displaying:", name_label.text, "-", text_label.text)
+	# Set label texts
+	name_label.text = name_text
+	text_label.text = text_text
+
+	# Show or hide the NinePatchRect based on content
+	if name_text == "" and text_text == "":
+		panel.visible = false
+	else:
+		panel.visible = true
+
+	print("Displaying:", name_text, "-", text_text)
 
 	if current_line.has("options") and current_line["options"].size() > 0:
 		show_options(current_line["options"])

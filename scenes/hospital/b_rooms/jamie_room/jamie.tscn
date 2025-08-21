@@ -1,11 +1,32 @@
-[gd_scene load_steps=3 format=3 uid="uid://dqurclr366727"]
+[gd_scene load_steps=6 format=3 uid="uid://dqurclr366727"]
 
 [ext_resource type="PackedScene" uid="uid://cavlfqqc5cnml" path="res://entities/npcs/Lebron.tscn" id="1_etc3n"]
-[ext_resource type="Texture2D" uid="uid://b8sevr1yaknu7" path="res://scenes/hospital/b_rooms/jamie_room/jamie.png" id="2_0ocpo"]
+[ext_resource type="Texture2D" uid="uid://bx580mykb3npi" path="res://assets/npcs/jamie.png" id="2_0ocpo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ocpo"]
+atlas = ExtResource("2_0ocpo")
+region = Rect2(0, 0, 640, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6w5s5"]
+atlas = ExtResource("2_0ocpo")
+region = Rect2(640, 0, 640, 1280)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q0jye"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ocpo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6w5s5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Jamie" instance=ExtResource("1_etc3n")]
 
 [node name="Sprite2D" parent="." index="0"]
-position = Vector2(-0.499998, -17.5)
-scale = Vector2(0.0190909, 0.0249361)
-texture = ExtResource("2_0ocpo")
+sprite_frames = SubResource("SpriteFrames_q0jye")
+frame_progress = 0.0

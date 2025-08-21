@@ -1,12 +1,22 @@
-[gd_scene load_steps=11 format=3 uid="uid://vuxeb0q3k5ft"]
+[gd_scene load_steps=21 format=3 uid="uid://vuxeb0q3k5ft"]
 
-[ext_resource type="Texture2D" uid="uid://dqvdb22uvnevg" path="res://scenes/hospital/Endings/good_ending/final_sprites/frame_00001.png" id="1_2adnf"]
-[ext_resource type="Texture2D" uid="uid://cq3wichuwx3xw" path="res://scenes/hospital/Endings/good_ending/final_sprites/frame_00002.png" id="2_jvtaw"]
-[ext_resource type="Texture2D" uid="uid://l3dsgjj1qcxn" path="res://scenes/hospital/Endings/good_ending/final_sprites/frame_00003.png" id="3_m5va4"]
-[ext_resource type="Texture2D" uid="uid://egrt1kh1bpbq" path="res://scenes/hospital/Endings/good_ending/final_sprites/frame_00004.png" id="4_n3eem"]
-[ext_resource type="Texture2D" uid="uid://xmdwhgskmj4w" path="res://scenes/hospital/Endings/good_ending/final_sprites/frame_00005.png" id="5_emdlx"]
-[ext_resource type="Texture2D" uid="uid://bod8i3ehmiyvy" path="res://scenes/hospital/Endings/good_ending/final_sprites/frame_00006.png" id="6_b32l1"]
-[ext_resource type="Texture2D" uid="uid://fexhsvs2q6ri" path="res://scenes/hospital/Endings/good_ending/final_sprites/frame_00007.png" id="7_k2vpn"]
+[ext_resource type="Texture2D" uid="uid://dkfk706sia7a1" path="res://scenes/hospital/Endings/good_ending/anim/Timeline 1_0000.bmp" id="1_p6uo1"]
+[ext_resource type="Texture2D" uid="uid://cru3mh10xc68t" path="res://scenes/hospital/Endings/good_ending/anim/Timeline 1_0001.bmp" id="2_4s740"]
+[ext_resource type="Texture2D" uid="uid://hmxbj7h3owx4" path="res://scenes/hospital/Endings/good_ending/anim/Timeline 1_0006.bmp" id="3_ko1rf"]
+[ext_resource type="Texture2D" uid="uid://c0io6knflforc" path="res://scenes/hospital/Endings/good_ending/anim/Timeline 1_0007.bmp" id="4_kghn4"]
+[ext_resource type="Texture2D" uid="uid://deej7gifkmj41" path="res://scenes/hospital/Endings/good_ending/anim/Timeline 1_0008.bmp" id="5_peit3"]
+[ext_resource type="Texture2D" uid="uid://dn42gs7pdjxpo" path="res://scenes/hospital/Endings/good_ending/anim/Timeline 1_0009.bmp" id="6_wjd67"]
+[ext_resource type="Texture2D" uid="uid://cuuyk6wli4ae7" path="res://scenes/hospital/Endings/good_ending/anim/Timeline 1_0011.bmp" id="7_opqs2"]
+[ext_resource type="Texture2D" uid="uid://cn72c2xipdji7" path="res://scenes/hospital/Endings/good_ending/anim/Timeline 1_0012.bmp" id="8_4whhe"]
+[ext_resource type="Texture2D" uid="uid://c37vq42xqctmq" path="res://scenes/hospital/Endings/good_ending/anim/Timeline 1_0014.bmp" id="9_dmh57"]
+[ext_resource type="Texture2D" uid="uid://dj6tdv3xc3wil" path="res://scenes/hospital/Endings/good_ending/anim/Timeline 1_0015.bmp" id="10_vcx8s"]
+[ext_resource type="Texture2D" uid="uid://cts5b3px8nvk8" path="res://scenes/hospital/Endings/good_ending/anim/Timeline 1_0016.bmp" id="11_l3rpf"]
+[ext_resource type="Texture2D" uid="uid://qnk0c7h16o6t" path="res://scenes/hospital/Endings/good_ending/anim/Timeline 1_0017.bmp" id="12_are47"]
+[ext_resource type="Texture2D" uid="uid://bvi5nqr15r4qb" path="res://scenes/hospital/Endings/good_ending/anim/Timeline 1_0018.bmp" id="13_quuqw"]
+[ext_resource type="Texture2D" uid="uid://bxrcy1bbe0g6j" path="res://scenes/hospital/Endings/good_ending/anim/Timeline 1_0020.bmp" id="14_2ooum"]
+[ext_resource type="Texture2D" uid="uid://dpusbrrk26423" path="res://scenes/hospital/Endings/good_ending/anim/Timeline 1_0021.bmp" id="15_68hnt"]
+[ext_resource type="Texture2D" uid="uid://clx0ytt61cai5" path="res://scenes/hospital/Endings/good_ending/anim/Timeline 1_0022.bmp" id="16_uv4f3"]
+[ext_resource type="Texture2D" uid="uid://ctpaljnfcufh" path="res://scenes/hospital/Endings/good_ending/anim/Timeline 1_0023.bmp" id="17_e3k2k"]
 
 [sub_resource type="Animation" id="Animation_4nm22"]
 resource_name = "new_animation"
@@ -19,30 +29,72 @@ _data = {
 [sub_resource type="SpriteFrames" id="SpriteFrames_dkw7h"]
 animations = [{
 "frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_p6uo1")
+}, {
+"duration": 2.0,
+"texture": ExtResource("2_4s740")
+}, {
+"duration": 2.0,
+"texture": ExtResource("3_ko1rf")
+}, {
+"duration": 3.2,
+"texture": ExtResource("4_kghn4")
+}, {
+"duration": 2.0,
+"texture": ExtResource("5_peit3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_wjd67")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_opqs2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4whhe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_dmh57")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_vcx8s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_l3rpf")
+}, {
 "duration": 1.5,
-"texture": ExtResource("1_2adnf")
+"texture": ExtResource("12_are47")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_jvtaw")
+"texture": ExtResource("13_quuqw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_m5va4")
+"texture": ExtResource("14_2ooum")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_n3eem")
+"texture": ExtResource("15_68hnt")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_emdlx")
+"texture": ExtResource("16_uv4f3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_b32l1")
+"texture": ExtResource("17_e3k2k")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_k2vpn")
+"texture": ExtResource("14_2ooum")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_68hnt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_uv4f3")
+}, {
+"duration": 2.5,
+"texture": ExtResource("17_e3k2k")
 }],
 "loop": false,
 "name": &"default",
-"speed": 1.0
+"speed": 3.0
 }]
 
 [node name="FinalScene" type="Node2D"]
@@ -53,9 +105,9 @@ libraries = {
 }
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(714, 412)
-scale = Vector2(1.13889, 1.13889)
+position = Vector2(963, 556)
+scale = Vector2(1.49861, 1.49861)
 sprite_frames = SubResource("SpriteFrames_dkw7h")
 autoplay = "default"
-frame = 6
+frame = 20
 frame_progress = 1.0

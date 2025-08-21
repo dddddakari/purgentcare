@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://l3dsgjj1qcxn"
-path="res://.godot/imported/frame_00003.png-5b24dbe9ac7d6faad276f8acd2b69069.ctex"
+uid="uid://diy4wlpufr3v4"
+path="res://.godot/imported/Timeline 1_0004.bmp-46a635a7e25c9f051cdcb8d3965c0f5b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/hospital/Endings/good_ending/final_sprites/frame_00003.png"
-dest_files=["res://.godot/imported/frame_00003.png-5b24dbe9ac7d6faad276f8acd2b69069.ctex"]
+source_file="res://scenes/hospital/Endings/good_ending/anim/Timeline 1_0004.bmp"
+dest_files=["res://.godot/imported/Timeline 1_0004.bmp-46a635a7e25c9f051cdcb8d3965c0f5b.ctex"]
 
 [params]
 
