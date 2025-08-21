@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://bps2i2ug5faaa"]
 
-[ext_resource type="Script" path="res://entities/npcs/yosef.gd" id="1_nq1kv"]
+[ext_resource type="Script" uid="uid://bx5ngstvnx4x" path="res://entities/npcs/yosef.gd" id="1_nq1kv"]
 [ext_resource type="Texture2D" uid="uid://cbagxc3hg0ka8" path="res://entities/npcs/npcs_sprite/zombie - front copy 2.png" id="2_gkc58"]
 [ext_resource type="PackedScene" uid="uid://balrieb8xarpl" path="res://systems/interactionsystem/interactable.tscn" id="3_gkc58"]
 
