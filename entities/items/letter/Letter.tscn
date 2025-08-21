@@ -9,7 +9,7 @@
 size = Vector2(12, 13)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_miny8"]
-radius = 15.0333
+radius = 28.0
 
 [node name="Letter" type="Area2D"]
 collision_layer = 0

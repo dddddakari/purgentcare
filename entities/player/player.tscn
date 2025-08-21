@@ -379,19 +379,17 @@ position = Vector2(-3, -8)
 scale = Vector2(-0.142169, 0.152318)
 sprite_frames = SubResource("SpriteFrames_vewsg")
 autoplay = "default"
-frame_progress = 0.703967
+frame_progress = 0.936144
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(-0.994814, 2.93708)
 rotation = 1.55683
 shape = SubResource("RectangleShape2D_8fjmc")
 
 [node name="InteractingComponent" parent="." instance=ExtResource("3_sglur")]
+visible = false
 position = Vector2(-41, -62)
-
-[node name="Camera2D" type="Camera2D" parent="."]
-scale = Vector2(1, 0.8985)
-zoom = Vector2(6, 6)
 
 [node name="InteractionArea" type="Area2D" parent="." groups=["player"]]
 visible = false
@@ -403,8 +401,10 @@ position = Vector2(55, 14)
 shape = SubResource("CircleShape2D_8fjmc")
 
 [node name="player_hitbox" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player_hitbox"]
+visible = false
 position = Vector2(-0.5, -3)
 shape = SubResource("RectangleShape2D_fkugw")
 
@@ -428,6 +428,7 @@ animation = &"attack_left"
 frame_progress = 0.783186
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
+visible = false
 offset_left = -115.0
 offset_top = -64.0
 offset_right = -50.0
